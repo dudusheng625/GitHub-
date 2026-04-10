@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>现代唐吉诃德：Grab里的华语保卫战</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-base': '#F9FAFB',
+                        'brand-accent': '#6366f1', // Indigo/Purple accent
+                        'brand-dark': '#111827',
+                        'brand-muted': '#6B7280',
+                        'brand-card': '#ffffff',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans SC', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F3F4F6;
+            color: #374151;
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .content-shadow {
+            box-shadow: 0 10px 50px -12px rgba(0, 0, 0, 0.05);
+        }
+        ::selection {
+            background-color: #6366f1;
+            color: white;
+        }
+        .prose p {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Header Section -->
+    <header class="relative w-full h-[60vh] md:h-[75vh] overflow-hidden">
+        <div class="absolute inset-0 w-full h-full">
+            <img src='https://opal.google/board/blobs/678244f4-268a-4a88-beac-57b3458d3c10' alt='media_1' class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="absolute inset-0 flex flex-col items-center justify-end pb-12 px-6 text-center">
+            <div class="animate-fade-in-up max-w-4xl">
+                <span class="inline-block px-4 py-1 mb-4 text-xs font-bold tracking-widest text-white uppercase bg-brand-accent rounded-full">
+                    社会观察
+                </span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white leading-tight drop-shadow-lg">
+                    《现代唐吉诃德：那位在Grab里对抗“香蕉人”的末代武士》
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 -mt-10 pb-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+            
+            <!-- Blog Content Card -->
+            <article class="bg-brand-card rounded-3xl p-8 md:p-14 content-shadow animate-fade-in-up">
+                
+                <!-- Intro Quote / Hook -->
+                <div class="mb-12 italic text-brand-muted text-lg border-l-4 border-brand-accent pl-6 py-2">
+                    在这个全岛都在卷英语、恨不得连家里猫叫都要带点伦敦腔的时代，一位Grab司机大哥横空出世，成了我们的“现代唐吉诃德”。
+                </div>
+
+                <!-- Main Body -->
+                <div class="prose prose-lg text-gray-700 leading-relaxed font-light">
+                    <p>他在车里贴了张直白到让人心碎的告示：<strong>“华族同胞请讲华语。我不跟华人讲英语。抱歉！”</strong></p>
+
+                    <p>啧啧，这哪是网约车啊？这分明是移动的华文复兴阵地，是一个男人对着庞大的英语霸权风车发起的决死冲锋。</p>
+
+                    <div class="my-10 overflow-hidden rounded-2xl shadow-xl transform transition-transform hover:scale-[1.02]">
+                        <img src='https://opal.google/board/blobs/d85be9a1-2116-4f98-adc1-5660bb6ae19e' alt='media_2' class="w-full h-auto" />
+                        <p class="text-sm text-center py-3 bg-gray-50 text-gray-500 italic">图：现代唐吉可德，你怎么知道那人不是香蕉人？</p>
+                    </div>
+
+                    <p>但问题来了，司机大哥，在跨入您这辆“纯度检测车”之前，您怎么能一眼看穿后座那位是不是传说中的“香蕉人”（Jiak Kentang）？这种生物外壳是标准的炎黄子孙，内里却是百分之百的马铃薯泥。你跟他说“你好”，他觉得你在咒他；你跟他说“转左”，他可能得在脑子里下载个翻译包才能反应过来那叫“Turn Left”。</p>
+
+                    <p>最玄学的是，本地华人拥有一种医学无法解释的“选择性失忆症”。在备考剑桥O-Level或A-Level华文的那几年，他们个个都能背诵范文，对“虽然……但是……”运用自如。然而，就在考卷上交、走出考场的那一秒，大脑里的华文分区就像被按下了“格式化”键。</p>
+
+                    <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-6">“马铃薯粉”的文化勋章</h2>
+                    
+                    <p>“哎呀，我考完试就全部还给老师了啦！”这成了很多人的勋章，仿佛“华语烂”就是迈向国际化的入场券。面对司机大哥的告示，这些“前华文优等生”们可能会露出尴尬又不失礼貌的微笑，然后用那种半咸不淡的ABC腔调挤出一句：“I understand, but my Mandarin is... you know... very the suck.”</p>
+
+                    <p>司机大哥这番苦心，在“香蕉人”眼里可能不是文化坚持，而是一场巨大的尴尬。他像唐吉诃德一样挥舞着长矛，试图守护那一点点语言的纯净，可他面对的是一帮连“早安”都要想三秒的“马铃薯粉”。</p>
+
+                    <p>说真的，这其实是一场注定失败的浪漫主义抗争。在这个只要会说“Can you go via AYE?”就能活得很好的城市，强迫华族同胞讲华语，简直比让他们放弃手机还难。</p>
+
+                    <h2 class="text-2xl font-bold text-brand-dark mt-12 mb-6">最后的哨兵</h2>
+
+                    <p>大哥，我佩服您的硬气，但也为您担心。当您遇到那种坚称自己“Jiak Kentang”长大、连名字都要改成“Jessica/Kevin”且坚决听不懂中文的同胞时，您是打算一路保持沉默，还是打算在车里循环播放《弟子规》？</p>
+
+                    <p>在这个满大街都是“假装不会华语”的年代，这位Grab司机就像是最后一名守卫长城的哨兵。虽然姿势有点滑稽，虽然对手只是几颗披着黄皮的“马铃薯”，但这种“我不跟华人讲英语”的倔强，多少带点凄凉的幽默。</p>
+
+                    <p>最后，提醒各位即将搭车的“香蕉人”：上车前最好先练习一下“去哪里”和“谢谢”的准确发音。不然，坐在那位现代唐吉诃德的车里，那几十公里的路程可能会让你觉得比考华文理解测验还要漫长。</p>
+                </div>
+
+                <!-- Fact Check Section -->
+                <section class="mt-16 border-t-2 border-dashed border-gray-100 pt-16">
+                    <div class="bg-indigo-50 rounded-3xl p-8 md:p-10 border border-brand-accent/20 relative overflow-hidden">
+                        <!-- Background decoration -->
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-accent/5 rounded-full blur-3xl"></div>
+                        
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="bg-brand-accent p-2 rounded-lg text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h2 class="text-2xl font-black font-display text-brand-accent tracking-wide">事实核查报告 / FACT CHECK</h2>
+                        </div>
+                        
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-brand-accent text-white rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                                <p class="text-gray-700 pt-1">
+                                    告示原文结尾是<span class="font-bold text-brand-accent">“谢谢”</span>而非“抱歉”，别自作多情给无礼行为加贴礼貌滤镜。
+                                </p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-brand-accent text-white rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                                <p class="text-gray-700 pt-1">
+                                    Grab官方正因<span class="font-bold text-brand-accent">“不包容”</span>展开调查，别在那儿强行把违规操作美化成“浪漫主义”。
+                                </p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="flex-shrink-0 w-8 h-8 bg-brand-accent text-white rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                                <p class="text-gray-700 pt-1">
+                                    这种行为已被广而告之属于<span class="font-bold text-brand-accent">“职场歧视”</span>，别把没礼貌硬生生捧成守卫文化的“哨兵”。
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Interactive element: Hover-based subtle detail -->
+                <div class="mt-12 text-center text-brand-muted text-sm group">
+                    <p class="cursor-help transition-all duration-300 group-hover:text-brand-accent">
+                        * 文章观点仅供参考，请保持友善沟通 *
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Simple decorative circle for visual interest -->
+    <div class="fixed top-0 right-0 -z-10 opacity-10 animate-float pointer-events-none">
+        <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="200" cy="200" r="200" fill="url(#paint0_radial)"/>
+            <defs>
+                <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 200) rotate(90) scale(200)">
+                    <stop stop-color="#6366F1"/>
+                    <stop offset="1" stop-color="#6366F1" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+        </svg>
+    </div>
+
+</body>
+</html>
