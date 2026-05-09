@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深度透视：求知若渴还是饥肠辘辘？</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1a1a1a',
+                            charcoal: '#333333',
+                            accent: '#2c4a3e', // Deep forest green
+                            bg: '#F9F9F9'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['"Noto Serif SC"', 'serif'],
+                        body: ['"PingFang SC"', '"Hiragino Sans GB"', '"Microsoft YaHei"', 'sans-serif'],
+                        english: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection {
+            background-color: rgba(44, 74, 62, 0.2);
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+        }
+        .article-content p {
+            margin-bottom: 1.75rem;
+            line-height: 1.85;
+            color: #374151;
+        }
+        .article-content h3 {
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 900;
+            font-size: 2rem;
+            line-height: 1.3;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            color: #111;
+        }
+        .article-content strong {
+            color: #111;
+            font-weight: 700;
+        }
+        .lead-in::first-letter {
+            float: left;
+            font-size: 4.5rem;
+            line-height: 1;
+            padding-right: 0.75rem;
+            font-weight: 900;
+            color: #2c4a3e;
+            font-family: 'Noto Serif SC', serif;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }
+        @media (max-width: 640px) {
+            .article-content h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-brand-bg font-body text-brand-charcoal antialiased">
+
+    <!-- Header Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 py-4 px-6 mb-0">
+        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="font-english font-bold text-xl tracking-tighter text-brand-accent">INSIGHT_CHANNELS</span>
+            </div>
+            <div class="hidden md:flex gap-8 font-english text-xs uppercase tracking-widest text-gray-500 font-semibold">
+                <span>Research</span>
+                <span>Editorial</span>
+                <span>Analysis</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+        <div class="absolute inset-0 z-0 scale-105 transform hover:scale-100 transition-transform duration-1000 ease-out">
+            <img src='https://opal.google/board/blobs/8dc9f2ef-16d6-4c85-9c83-027021abe683' alt='media_1' class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 h-full flex flex-col justify-end items-center pb-16 px-6 text-center">
+            <span class="inline-block px-3 py-1 mb-4 bg-brand-accent/90 text-white text-[10px] uppercase tracking-[0.2em] font-english">Feature Analysis</span>
+            <h1 class="font-display font-black text-white text-3xl md:text-5xl lg:text-6xl max-w-4xl leading-tight drop-shadow-2xl">
+                “Stay hungry, stay foolish” 的语义错位与成功学傲慢
+            </h1>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <main class="max-w-[800px] mx-auto px-6 py-16 md:py-24">
+        <article class="article-content text-lg md:text-xl">
+            <div class="lead-in">
+                <p>2005年，史蒂夫·乔布斯在斯坦福大学的草坪上，对着一群天之骄子留下了那句著名的“Stay Hungry, Stay Foolish”。那时的语境里，这句话带着一种浪漫主义的理想色彩，是关于在成功面前保持好奇心，在未知面前保持一种“初学者”的笨拙。</p>
+            </div>
+
+            <p>然而，二十多年过去了，有些人的阅读理解能力显然还停留在上个世纪。</p>
+
+            <p>根据昨天的报道，本地一位自诩为“人生导师”的企业界人士，大概是刚翻开哪本过期了的成功学鸡汤，便迫不及待地将其奉为金科玉律。他对着如今在市场上艰难求存、连午休都得算计生活成本的年轻人们，大放诀词地批评他们“不够饥饿”。他满以为自己是乔布斯附体，正挥舞着智慧的皮鞭抽打懒惰的灵魂，哪知道这一鞭子直接捅到了马蜂窝上。</p>
+
+            <p>这种“跨时空错位”的语录，真的很难不让人发笑。</p>
+
+            <h3 class="flex items-center gap-4">
+                <span class="w-8 h-px bg-brand-accent"></span>
+                他把“求知欲”当成了“求生欲”
+            </h3>
+            <p>乔布斯说的“Hungry”是指对知识、对改变世界的渴望，那是一种填满灵魂的野心；而这位导师眼里的“Hungry”，大概是字面意思上的“没吃饱”。在他看来，年轻人只要保持饥饿，就能在职场的小黑屋里跑得更快。这种把生理上的匮乏当成精神上的动力的逻辑，与其说是激励，不如说是对当代生活成本的一种恶意无视。</p>
+
+            <h3 class="flex items-center gap-4">
+                <span class="w-8 h-px bg-brand-accent"></span>
+                他低估了现在的年轻人“Stay Foolish”的底线
+            </h3>
+            <p>以前的人“大智若愚”，是因为他们真的相信只要努力就能换来一个看得见的未来；现在的年轻人如果你想忽悠他们“若愚”，那他们真的会让你见识一下什么叫“大清醒”。当一个人告诉你“要像傻瓜一样去拼搏”时，通常他自己正精明地算计着你的剩余价值。这位导师大概忘了，互联网是有记忆的，而且互联网上的年轻人是有脾气的。这种用过时的精英主义教条来规避结构性压力的做法，无异于在火药桶边玩打火机，还觉得自己照亮了世界。</p>
+
+            <p><strong>最深刻的讽刺在于，那句被奉为圭臬的名言，原本是《全球概览》（The Whole Earth Catalog）停刊时的告别词。</strong> 它的核心是反权威、反教条、拥抱未知的独立精神。而这位大谈特谈“不够饥饿”的上位者，恰恰是他那个阶层里最陈腐、最教条、最缺乏反思能力的权威缩影。</p>
+
+            <p>现在的市场环境，不是年轻人不够“饥饿”，而是某些人提供的饼太硬、太干，还带着一股陈年霉味。如果“求知若渴”被扭曲成“理所应当的贫穷”，那么这种成功学可以被扔进历史的碎纸机里了。</p>
+
+            <p>这位导师的“大开脑洞”，最终成了他口碑的“大开天窗”。这或许也算另一种形式的“Stay Foolish”——他在全网面前，生动形象地展示了什么叫真正的愚不可及。</p>
+
+            <p class="italic text-gray-400 mt-12 border-l-4 border-gray-200 pl-6">
+                下次引用名言前，建议先照照镜子，看看自己长得像不像乔布斯，还是更像那个试图用干草骗驴拉磨的磨坊主。毕竟，现在的年轻人不缺“饥饿感”，他们只缺对这种说教的耐受力。
+            </p>
+        </article>
+
+        <!-- Divider -->
+        <div class="divider my-24"></div>
+
+        <!-- Fact Check Section -->
+        <section id="fact-check" class="max-w-[700px] mx-auto transition-all duration-500 hover:translate-y-[-4px]">
+            <div class="glass-card rounded-2xl p-8 md:p-12 shadow-sm">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="font-display font-bold text-2xl flex items-center gap-3">
+                        <svg class="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        事实核查 / Fact Check
+                    </h2>
+                    <span class="font-english text-[10px] uppercase tracking-widest text-gray-400">Verifiably Sourced</span>
+                </div>
+                
+                <ul class="space-y-6 text-sm md:text-base text-gray-600 leading-relaxed font-light">
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 bg-brand-accent rounded-full"></span>
+                        <p>2005年，史蒂夫·乔布斯在斯坦福大学发表了包含“Stay Hungry, Stay Foolish”这一名言的演讲。</p>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 bg-brand-accent rounded-full"></span>
+                        <p>近日有媒体报道称，一位本地企业界人士公开批评当代年轻人“不够饥饿”。</p>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="flex-shrink-0 w-1.5 h-1.5 mt-2 bg-brand-accent rounded-full"></span>
+                        <p>“Stay Hungry, Stay Foolish”这一短语最初源于《全球概览》（The Whole Earth Catalog）杂志停刊时的告别词。</p>
+                    </li>
+                </ul>
+
+                <div class="mt-8 pt-6 border-t border-gray-100 flex justify-between items-center text-[10px] text-gray-400 font-english uppercase tracking-tighter">
+                    <span>Research insight team</span>
+                    <span>© 2026 Analysis Report</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Minimal Branding Footer -->
+    <div class="w-full py-12 flex flex-col items-center justify-center border-t border-gray-100 bg-white">
+        <p class="font-english font-medium text-xs tracking-[0.3em] text-brand-accent opacity-60 mb-2">RESEARCH INSIGHT</p>
+        <div class="flex gap-4 items-center">
+            <span class="h-[1px] w-8 bg-gray-200"></span>
+            <span class="text-[10px] text-gray-400 font-english uppercase tracking-widest">Independent Commentary</span>
+            <span class="h-[1px] w-8 bg-gray-200"></span>
+        </div>
+    </div>
+
+    <script>
+        // Micro-animations for the article
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('h3, .glass-card').forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
