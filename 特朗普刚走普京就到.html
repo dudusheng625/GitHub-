@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究博文 - 大国密集访华背后的供应链与 AI 算力外交隐线</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chalkboard: '#1A2E22',
+                        chalkWhite: '#F5F5F5',
+                        chalkYellow: '#FFF176',
+                        chalkBlue: '#81D4FA',
+                    },
+                    fontFamily: {
+                        title: ['"Ma Shan Zheng"', 'cursive'],
+                        accent: ['"ZCOOL XiaoWei"', 'serif'],
+                        body: ['"Noto Sans SC"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #1A2E22;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.02) 0%, transparent 80%),
+                url("https://www.transparenttextures.com/patterns/dark-leather.png"); /* Subtle grain texture */
+            color: #F5F5F5;
+            font-family: 'Noto Sans SC', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Chalk Textures and Effects */
+        .chalk-text {
+            text-shadow: 0 0 2px rgba(255,255,255,0.4), 1px 1px 1px rgba(0,0,0,0.2);
+            filter: drop-shadow(0 0 1px rgba(255,255,255,0.2));
+        }
+
+        .chalk-title {
+            font-family: 'Ma Shan Zheng', cursive;
+            letter-spacing: 0.05em;
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Handwritten-style borders */
+        .chalk-border {
+            border: 2px solid #F5F5F5;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .chalk-underline {
+            background: linear-gradient(transparent 90%, #F5F5F5 90%);
+            background-size: 100% 100%;
+            display: inline;
+        }
+
+        .chalk-double-underline {
+            border-bottom: 3px double #F5F5F5;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Smudge effects */
+        .smudge {
+            position: absolute;
+            background: rgba(255,255,255,0.03);
+            filter: blur(20px);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Media styling */
+        .hero-img-container {
+            position: relative;
+            width: 100%;
+            max-height: 500px;
+            overflow: hidden;
+            filter: grayscale(0.2) contrast(1.1) sepia(0.1);
+            mask-image: radial-gradient(black, transparent);
+        }
+        
+        .hero-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            filter: brightness(0.7) contrast(1.2);
+        }
+
+        .hero-img-container::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(26, 46, 34, 0.4);
+            pointer-events: none;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1A2E22; }
+        ::-webkit-scrollbar-thumb { background: rgba(245,245,245,0.2); border-radius: 10px; }
+
+        .note-card {
+            font-family: 'ZCOOL XiaoWei', serif;
+            transform: rotate(-1deg);
+            background: rgba(255,255,255,0.02);
+            border-left: 2px solid #FFF176;
+            padding: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid rgba(245,245,245,0.3);
+            margin: 2rem 0;
+        }
+        th, td {
+            border: 1px solid rgba(245,245,245,0.3);
+            padding: 1rem;
+            text-align: left;
+        }
+        th {
+            color: #FFF176;
+            font-family: 'ZCOOL XiaoWei', serif;
+        }
+
+        .chalk-cloud {
+            border: 2px dashed rgba(245,245,245,0.5);
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            padding: 1.5rem;
+            display: inline-block;
+        }
+        
+        .interactive-link {
+            color: #81D4FA;
+            text-decoration: underline dotted;
+            transition: all 0.3s ease;
+        }
+        .interactive-link:hover {
+            color: #FFF;
+            text-shadow: 0 0 8px rgba(129, 212, 250, 0.8);
+        }
+
+        blockquote {
+            border-left: 4px solid #FFF176;
+            padding: 1rem 2rem;
+            margin: 2rem 0;
+            background: rgba(255, 241, 118, 0.05);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="antialiased leading-relaxed">
+
+    <!-- Blackboard Smudge Decors -->
+    <div class="smudge w-64 h-64 top-10 left-10"></div>
+    <div class="smudge w-96 h-96 bottom-20 right-10"></div>
+
+    <!-- Hero Section -->
+    <header class="relative w-full mb-12">
+        <div class="hero-img-container h-[60vh]">
+            <img src='https://opal.google/board/blobs/57b13fff-c1a7-4852-bf26-7eabcee42b0d' alt='Header Background' />
+        </div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+            <h1 class="chalk-title text-4xl md:text-6xl lg:text-7xl text-chalkWhite chalk-text mb-6">
+                《特朗普刚走普京就到：<br>
+                大国密集访华背后的供应链与 AI 算力外交隐线》
+            </h1>
+            <div class="note-card absolute bottom-10 right-10 text-right">
+                <p class="text-sm opacity-80">发布日期：2026-05-16</p>
+                <p class="text-xs opacity-60">记录人：新加坡金融区观察员</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 pb-24 relative z-10">
+        
+        <!-- Intro Note -->
+        <section class="mb-16">
+            <div class="chalk-border">
+                <p class="text-xl leading-relaxed text-chalkWhite">
+                    北京最近的天气大概很适合办“大国连轴转”的庙会。前脚刚送走特朗普那帮恨不得把每一粒硅片都贴上关税标签的贸易代表团，后脚普京的专机就落了地。这场“大国外交接力赛”表面上看是礼尚往来，实则背后的供应链暗流和 AI 算力博弈已经快把这张谈判桌掀翻了。
+                </p>
+                <div class="mt-4 flex items-center gap-2 text-chalkYellow">
+                    <span class="text-2xl">☞</span>
+                    <span class="font-accent">观察：大国在上面博弈，我们在下面看戏。</span>
+                </div>
+            </div>
+        </section>
+
+        <article class="space-y-12 text-lg">
+            
+            <!-- Section 1 -->
+            <section>
+                <h2 class="text-3xl font-title text-chalkWhite mb-6">
+                    <span class="chalk-double-underline">一、 特朗普的“生意经”：当芯片变成敲门砖</span>
+                </h2>
+                <p class="mb-6">
+                    特朗普那套“交易型外交”大家都不陌生。2025年11月《华尔街日报》的数据显示，在特朗普重返白宫后的首个财季，美国对华半导体设备的出口限制名单又拉长了30%。这次他派出的代表团里，除了政客，更多的是硅谷那些满脑子都是季度财报的执行官。
+                </p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-6 border border-dashed border-chalkWhite rounded-lg">
+                        <h3 class="text-chalkYellow font-accent mb-2">1. 关税作为恫吓工具</h3>
+                        <p class="text-sm leading-relaxed">根据2026年1月美国商务部（DOC）发布的《贸易预测报告》，美方拟对非美产地的 AI 加速器征收25%至40%的“国家安全补偿税”。这招很损，名义上是保护本土供应链。</p>
+                    </div>
+                    <div class="p-6 border border-dashed border-chalkWhite rounded-lg">
+                        <h3 class="text-chalkYellow font-accent mb-2">2. 产能倒挂的现实</h3>
+                        <p class="text-sm leading-relaxed">2025年第四季度 SEMI 数据指出，中国大陆在28nm及以上成熟制程的全球产能占比已经突破了35%。特朗普代表团这次来，更多的是来确认：利润缺口该由谁来补？</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section>
+                <h2 class="text-3xl font-title text-chalkWhite mb-6">
+                    <span class="chalk-cloud">二、 普京的“算力渴求”：能源换算力的极限拉扯</span>
+                </h2>
+                <p class="mb-6">
+                    普京在这个档口访华，目的比特朗普更直接，也更急迫。俄罗斯现在的处境就像一个家里坐拥无数煤矿和天然气井，却因为没网而打不了游戏的土豪。
+                </p>
+                <blockquote>
+                    俄罗斯的逻辑很简单：我有的是廉价电力。根据2025年《BP世界能源统计评论》，俄罗斯西伯利亚地区的电价依然保持在全球极低水平（约合每千瓦时0.03美元）。
+                </blockquote>
+                <div class="space-y-4">
+                    <p><strong class="text-chalkBlue">● 冲突点：</strong> 中方视角认为算力出海是好事，但得防着美国的次级制裁。</p>
+                    <p><strong class="text-chalkBlue">● 俄罗斯视角：</strong> 必须在2027年之前完成关键行业（如气象模拟、核物理、油气勘探）的算法自主化。</p>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section>
+                <div class="chalk-border border-chalkBlue/50">
+                    <h2 class="text-3xl font-title text-chalkBlue mb-6 underline">三、 新加坡的角色：红点微光里的“中转站”</h2>
+                    <p class="mb-6">
+                        现在聊聊我们这个“小红点”。很多人觉得大国打架，新加坡这种弹丸之地只能瑟瑟发抖。抱歉，你可能太小看那些在乌节路吹冷气的精明商人了。
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <div class="flex-1">
+                            <h4 class="font-accent text-chalkYellow">1. 半导体封装的避风港</h4>
+                            <p class="text-sm">2025年新加坡吸引的半导体固定资产投资额创下了 <span class="text-chalkYellow">150亿新元</span> 的历史新高。当美国禁止向中国直接出口高端设备时，新加坡成了完美的“中转清洗站”。</p>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-accent text-chalkYellow">2. 航运枢纽的“算力化”转型</h4>
+                            <p class="text-sm">2025年新加坡港务局数据：高价值电子元器件占比从12%上升到19%。我们现在转运的是“算力溢出”。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4 & 5 Table -->
+            <section>
+                <h2 class="text-3xl font-title text-chalkWhite mb-6">
+                    <span class="chalk-underline">四/五、 供应链现状与对比分析</span>
+                </h2>
+                <div class="overflow-x-auto">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>维度</th>
+                                <th>特朗普/美国模式</th>
+                                <th>普京-中方模式</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-accent">核心逻辑</td>
+                                <td>存量保护与技术封锁</td>
+                                <td>增量交换与资源互补</td>
+                            </tr>
+                            <tr>
+                                <td class="font-accent">主要工具</td>
+                                <td>关税、出口管制、金融制裁</td>
+                                <td>能源合作、基础设施代建、标准输出</td>
+                            </tr>
+                            <tr>
+                                <td class="font-accent">脆弱性</td>
+                                <td>导致美国科技企业利润缩水</td>
+                                <td>面临地缘政治波动的风险</td>
+                            </tr>
+                            <tr>
+                                <td class="font-accent">新加坡态度</td>
+                                <td>配合合规，赚取法律服务费</td>
+                                <td>承接转移，赚取物流与金融费</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section class="bg-white/5 p-8 rounded-xl relative overflow-hidden">
+                <div class="absolute top-2 right-2 text-4xl opacity-10 font-title">UNSOLVED</div>
+                <h2 class="text-3xl font-title text-chalkYellow mb-6">六、 那些被忽略的“硬伤”</h2>
+                <ul class="space-y-6 list-none">
+                    <li class="flex gap-4">
+                        <span class="text-chalkYellow">✘</span>
+                        <div>
+                            <strong class="block mb-1">产能真实性之谜</strong>
+                            <p class="text-sm opacity-80">中国光刻机虽然宣布突破，但在良率和量产稳定性上仍缺乏公开的第三方验证数据。</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-chalkYellow">✘</span>
+                        <div>
+                            <strong class="block mb-1">俄罗斯能源的可持续杠杆</strong>
+                            <p class="text-sm opacity-80">如果油价跌破50美元/桶，俄罗斯还有多少余粮支付高昂的 AI 基础设施费用？</p>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-chalkYellow">✘</span>
+                        <div>
+                            <strong class="block mb-1">新加坡的“站队压力”</strong>
+                            <p class="text-sm opacity-80">如果美国启动更严厉的 FDPR，新加坡的封装厂还能不能接中国的单子？</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Section 7 Conclusion -->
+            <section class="text-center py-12 border-t-2 border-chalkWhite/20">
+                <h2 class="text-4xl font-title text-chalkWhite mb-8">七、 结论：没人在意“主义”，大家只在意“算力”</h2>
+                <div class="text-left space-y-4 max-w-2xl mx-auto">
+                    <p>特朗普代表的是“存量霸权的焦虑”，试图通过贸易壁垒延缓对手。而普京代表的是“生存主义的突围”，通过中国换取未来的入场券。</p>
+                    <p class="text-chalkYellow">至于新加坡？我们不仅是地理上的港口，更是数字时代的“流量洗钱房”。只要大国还在博弈，我们就依然有生存空间。</p>
+                    <p class="font-accent text-2xl mt-8 border-l-4 border-chalkBlue pl-4">2026年的世界，就是一个巨大的、精密的、且充满恶意的利益交换机。谁要是先谈感情，谁就输了。</p>
+                </div>
+            </section>
+
+        </article>
+
+        <!-- Signature/Footer Area -->
+        <div class="mt-24 text-right">
+            <div class="inline-block transform rotate-[-2deg]">
+                <p class="font-title text-5xl text-chalkWhite chalk-text opacity-90">下课！</p>
+                <div class="h-1 w-full bg-chalkWhite/40 mt-2"></div>
+                <p class="font-accent text-sm mt-2 text-chalkWhite/60 italic">Class Dismissed - 2026.05.16</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // Subtle animation for chalk text on hover
+        document.querySelectorAll('.chalk-title, h2, .interactive-link').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                el.style.textShadow = '0 0 12px rgba(255,255,255,0.6)';
+            });
+            el.addEventListener('mouseleave', () => {
+                el.style.textShadow = '0 0 2px rgba(255,255,255,0.4), 1px 1px 1px rgba(0,0,0,0.2)';
+            });
+        });
+    </script>
+</body>
+</html>
