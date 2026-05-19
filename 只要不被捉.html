@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在新加坡，你什么都可以做，只要不被捉到</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Noto+Sans+SC:wght@300;400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#0A0F1D',
+                        asphalt: '#121620',
+                        misty: '#E2E8F0',
+                        cobalt: '#1D4ED8',
+                        cyan: '#0891B2',
+                        amber: '#B45309',
+                        slate: '#475569',
+                    },
+                    fontFamily: {
+                        display: ['ZCOOL XiaoWei', 'serif'],
+                        body: ['Noto Sans SC', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    animation: {
+                        'breathing': 'breathing 4s ease-in-out infinite',
+                        'flicker': 'flicker 3s linear infinite',
+                    },
+                    keyframes: {
+                        breathing: {
+                            '0%, 100%': { opacity: 0.6 },
+                            '50%': { opacity: 1 },
+                        },
+                        flicker: {
+                            '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': { opacity: 1 },
+                            '20%, 21.999%, 63%, 63.999%, 65%, 69.999%': { opacity: 0.4 },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0A0F1D;
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Effect */
+        .glass {
+            background: rgba(18, 22, 32, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Rain Streaks / Paint Drips */
+        .drip-container {
+            position: relative;
+            height: 120px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .drip {
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, rgba(29, 78, 216, 0.5), transparent);
+            border-radius: 0 0 2px 2px;
+        }
+
+        /* Fog/Mist Overlay */
+        .mist-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(10, 15, 29, 0.4) 100%);
+            z-index: 50;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0F1D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1D4ED8;
+            border-radius: 10px;
+        }
+
+        /* Text Effects */
+        .hand-style {
+            font-family: 'ZCOOL XiaoWei', serif;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 15px rgba(29, 78, 216, 0.4);
+        }
+
+        .stencil-heading {
+            position: relative;
+            display: inline-block;
+        }
+        .stencil-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 40%;
+            height: 2px;
+            background: #1D4ED8;
+            opacity: 0.6;
+        }
+
+        /* Media Filtering */
+        .hero-img img {
+            filter: grayscale(0.4) contrast(1.2) brightness(0.6) sepia(0.2) hue-rotate(180deg);
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .content-img img {
+            filter: grayscale(0.2) contrast(1.1) brightness(0.8);
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Vignette */
+        .vignette {
+            box-shadow: inset 0 0 150px rgba(0,0,0,0.9);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-cobalt selection:text-white">
+
+    <div class="mist-overlay"></div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[80vh] flex flex-col justify-end items-center overflow-hidden">
+        <div class="absolute inset-0 hero-img z-0">
+            <img src='https://opal.google/board/blobs/52d1dd04-8208-4ed7-8282-890d02d4bc3b' alt='Midnight Cityscape' />
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-transparent to-transparent"></div>
+            <div class="absolute inset-0 vignette"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-4xl px-6 pb-24 text-center">
+            <h1 class="hand-style text-5xl md:text-7xl lg:text-8xl bg-gradient-to-b from-misty to-cobalt bg-clip-text text-transparent leading-tight mb-8">
+                在新加坡，你什么都可以做，<br/>只要不被捉到
+            </h1>
+            
+            <div class="flex flex-col items-center gap-4">
+                <div class="px-4 py-1 glass rounded-full text-xs font-mono tracking-widest text-slate uppercase opacity-70 animate-breathing">
+                    Research Topic / 2026
+                </div>
+                <div class="text-slate font-mono text-sm tracking-tighter opacity-50">
+                    发布日期：2026-05-19
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Transition Drip -->
+    <div class="drip-container flex justify-center opacity-40">
+        <div class="drip h-24" style="left: 45%; animation: breathing 3s infinite;"></div>
+        <div class="drip h-16" style="left: 50%; animation: breathing 4s infinite 1s;"></div>
+        <div class="drip h-20" style="left: 55%; animation: breathing 3.5s infinite 0.5s;"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-6 py-12 space-y-16 relative">
+        
+        <!-- Intro Section -->
+        <section class="space-y-6">
+            <h2 class="stencil-heading text-2xl font-bold text-cyan hand-style tracking-wide">
+                只要没被捉到，我们就还是那个优雅的法治社会
+            </h2>
+            <div class="text-lg leading-relaxed text-misty/90 space-y-4 font-light">
+                <p>
+                    在新加坡，有一种流传在民间、甚至刻在骨子里的“第十一条诫命”。大家都知道摩西十诫，但在狮城这个精致的盆景社会里，最重要的一条往往秘而不宣，那就是：“你什么都可以做，只要不被捉到。”
+                </p>
+                <p>
+                    最近，电信圈子里闹出的一出大戏，恰好给这条潜规则做了一个极其完美的注脚。Simba（也就是曾经的TPG）和M1的整合计划被资媒局（IMDA）按下了暂停键。理由很有趣，也非常“新加坡”：怀疑Simba违规使用了未经指派的无线射频频段。简单来说，就是有人在光天化日之下，疑似偷了国家的“空气”来做自家的生意。
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Interaction Block -->
+        <figure class="group relative overflow-hidden rounded-lg content-img transition-all duration-700 hover:scale-[1.01]">
+            <img src='https://opal.google/board/blobs/af8bf06f-7d32-48ee-9b14-65bc32464734' alt='Urban Texture' />
+            <div class="absolute inset-0 bg-cobalt/10 group-hover:bg-transparent transition-colors duration-500"></div>
+            <figcaption class="mt-4 text-sm font-mono text-slate italic text-center opacity-60">
+                Visual Artifact: The silent complexity of urban infrastructure.
+            </figcaption>
+        </figure>
+
+        <!-- Section 1 -->
+        <section class="space-y-8 relative">
+            <div class="absolute -left-8 top-0 h-full w-px bg-gradient-to-b from-cobalt/40 via-transparent to-transparent"></div>
+            <h2 class="text-3xl font-bold text-cobalt hand-style tracking-wider">一、 无线频率：那是国家的“风水”，谁让你乱动的？</h2>
+            <div class="text-lg leading-loose text-misty/80 space-y-6">
+                <p>
+                    在普通人眼里，无线频率这东西看不见摸不着，像空气一样自然。但在监管机构眼里，这每一赫兹都是白花花的银子，是国家的主权，更是不可逾越的红线。
+                </p>
+                <p>
+                    Simba这次被调查，就像是在一个出了名连吐痰都要罚款的考场里，不仅试图翻书，还打算直接把隔壁同学的卷子拿过来抄，而且动静大到监考老师想装睡都难。资媒局的文告写得非常有礼貌，说要“详尽且审慎”地评估，但字里行间的潜台词其实很犀利：在我的地盘上，你想玩空手套白狼？
+                </p>
+                <div class="glass p-8 border-l-4 border-amber/50 rounded-r-lg bg-asphalt/40 my-8">
+                    <p class="text-amber italic font-light">
+                        消息一出，母公司Tuas Limited的股价应声暴跌超过60%。这种跌幅，在新加坡这个追求稳健、甚至有些沉闷的股市里，简直像是平地惊雷。这不仅是钱的问题，这是“人设”崩塌的问题。
+                    </p>
+                </div>
+                <p>
+                    这种“走钢丝”的胆量，确实让人不得不佩服。大家都以为在新加坡做生意，大家都是规规矩矩的会计师，哪知道有些人骨子里流着的是海盗的血液。
+                </p>
+            </div>
+        </section>
+
+        <!-- Drip -->
+        <div class="drip-container opacity-20">
+            <div class="drip h-full" style="left: 20%;"></div>
+        </div>
+
+        <!-- Section 2 -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-bold text-cobalt hand-style tracking-wider">二、 “不被捉到”：狮城生活的高级博弈论</h2>
+            <div class="text-lg leading-loose text-misty/80 space-y-6">
+                <p>
+                    我们从小被教育新加坡是法治社会，是“Fine City”（罚款之城）。这里有全世界最干净的街道，最准时的地铁，还有最听话的公民。但如果你真的相信这就是全部真相，那你可能还没真正融入这里的咖啡店文化。
+                </p>
+                <p>
+                    在新加坡，遵守规则往往不是因为道德感爆发，而是因为“算盘”打得精。我们会精确计算违规的成本和被捉的概率。
+                </p>
+                <blockquote class="relative p-8 glass bg-slate/5 rounded-lg border-dashed border border-slate/30">
+                    <p class="text-slate italic font-mono leading-relaxed">
+                        “马路上那些平时文质彬彬的司机，在快到ERP电票闸门前会突然减速，或者在没有测速摄像头的小路上化身F1车手。只要没被那台闪着红光的机器拍到，每个人都是‘年度模范司机’。”
+                    </p>
+                </blockquote>
+                <p>
+                    再看看那些在组屋底层偷偷喂鸽子的人，他们左顾右盼的眼神，比专业特工还要警觉。这种在规则边缘试探的华尔兹，是每一位新加坡居民的必修课。
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-bold text-cobalt hand-style tracking-wider">三、 企业的“捷径思维”：当效率变成了鲁莽</h2>
+            <div class="text-lg leading-loose text-misty/80 space-y-6">
+                <p>
+                    很多企业在进入新加坡市场时，总觉得这里的流程太慢、监管太严。于是，一些号称拥有“狼性文化”或者“初创精神”的高管就开始动歪脑筋：能不能先做了再说？
+                </p>
+                <p>
+                    可惜，他们忘了，新加坡的监管机构虽然平时看起来像是个慢条理的退休大爷，但手里那根藤条可从来没弄丢过。Simba与M1的整合，本该是本地电信市场的一场重头戏。结果呢？因为这一场疑似“违规用频”的闹剧，买卖协议失效，股价暴跌，连带着之前精心设计的商业部署全都变成了废纸。
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="space-y-8">
+            <h2 class="text-3xl font-bold text-cobalt hand-style tracking-wider">四、 这种“聪明”到底是福还是祸？</h2>
+            <div class="text-lg leading-loose text-misty/80 space-y-6">
+                <p>
+                    说实话，这种“只要不被捉到就可以做”的心态，其实是高压环境下的某种应激反应。在一个每一寸土地都被规划、每一项活动都被法律条文定义的社会里，人们总会渴望一点点的“自由空间”。
+                </p>
+                <p>
+                    但问题在于，当这种心态从个人行为蔓延到企业决策，甚至成为一种行业潜规则时，法治的基石就开始晃动了。我们引以为傲的“新加坡品牌”，其核心价值不是便宜，也不是快，而是“可预测性”。
+                </p>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="pt-12 pb-24 border-t border-slate/10">
+            <h2 class="text-3xl font-bold text-cyan hand-style tracking-wider mb-8">五、 结论：别把宽容当软弱，别把漏洞当红利</h2>
+            <div class="text-lg leading-loose text-misty/90 space-y-6 bg-gradient-to-b from-transparent to-asphalt p-8 rounded-b-2xl">
+                <p>
+                    资媒局这次的果断出手，实际上是给所有想在新加坡玩“灰色幽默”的企业敲响了警钟。在狮城，你可以做梦，可以赚钱，甚至可以偶尔抱怨规则太死板。但你绝对不能挑战这个系统的底层运行规则。
+                </p>
+                <p>
+                    Simba和M1的这出戏还没演完，但它已经告诉了我们一个朴素的道理：在新加坡，最聪明的做法往往是那个看起来最笨的做法——老老实实地按规矩办。
+                </p>
+                <p class="font-bold text-cobalt/80 animate-flicker">
+                    洗洗睡吧，明天记得按时交停车费。
+                </p>
+            </div>
+        </section>
+
+        <!-- Signature -->
+        <div class="flex justify-end pt-8 pb-32">
+            <span class="hand-style text-2xl text-slate/30 italic hover:text-cobalt/40 transition-colors cursor-default select-none">
+                ~ 匿名观察者, 2026
+            </span>
+        </div>
+
+    </main>
+
+    <!-- UI Background Elements -->
+    <div class="fixed bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent pointer-events-none z-10 opacity-60"></div>
+    
+    <script>
+        // Subtle Mouse Movement for Parallax Mist
+        document.addEventListener('mousemove', (e) => {
+            const mist = document.querySelector('.mist-overlay');
+            const x = (e.clientX / window.innerWidth) * 5;
+            const y = (e.clientY / window.innerHeight) * 5;
+            mist.style.background = `radial-gradient(circle at ${50 + x}% ${50 + y}%, transparent 0%, rgba(10, 15, 29, 0.4) 100%)`;
+        });
+
+        // Dynamic Drips
+        function createDrip() {
+            const container = document.querySelector('.drip-container');
+            const drip = document.createElement('div');
+            drip.className = 'drip';
+            drip.style.left = Math.random() * 100 + '%';
+            drip.style.height = Math.random() * 100 + 50 + 'px';
+            drip.style.opacity = Math.random() * 0.3;
+            drip.style.transition = 'all 5s ease-in-out';
+            
+            setTimeout(() => {
+                drip.style.top = '150%';
+                drip.style.opacity = '0';
+            }, 100);
+
+            container.appendChild(drip);
+            setTimeout(() => drip.remove(), 6000);
+        }
+
+        setInterval(createDrip, 2000);
+    </script>
+</body>
+</html>
