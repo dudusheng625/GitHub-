@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《从太平船务到价格卡特尔》- 研究博文</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        parchment: '#F5E6D3',
+                        canvas: '#EFE9E1',
+                        ink: '#2C2C2C',
+                        burntOrange: '#CC5500',
+                        sageGreen: '#7D8471',
+                        mustard: '#E3B448',
+                        dustyBlue: '#7A91A3',
+                    },
+                    fontFamily: {
+                        serif: ['Noto Serif SC', 'serif'],
+                        sans: ['Noto Sans SC', 'sans-serif'],
+                        display: ['ZCOOL XiaoWei', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F5E6D3;
+            background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+            color: #2C2C2C;
+            cursor: default;
+        }
+
+        .halftone-overlay {
+            position: relative;
+        }
+        .halftone-overlay::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(#000 10%, transparent 11%);
+            background-size: 3px 3px;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        .letterpress {
+            text-shadow: 0px 1px 1px rgba(255,255,255,0.5), 0px -1px 1px rgba(0,0,0,0.3);
+        }
+
+        .vintage-border {
+            border: 8px double #2C2C2C;
+            padding: 4px;
+            position: relative;
+        }
+
+        .vintage-border::before {
+            content: "";
+            position: absolute;
+            top: -12px; left: -12px; right: -12px; bottom: -12px;
+            border: 1px solid #2C2C2C;
+            pointer-events: none;
+        }
+
+        .fleuron {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            color: #CC5500;
+            font-size: 1.5rem;
+        }
+        .fleuron::before, .fleuron::after {
+            content: "❧";
+            margin: 0 1rem;
+        }
+        .fleuron::before { transform: scaleX(-1); }
+
+        .image-container img {
+            filter: sepia(0.3) contrast(1.1) brightness(0.9);
+            mix-blend-mode: multiply;
+        }
+
+        .pull-quote {
+            position: relative;
+            background: rgba(125, 132, 113, 0.1);
+            border-left: 4px solid #7D8471;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            font-style: italic;
+        }
+        .pull-quote::before {
+            content: "“";
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 5rem;
+            color: #7D8471;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .marginalia {
+            font-variant: small-caps;
+            letter-spacing: 0.1em;
+            border-top: 1px solid #2C2C2C;
+            border-bottom: 1px solid #2C2C2C;
+            display: inline-block;
+            padding: 0.25rem 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem !important; line-height: 1.2; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body class="font-sans leading-relaxed">
+
+    <!-- Hero Section -->
+    <header class="container mx-auto max-w-4xl pt-12 pb-8 px-6 text-center fade-in">
+        <div class="vintage-border mb-12 bg-white/30 overflow-hidden halftone-overlay">
+            <div class="image-container overflow-hidden">
+                <img src='https://opal.google/board/blobs/d3a57758-17b0-4661-a547-93ffabacb810' alt='Vintage Navigation Illustration' class="w-full h-auto object-cover grayscale opacity-90">
+            </div>
+        </div>
+
+        <h1 class="hero-title font-serif text-5xl md:text-6xl font-black text-ink mb-6 letterpress uppercase tracking-tight">
+            《从太平船务到价格卡特尔：人类驯服海洋的方式，原来是联合收割》
+        </h1>
+
+        <div class="metadata mb-12">
+            <span class="marginalia font-serif text-sm text-ink/80">
+                发布日期：2026-05-22 &nbsp; | &nbsp; 航运观察报告 NO. 412
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto max-w-2xl px-6 pb-24 fade-in" style="animation-delay: 0.3s;">
+        
+        <article class="prose prose-lg prose-stone mx-auto">
+            
+            <p class="mb-8 text-xl font-medium leading-relaxed first-letter:text-6xl first-letter:font-serif first-letter:float-left first-letter:mr-3 first-letter:text-burntOrange">
+                航运界的幽默感，通常都藏在那些正儿八经的名字里。比如“太平船务”（PIL），听起来像是一位德高望重的老中医开的养生馆，主打一个四平八稳、现世安稳。然而，如果你在过去几年里试图通过海运发出一箱哪怕只是塑料拖鞋的货，你就会发现，这个“太平”指的可能只是大老板钱包里的太平，至于全球供应链，那是被搅得鸡犬不宁，活像进了台风眼的破渔船。
+            </p>
+
+            <p class="mb-8">
+                人类文明的历史，在某种程度上就是一部试图“驯服海洋”的历史。我们从靠星盘和季风博命的木船，进化到了几十万吨级的钢铁巨兽；我们用精密导航和卫星气象避开了波塞冬的怒火。但讽刺的是，当海浪不再是威胁，当机械工程彻底战胜了深海恐惧，我们却在资本精心编织的“价格卡特尔”面前集体翻船。
+            </p>
+
+            <p class="mb-8">
+                原来，人类驯服海洋的终极方式，并不是让航行变得更安全，而是把这片蓝色的公海，变成了一台精准、高效且冷酷的“联合收割机”。
+            </p>
+
+            <div class="fleuron"></div>
+
+            <h2 class="font-serif text-3xl font-bold text-center text-burntOrange mt-12 mb-8 uppercase tracking-widest border-b-2 border-burntOrange/20 pb-4">
+                一、 名字叫“太平”，干的却是“不太平”的买卖
+            </h2>
+
+            <p class="mb-8">
+                在航运这个行当，起名艺术是一门玄学。叫“太平洋”的未必风平浪静，叫“太平”的更是让货主们的心跳时刻处于高频震颤状态。
+            </p>
+
+            <p class="mb-8">
+                太平船务作为东南亚航运界的元元老，其发展史几乎就是新加坡航运地位的缩影。然而，当这些航运巨头们坐在一起开会时，他们讨论的重点从来不是如何优化航线以减少碳排放，而是如何通过“运力调控”这种优雅的词汇，人为地制造出一种“一舱难求”的末日景象。
+            </p>
+
+            <div class="pull-quote font-serif text-2xl text-ink/90 leading-snug">
+                这种操作的荒谬之处在于：我们花了几个世纪改进造船技术，让运输成本在理论上应该随着规模效应不断下降。结果呢？技术越先进，价格反而越像断了线的风筝。
+            </div>
+
+            <p class="mb-8">
+                这不叫市场规律，这叫“人为降雪”。当所有大船公司通过联盟的形式达成默契，所谓的竞争就变成了一场拙劣的剧本杀。你以为你在选服务，其实你只是在选哪把镰刀割你更顺手。
+            </p>
+
+            <h2 class="font-serif text-3xl font-bold text-center text-sageGreen mt-16 mb-8 uppercase tracking-widest border-b-2 border-sageGreen/20 pb-4">
+                二、 从机械工程到资本收割：逻辑的华丽转身
+            </h2>
+
+            <p class="mb-8">
+                我们曾经天真地以为，人类征服海洋的终极目标是自由贸易的繁荣。瓦特发明蒸汽机，是为了让船走得更快；马可尼发明无线电，是为了让信息传得更远。然而，在现代航运资本的逻辑里，这些技术进步只是为了给“收割”提供更锋利的刀刃。
+            </p>
+
+            <p class="mb-8">
+                现在的航运业，与其说是物流业，不如说是金融操盘业。
+            </p>
+
+            <p class="mb-8">
+                那些体量巨大的集装箱船，每一艘都是一个漂浮在海上的杠杆。巨头们不再满足于赚取辛苦的运费差价，他们更热衷于玩弄“供需错配”的游戏。通过闲置船只、跳港或者是莫名其妙的“航线调整”，他们可以轻易地在电脑屏幕前制造出全球贸易的血栓。
+            </p>
+
+            <p class="mb-8">
+                这种逻辑的转换非常彻底：以前是“船随货走”，现在是“货求船位”。人类用了几千年时间，好不容易才让海洋变得可以预测，结果资本一伸手，又让它变得比原始社会还要变幻莫测。
+            </p>
+
+            <h2 class="font-serif text-3xl font-bold text-center text-burntOrange mt-16 mb-8 uppercase tracking-widest border-b-2 border-burntOrange/20 pb-4">
+                三、 权力映射：垄断成瘾与法律的无力感
+            </h2>
+
+            <p class="mb-8">
+                为什么这些航运巨头敢于如此明目张胆？因为在公海上，权力的映射逻辑是非常简单的：谁的船大，谁的话语权就大。
+            </p>
+
+            <p class="mb-8">
+                这种对“行业垄断”的成瘾性，已经深入到这些企业的基因里。在他们的价值体系中，并没有“公平竞争”这个选项，有的只是“势力范围”的划分。这种成瘾性类似于毒瘾，一旦体验过通过操纵价格获取暴利带来的快感，就再也回不去那种靠提升服务、降低成本来赚取微利的辛苦日子了。
+            </p>
+
+            <p class="mb-8">
+                这些巨头唯一敬畏的，只有惩罚性赔偿的金额。
+            </p>
+
+            <p class="mb-8">
+                但是，这里的悖论在于：如果罚款的金额还没有他们通过价格操纵赚到的利润多，那么罚款就不叫惩罚，而叫“运营成本”。这种厚颜无耻的姿态，确实很有那种“我就喜欢你看我不爽，却又不得不把货塞进我集装箱”的精英傲慢。
+            </p>
+
+            <h2 class="font-serif text-3xl font-bold text-center text-dustyBlue mt-16 mb-8 uppercase tracking-widest border-b-2 border-dustyBlue/20 pb-4">
+                四、 新加坡视角的冷眼旁观
+            </h2>
+
+            <p class="mb-8">
+                作为一个在新加坡看着大士港（Tuas Port）一点点填出来的评论者，我必须说，我们对这种航运逻辑有着最直观的感受。
+            </p>
+
+            <p class="mb-8">
+                新加坡是靠海吃饭的。我们欢迎大船，欢迎贸易，但我们也最清楚，当海洋被几个巨头私有化之后，所谓的“枢纽”地位其实是非常脆弱的。在新加坡的职场文化里，我们讲究的是“Kiasu”（怕输）和“Kiasi”（怕死），但这些航运巨头表现出来的是一种“Kiap”（夹缝中取利）的贪婪。
+            </p>
+
+            <div class="fleuron"></div>
+
+            <h2 class="font-serif text-3xl font-bold text-center text-ink mt-16 mb-8 uppercase tracking-widest">
+                五、 结论：大海依然澎湃，只是船长换了面孔
+            </h2>
+
+            <p class="mb-8">
+                几百年前，海盗是海洋上最令人头疼的存在。他们直接、粗暴、毫不掩饰自己的掠夺意图。几百年后，海盗并没有消失，他们只是穿上了剪裁得体的西装，搬进了玻璃幕墙的写字楼。
+            </p>
+
+            <p class="mb-12">
+                人类确实驯服了海洋，我们让它变得不再那么致命。但随之而来的代价是，我们亲手扶持起了一群新的“海洋领主”。在这个逻辑里，所谓的“太平”从来不是一种状态，而是一种被标好了价格的奢侈品。
+            </p>
+
+            <div class="border-t-4 border-ink pt-8 text-center">
+                <p class="font-display text-4xl text-ink/80 italic">
+                    Writer Signature
+                </p>
+                <p class="text-xs uppercase tracking-widest mt-2 text-ink/40">
+                    End of Dispatch · 完 · 2026
+                </p>
+            </div>
+
+        </article>
+    </main>
+
+    <script>
+        // Simple micro-interaction for links and elements
+        document.querySelectorAll('h2').forEach(header => {
+            header.addEventListener('mouseenter', () => {
+                header.style.transform = 'translateY(-2px)';
+                header.style.transition = 'transform 0.3s ease';
+            });
+            header.addEventListener('mouseleave', () => {
+                header.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
