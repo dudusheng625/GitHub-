@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠辈也爱搭地铁：论新加坡公共交通的“生物多样性”</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        parchment: '#F5E6D3',
+                        fadedCanvas: '#EFE9E1',
+                        inkBlack: '#2C2C2C',
+                        burntOrange: '#CC5500',
+                        sageGreen: '#7D8471',
+                        mustard: '#E3B448',
+                        dustyBlue: '#7A919E',
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif SC"', 'serif'],
+                        sans: ['"Noto Sans SC"', 'sans-serif'],
+                        cursive: ['"Ma Shan Zheng"', 'cursive'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F5E6D3;
+            background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+            color: #2C2C2C;
+            overflow-x: hidden;
+        }
+
+        .vintage-border {
+            border: 8px double #2C2C2C;
+            padding: 4px;
+            position: relative;
+        }
+
+        .vintage-border::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            right: -12px;
+            bottom: -12px;
+            border: 1px solid #2C2C2C;
+            pointer-events: none;
+        }
+
+        .halftone-overlay {
+            position: relative;
+        }
+
+        .halftone-overlay::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#000 10%, transparent 10%);
+            background-size: 3px 3px;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .screen-print-img img {
+            filter: grayscale(20%) contrast(110%) sepia(20%);
+            mix-blend-mode: multiply;
+        }
+
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 4.5rem;
+            line-height: 1;
+            padding-right: 8px;
+            color: #CC5500;
+            font-family: "Noto Serif SC", serif;
+            font-weight: 900;
+        }
+
+        .ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 3rem 0;
+            color: #7D8471;
+            font-size: 1.5rem;
+        }
+
+        .ornament::before, .ornament::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #7D8471, transparent);
+            margin: 0 1rem;
+        }
+
+        .pull-quote {
+            position: relative;
+            background: rgba(125, 132, 113, 0.1);
+            border-left: 4px solid #CC5500;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            font-style: italic;
+            border-radius: 2px;
+        }
+
+        .pull-quote::before {
+            content: '“';
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 5rem;
+            color: #CC5500;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .marginalia {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #7D8471;
+            border-top: 1px solid #7D8471;
+            display: inline-block;
+            padding-top: 4px;
+        }
+
+        .fleuron {
+            font-family: serif;
+            color: #CC5500;
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            color: #CC5500;
+        }
+
+        a {
+            text-decoration: underline dotted #CC5500;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #CC5500;
+            text-decoration: underline solid #CC5500;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+
+    <div class="max-w-4xl mx-auto bg-fadedCanvas vintage-border shadow-2xl relative">
+        <!-- Hero Section -->
+        <header class="text-center pt-12 pb-8 px-6">
+            <div class="mb-8 halftone-overlay screen-print-img inline-block border-4 border-inkBlack p-1 shadow-lg bg-white overflow-hidden max-w-full">
+                <img src='https://opal.google/board/blobs/c9bba1c0-aea1-4cf2-ae8b-342d0f031618' alt='Header Illustration' class="w-full h-auto block" />
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-serif font-black mb-4 tracking-tighter text-inkBlack fade-in leading-tight">
+                鼠辈也爱搭地铁：<br>
+                <span class="text-burntOrange">论新加坡公共交通的“生物多样性”与管理幻象</span>
+            </h1>
+
+            <div class="flex flex-col items-center gap-2 fade-in" style="animation-delay: 0.3s;">
+                <span class="marginalia">发布日期：2026-05-26</span>
+                <span class="text-xs uppercase tracking-widest text-sageGreen font-sans">新加坡 · 狮城观察 · 特刊</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="px-6 md:px-16 pb-20 font-sans text-lg leading-relaxed text-justify">
+            
+            <div class="drop-cap fade-in" style="animation-delay: 0.5s;">
+                在新加坡，如果你想在早高峰的红线地铁上找一个不拥挤的角落，那简直是痴人说梦。但就在最近，一位不需要支付车费、也不用刷卡进站的“乘客”，以一种极其嚣张的姿态，打破了本地通勤族那层名为“文明”的脆弱滤镜。
+            </div>
+
+            <p class="mt-6">是的，我们说的是那只在南北线车厢里悠然漫步的老鼠。</p>
+
+            <div class="my-10 flex flex-col items-center">
+                <div class="border-2 border-sageGreen p-2 shadow-inner bg-parchment w-full max-w-lg halftone-overlay screen-print-img">
+                    <img src='https://opal.google/board/blobs/7a76b781-bd10-40eb-ac53-70cf6f8970f3' alt='Media' class="w-full grayscale brightness-90 contrast-125" />
+                </div>
+                <p class="text-sm font-serif italic mt-3 text-sageGreen">图：近日被广泛传播的“乡村鼠进城”影像资料</p>
+            </div>
+
+            <p class="mt-6">这只被戏称为“乡村鼠进城”的小畜生，不仅在社交媒体上赢得了几百万的流量，更像是一记清脆的耳光，抽在了我们引以为傲的“花园城市”和“高效管理”的脸颊上。作为一个在狮城冷眼旁观了几十年的老笔头，我不得不说，这只老鼠出现的时机，真是妙不可言，讽刺至极。</p>
+
+            <div class="ornament"><span class="fleuron">❦</span></div>
+
+            <h2 class="text-2xl font-serif font-bold text-center text-burntOrange mb-6 uppercase tracking-widest border-b border-sageGreen pb-2 inline-block mx-auto w-full">一、 无票乘车的“特权阶级”</h2>
+            
+            <p>在新加坡，我们有一套足以令全世界强迫症患者感到舒适的法律体系。地铁上禁止饮食，违者罚款500新币；禁止吸烟，违者罚款1000新币；禁止携带易燃物品，违者罚款5000新币。我们的车厢整洁得几乎可以当作手术室，广播里反复播放着温润而坚定的语音，提醒大家要礼让、要守规矩。</p>
+
+            <div class="pull-quote font-serif text-xl">
+                这种对于规则的彻底蔑视，反而产生了一种荒诞的幽默感。真正的自由往往属于那些完全不按剧本演出的角色。
+            </div>
+
+            <p>然而，这只老鼠显然没有受过国民教育。它既不担心被罚款，也不必在进站时排队安检。它在红色的塑料座椅下穿梭，在乘客惊恐的目光中完成了从一个站点到另一个站点的跨越。</p>
+
+            <h2 class="text-2xl font-serif font-bold text-center text-burntOrange mt-12 mb-6 uppercase tracking-widest border-b border-sageGreen pb-2 w-full">二、 “洁癖”城市的裂缝</h2>
+            
+            <p>新加坡的整洁，在很大程度上是建立在极其密集的清理频率和严格的人工干预之上的。但这种整洁往往带有一种“盆景式”的虚假感。你以为你生活在实验室里，其实你只是生活在一个巨大的、被强行洗刷过的热带丛林上方。</p>
+
+            <p class="mt-4">这只出现在地铁上的老鼠，绝不是凭空掉下来的。追根溯源，这涉及到城市管理的深层裂缝。过去几年里，关于组屋区、熟食中心甚至商场鼠患的报道层出不穷。我们投入了无数的资金去研发智能监控，却在最原始的卫生防治上被一只老鼠搞得狼狈不堪。</p>
+
+            <h2 class="text-2xl font-serif font-bold text-center text-burntOrange mt-12 mb-6 uppercase tracking-widest border-b border-sageGreen pb-2 w-full">三、 危机公关的艺术</h2>
+            
+            <p>每次发生这类事件，相关部门的回应总是如出一辙。“我们已经关注到此事”、“正在进行深度清洁”。这些用词标准得可以作为政府公关手册的教科书范本。但老鼠不看Facebook，也不在乎你的公关稿写得多么诚恳。它们只在乎哪里的电缆好啃，哪里的厨余垃圾足够丰盛。</p>
+
+            <h2 class="text-2xl font-serif font-bold text-center text-burntOrange mt-12 mb-6 uppercase tracking-widest border-b border-sageGreen pb-2 w-full">四、 涨价与体验的悖论</h2>
+            
+            <p>每次公交理事会宣布调高运费时，给出的理由总是那么冠冕堂皇：通货膨胀、能源成本上升。现在我们付了更多的钱，得到了什么？除了日常的信号延迟，现在还额外附赠了“车厢生物探索之旅”。</p>
+
+            <h2 class="text-2xl font-serif font-bold text-center text-burntOrange mt-12 mb-6 uppercase tracking-widest border-b border-sageGreen pb-2 w-full">五、 “智慧国”的尴尬</h2>
+            
+            <p>我们整天在谈论“智慧国”（Smart Nation），谈论大数据分析。但在这一层层高科技的包裹下，一只重约几百克的老鼠，却能避开所有的传感器，大摇大摆地在城市的交通大动脉里旅行。这只老鼠，其实是现实世界对数字幻象的一次有力突袭。</p>
+
+            <h2 class="text-2xl font-serif font-bold text-center text-burntOrange mt-12 mb-6 uppercase tracking-widest border-b border-sageGreen pb-2 w-full">六、 身份认知的隐喻</h2>
+            
+            <p>在新加坡，我们划分“乡村”与“城市”的界限已经越来越模糊。这只老鼠打破了这种空间上的优越感。它告诉那些住在市区高档公寓的精英们：你们引以为傲的现代化生活，其实和后巷的阴影只有一墙之隔。</p>
+
+            <div class="ornament"><span class="fleuron">❦</span></div>
+
+            <section class="mt-12 space-y-6 font-serif italic text-inkBlack/80">
+                <p>那只在地铁上成名的老鼠，大概率已经通过某种方式“消失”了。但它留下的议题，却不应该随着清洁工的扫帚一起被扫进垃圾桶。</p>
+                <p>我们需要反思的，不是如何抓到这只老鼠，而是如何反思我们的城市管理哲学。是继续沉迷于那些华丽的词藻和昂贵的科技展示，还是回归初心，把最基础的民生、卫生、安全做到极致？</p>
+                <p>下一次，当你坐在凉爽的车厢里，低头玩着手机时，或许可以偶尔抬起头看看脚下。这不只是为了防备老鼠，更是为了提醒自己：在这个看似完美的社会运行机制下，依然有很多我们看不见的、不愿看见的真实在涌动。</p>
+            </section>
+
+            <!-- Final Signature Section -->
+            <div class="mt-16 pt-8 border-t-2 border-dotted border-inkBlack flex flex-col items-center">
+                <p class="font-cursive text-3xl text-burntOrange opacity-80 mb-2">狮城冷眼人</p>
+                <p class="text-xs uppercase tracking-tighter text-sageGreen">于 2026年5月 撰写</p>
+                <a href="https://www.zaobao.com.sg/news/singapore/story20260525-9104380" target="_blank" class="mt-4 text-xs font-sans text-dustyBlue hover-lift no-underline">参考原文：联合早报报道 ➔</a>
+            </div>
+        </main>
+
+        <!-- Colophon -->
+        <div class="bg-inkBlack text-parchment py-8 px-12 flex justify-between items-center overflow-hidden relative">
+            <div class="z-10">
+                <p class="font-serif text-sm tracking-widest">THE SINGAPORE CHRONICLE</p>
+                <p class="text-[10px] opacity-60">RETROSPECTIVE RESEARCH SERIES NO. 25</p>
+            </div>
+            <div class="text-4xl fleuron opacity-20 absolute right-[-10px] bottom-[-10px] select-none">❧</div>
+            <div class="z-10 border border-parchment/30 p-2">
+                <span class="font-cursive text-xl">庚午年制</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background paper stain effects -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-[-1] opacity-10 overflow-hidden">
+        <div class="absolute top-[-100px] right-[-100px] w-96 h-96 bg-[#8B4513] rounded-full filter blur-[120px]"></div>
+        <div class="absolute bottom-[-100px] left-[-100px] w-96 h-96 bg-[#CC5500] rounded-full filter blur-[120px]"></div>
+    </div>
+
+</body>
+</html>
