@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加薪的弹性形变：研究报告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: '#1A2E22',
+                        chalk: '#F5F5F5',
+                        sunny: '#FFF176',
+                        sky: '#81D4FA',
+                        note: '#2A4235'
+                    },
+                    fontFamily: {
+                        chalk: ['"Segoe Print"', '"Comic Sans MS"', 'cursive'],
+                        body: ['"Georgia"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #1A2E22;
+            background-image: radial-gradient(white, rgba(255,255,255,.05) 2px, transparent 2px);
+            background-size: 50px 50px;
+            color: #F5F5F5;
+            line-height: 1.8;
+        }
+        .chalk-border {
+            border: 2px solid #F5F5F5;
+            border-radius: 5px;
+            padding: 2rem;
+            position: relative;
+        }
+        .chalk-title {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-family: 'cursive';
+        }
+        .chalk-sketch {
+            filter: grayscale(70%) sepia(20%) brightness(1.1) contrast(1.2);
+            border: 4px solid #F5F5F5;
+            border-radius: 8px;
+        }
+        .highlight {
+            color: #FFF176;
+            font-weight: bold;
+        }
+        .link-style {
+            color: #81D4FA;
+            text-decoration: underline;
+        }
+        blockquote {
+            border-left: 5px solid #FFF176;
+            background-color: #2A4235;
+            padding: 1rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+
+    <main class="max-w-4xl mx-auto">
+        <!-- Header Section -->
+        <header class="mb-12 text-center">
+            <div class="chalk-sketch mb-6 overflow-hidden">
+                <img src='https://opal.google/board/blobs/f222218e-af74-4361-88ab-a579159b6ec8' alt='Blackboard Mural' class="w-full h-auto">
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold chalk-title leading-tight mb-4">
+                《加薪的弹性形变：用450新元对冲老龄化，属于典型的“带病提速”》
+            </h1>
+            <div class="inline-block border border-white px-4 py-1 text-sm opacity-80">
+                发布日期：2026-06-03
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <article class="space-y-10">
+            <section class="chalk-border">
+                <p class="text-lg mb-6">
+                    在这个连空气都充满了涨价气息的小岛上，最近的一则新闻让不少正顶着烈日等巴士的打工人心头一颤。2024年5月30日，根据新加坡陆路交通管理局（LTA）联手四家巴士运营商发布的公告，本地巴士车长的月薪调高了约450新元。
+                </p>
+                <p>
+                    听起来像是一场久旱逢甘霖的慈悲，但如果你稍微拨开那层名为“体面”的糖衣，就会发现这450新元背后的逻辑，并不是什么劳资关系的温情脉脉，而是一场关于社会结构“应力集中”的极限求生。用物理学术语来说，这叫<span class="highlight">“弹性形变”</span>——当材料内部已经产生微裂纹，你却试图通过外力拉伸来维持表面的平整。这不叫优化，这叫“带病提速”。
+                </p>
+            </section>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold border-b-2 border-white inline-block">一、 账面繁荣：450新元买不来的“材料韧性”</h2>
+                <p>
+                    根据<a href="https://www.8world.com/singapore/lta-on-bus-captain-salary-3168881" class="link-style" target="_blank">《8视界新闻》</a>综合数据，此次调薪后，入行不久的本地巴士车长起薪将跨过3000新元大关。然而，数据背后的冷酷事实是：愿意干和能干多久之间，依然横亘着一条马里亚纳海沟。
+                </p>
+            </section>
+
+            <section class="chalk-border border-dashed">
+                <h2 class="text-2xl font-bold mb-4">二、 结构性裂纹：老龄化社会的“生物钟战争”</h2>
+                <p class="mb-4">根据2023年新加坡统计局数据，65岁及以上人口比例已达到19.1%。</p>
+                <ul class="list-disc ml-6 space-y-2">
+                    <li>巴士驾驶不是一种可以无限扩展的“弹性岗位”。</li>
+                    <li>它对生理时钟的摧残、对腰椎的定向爆破是无法单纯用450新元对冲的。</li>
+                    <li>这是一种对未来健康预支的“医疗保险预付款”。</li>
+                </ul>
+            </section>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold">三、 利益博弈：运营商的“成本转嫁”</h2>
+                <blockquote>
+                    “这种‘应力集中’体现在：为了维持现有的公共交通服务频率，运营商不得不依靠这一小拨‘加薪后的车长’去完成高强度的工作。”
+                </blockquote>
+            </section>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold">四、 所谓的“本地人就业意愿”：一场华丽的错觉</h2>
+                <p>
+                    决策层认为，只要把底薪涂抹得足够厚，就能掩盖行业吸引力的结构性塌陷。但现实是，对于现代劳动力而言，金钱的边际效用正在递减，而<span class="highlight">“自由度”</span>和<span class="highlight">“尊严感”</span>的权重在上升。
+                </p>
+            </section>
+
+            <section class="chalk-border border-double">
+                <h2 class="text-2xl font-bold mb-4">五、 缺失的环节：硬事实与不确定性的碰撞</h2>
+                <p><strong>硬事实：</strong> 2024年5月起，本地巴士车长基本薪金增加约450新元。</p>
+                <p><strong>个人推论：</strong> 这种加薪是短视的。它解决了“当下有没有人开车”的问题，但没有解决“未来谁来开车”的问题。</p>
+            </section>
+
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold">结论：别把“止痛片”当成“强心针”</h2>
+                <p>
+                    如果一个社会结构已经产生了裂纹，我们需要的不是往缝隙里塞钞票，而是重新审视整个结构的布局。如果一直避重就轻，只会在“带病提速”的道路上，直到那根紧绷的弹性纤维彻底崩断。
+                </p>
+            </section>
+        </article>
+
+        <!-- Footer -->
+        <footer class="mt-16 pt-8 text-center opacity-70 border-t border-white border-dashed">
+            <p class="text-xl italic">Class Dismissed.</p>
+        </footer>
+    </main>
+
+</body>
+</html>
