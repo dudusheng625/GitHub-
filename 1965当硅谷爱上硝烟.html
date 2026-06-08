@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Machine: The Industrial Intelligence Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Roboto+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gunmetal: '#1A1A1B',
+                        obsidian: '#0D0D0D',
+                        silver: '#E5E7EB',
+                        hazard: '#F97316',
+                        luminous: '#3B82F6',
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Roboto Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0D0D0D; color: #E5E7EB; }
+        .chassis-border { border: 2px solid #333; position: relative; }
+        .stud-grid { background-image: radial-gradient(#222 1px, transparent 1px); background-size: 20px 20px; }
+        .metallic-text { text-shadow: 2px 2px 0px #000, 4px 4px 0px #444; }
+        .snap-fit:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0px #F97316; transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .blueprint-line { border-left: 2px solid #F97316; padding-left: 1rem; }
+        .serial-tag { border: 1px solid #444; background: #1A1A1B; padding: 0.5rem 1rem; font-size: 0.8rem; letter-spacing: 0.1rem; }
+    </style>
+</head>
+<body class="font-body selection:bg-hazard selection:text-white">
+
+    <!-- Header Section -->
+    <header class="max-w-5xl mx-auto px-6 py-12">
+        <div class="relative group">
+            <div class="overflow-hidden rounded-lg chassis-border shadow-2xl">
+                <img src='https://opal.google/board/blobs/e7af6001-a5b5-4453-bb35-7c01386dd2ff' alt='Industrial Mechanical Assembly' class="w-full h-80 object-cover opacity-80 hover:opacity-100 transition-opacity duration-500" />
+            </div>
+            <div class="absolute -bottom-6 left-6 bg-obsidian p-4 chassis-border">
+                <h1 class="font-display text-4xl md:text-6xl font-black metallic-text text-white">
+                    当硅谷爱上硝烟
+                </h1>
+            </div>
+        </div>
+
+        <div class="mt-12 flex justify-between items-end border-b border-gray-700 pb-4">
+            <div class="serial-tag text-hazard">ID: #AR-2026-0606 // RESEARCH_LOG</div>
+            <div class="text-sm text-gray-400">发布日期：2026-06-06</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 pb-24 space-y-12">
+
+        <!-- Intro -->
+        <section class="chassis-border p-8 bg-gunmetal">
+            <p class="text-xl leading-relaxed">
+                在新加坡的牛车水喝咖啡，你可能会觉得世界很太平。但在太平洋对岸，那些曾经标榜“不作恶”的科技巨头，正忙着给死神装上最新的显卡。
+            </p>
+        </section>
+
+        <!-- Sections -->
+        <article class="space-y-16">
+            
+            <section class="snap-fit chassis-border p-6 bg-obsidian">
+                <h2 class="font-display text-2xl font-bold mb-4 text-luminous">一、 婚约：从“不作恶”到“不放过”</h2>
+                <p class="mb-4">2018年是个分水岭。当时大家觉得科技精英还有良心，可事实证明，良心在资本回报率面前，连个冗余代码都算不上。</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                    <div class="p-4 bg-gray-900 border border-gray-700">
+                        <span class="text-hazard font-bold">JWCC 合同</span>
+                        <p class="text-sm">谷歌、亚马逊、微软、甲骨文分食90亿美元合同。</p>
+                    </div>
+                    <div class="p-4 bg-gray-900 border border-gray-700">
+                        <span class="text-hazard font-bold">18亿美元预算</span>
+                        <p class="text-sm">2024财年国防部AI机器学习支出，同比激增30%。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="snap-fit chassis-border p-6 bg-obsidian">
+                <h2 class="font-display text-2xl font-bold mb-4 text-luminous">二、 速度的诅咒：当OODA循环缩短到微秒</h2>
+                <blockquote class="blueprint-line my-6 text-gray-400 italic">
+                    这就好比你和AI玩抢凳子。你刚听到音乐响，AI已经把凳子拆了做成柴火。
+                </blockquote>
+                <p>当AI介入，战争节奏超频。模拟对抗中，AI飞行员以5:0击败资深人类飞行员，反应时差不到人类的百分之一。</p>
+            </section>
+
+            <section class="snap-fit chassis-border p-6 bg-obsidian">
+                <h2 class="font-display text-2xl font-bold mb-4 text-luminous">三、 资本的逻辑：战争变成了SaaS产品</h2>
+                <p>在AI时代，战争变成了“软件即服务”。只要战场燃烧，算法就在迭代，订阅费就得照付。2023年，全球防务技术领域风险投资额高达342亿美元。</p>
+            </section>
+
+            <section class="snap-fit chassis-border p-6 bg-obsidian">
+                <h2 class="font-display text-2xl font-bold mb-4 text-luminous">四、 失控的征兆：幻觉与黑天鹅</h2>
+                <div class="p-4 bg-red-900/10 border-l-4 border-red-600">
+                    <p class="text-sm"><strong>警告：</strong> 全球尚无任何国际条约明确禁止“全自动致命武器系统”（LAWS）。在加沙战争中，AI系统误判率据称高达10%。</p>
+                </div>
+            </section>
+
+            <section class="snap-fit chassis-border p-6 bg-obsidian">
+                <h2 class="font-display text-2xl font-bold mb-4 text-luminous">五、 全球博弈中的“技术中立”谎言</h2>
+                <p>战争正在从“人口红利”转向“算力红利”。没有自研能力的国家，将彻底沦为数字时代的“殖民地”。</p>
+            </section>
+
+            <section class="snap-fit chassis-border p-6 bg-hazard text-obsidian">
+                <h2 class="font-display text-2xl font-bold mb-4">六、 结论：谁在握着那个开关？</h2>
+                <p class="font-bold">当最终按下核按钮时，AI可能还会弹出一个对话框问你：<br>“您确定要删除人类吗？此操作不可撤销。”</p>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-4xl mx-auto px-6 py-12 border-t border-gray-800 text-center">
+        <div class="serial-tag text-gray-500 font-mono">
+            MANUFACTURER: NEURAL_SYSTEMS_DIV // STATUS: OPERATIONAL // TERMINATION_CODE: 0x4F41
+        </div>
+        <p class="mt-4 text-xs text-gray-600 uppercase tracking-widest">System Objective Fulfilled</p>
+    </footer>
+
+</body>
+</html>
