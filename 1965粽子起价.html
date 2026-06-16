@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粽子价格观察报告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#84A98C',
+                        'secondary': '#F4A261',
+                        'dark': '#2D3436',
+                        'cream': '#FDFBF7'
+                    },
+                    fontFamily: {
+                        'sans': ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FDFBF7; }
+        .bento-card {
+            border: 3px solid #2D3436;
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-5px);
+            background-color: #FDFBF7;
+        }
+        .draw-border {
+            border-bottom: 4px solid #84A98C;
+        }
+    </style>
+</head>
+<body class="text-dark font-sans antialiased p-4 md:p-12">
+
+    <!-- Header Section -->
+    <header class="max-w-5xl mx-auto mb-16 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="flex-1">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight text-dark">
+                裹在叶子里的<br><span class="text-primary italic">“贵气”</span>
+            </h1>
+            <p class="text-xl font-bold bg-secondary/20 inline-block px-4 py-1 border-l-4 border-secondary">
+                关于端午粽子身价暴涨的刻薄观察报告
+            </p>
+            <div class="mt-8 flex gap-4 text-sm font-bold uppercase tracking-widest">
+                <span class="bg-primary text-white px-3 py-1 rounded-none">发布日期</span>
+                <span class="border-2 border-dark px-3 py-1">2026-06-13</span>
+            </div>
+        </div>
+        <div class="w-64 h-64 md:w-80 md:h-80 border-4 border-dark rounded-3xl overflow-hidden shadow-[10px_10px_0px_0px_rgba(45,52,54,1)]">
+            <img src='https://opal.google/board/blobs/c628acfa-9256-414b-b119-f1b2b6193cb8' alt='粽子主题插画' class="w-full h-full object-cover">
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Intro -->
+        <article class="md:col-span-2 bento-card p-8 bg-white shadow-[8px_8px_0px_0px_rgba(244,162,97,0.3)]">
+            <h2 class="text-3xl font-black mb-4 draw-border pb-2 inline-block">前言：当糯米开始做起“豪门梦”</h2>
+            <p class="leading-relaxed text-lg">又到了一年一度全岛安哥安娣为了几粒糯米团子在巴刹和商场里挤得大汗淋漓的时节。今年的端午节，与其说是纪念屈原，倒不如说是考验消费者的心脏承受能力。</p>
+        </article>
+
+        <!-- Media Placeholder -->
+        <div class="bento-card flex items-center justify-center p-4 bg-primary/10">
+            <img src='https://opal.google/board/blobs/03386bcd-4d52-4db5-815f-4f917dd03726' alt='内容辅助插画' class="w-full h-auto rounded-xl">
+        </div>
+
+        <!-- Section 1 -->
+        <section class="bento-card p-6 bg-white">
+            <h3 class="text-xl font-bold text-primary mb-3">01. 成本的挡箭牌</h3>
+            <p class="text-sm leading-relaxed">所谓的“不起价”，其实建立在一个已经高不可攀的基数之上。这粽子是用航天飞机的燃料煮的吗？</p>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="bento-card p-6 bg-white">
+            <h3 class="text-xl font-bold text-secondary mb-3">02. 膨胀的味蕾</h3>
+            <p class="text-sm leading-relaxed">“七龙珠”咸蛋粽和黑松露粽。商家管这叫创新，我管这叫谋财害命式的消费主义傲慢。</p>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="bento-card p-6 bg-white">
+            <h3 class="text-xl font-bold text-primary mb-3">03. 消失的温情</h3>
+            <p class="text-sm leading-relaxed">年轻人嫌包粽子麻烦。我们吃下的只是一团工业化生产的碳水化合物，而不是一份带着温度的记忆。</p>
+        </section>
+
+        <!-- Quote Block -->
+        <blockquote class="md:col-span-3 bento-card p-10 bg-secondary text-white font-black text-2xl md:text-3xl italic text-center">
+            “粽子本该是属于大众的，而不是裹着包装盒、塞进名贵药材的奢侈品。”
+        </blockquote>
+
+        <!-- Summary -->
+        <section class="md:col-span-3 bento-card p-8 bg-white border-primary">
+            <h2 class="text-3xl font-black mb-6">结语：别吃下泡沫</h2>
+            <p class="text-lg leading-relaxed text-dark/90">
+                再涨价就没天理了？在这个凡事看齐“市场价值”的时代，天理往往是最后才被考虑的东西。今年买粽子时，别忘了提醒自己：你吃进去的不仅仅是糯米，还有这个时代浮躁的泡沫和商家精心编织的消费陷阱。
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-5xl mx-auto mt-20 pt-10 border-t-4 border-dark flex justify-between items-center">
+        <div class="text-sm font-bold opacity-60">
+            研究观察员报告 - 2026 端午特刊
+        </div>
+        <div class="w-12 h-4 bg-secondary"></div>
+    </footer>
+
+</body>
+</html>
