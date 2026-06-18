@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>92%的临界焦虑：肌少症与国家机密</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fashionPink: '#F4EAE6',
+                        charcoal: '#333333',
+                        paperWhite: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        heading: ['"Noto Serif SC"', 'serif'],
+                        body: ['"Noto Sans SC"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F4EAE6; color: #333333; }
+        .crop-mark { position: fixed; width: 30px; height: 30px; border: 2px solid #333333; }
+        .corner-tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+        .corner-tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+        .corner-br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+        .bento-card { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card:hover { transform: scale(1.02); }
+        .hand-drawn-bubble { border: 1px solid #333333; border-radius: 25px 25px 25px 5px; padding: 1rem; background: rgba(255,255,255,0.4); }
+    </style>
+</head>
+<body class="font-body selection:bg-rose-200">
+
+    <!-- Crop Marks -->
+    <div class="crop-mark corner-tl"></div>
+    <div class="crop-mark corner-tr"></div>
+    <div class="crop-mark corner-bl"></div>
+    <div class="crop-mark corner-br"></div>
+
+    <main class="max-w-4xl mx-auto px-8 py-20">
+        
+        <!-- Header -->
+        <header class="relative mb-24 text-center">
+            <div class="absolute top-0 left-0 hand-drawn-bubble hidden md:block rotate-[-5deg]">
+                <p class="text-xs italic">发布日期：2026-06-15</p>
+            </div>
+            
+            <h1 class="font-heading text-4xl md:text-6xl font-bold mb-12 leading-tight text-charcoal">
+                92%的临界焦虑：在全岛床位熔断前夕，你的肌少症参数成了国家最高机密
+            </h1>
+
+            <div class="w-full h-96 overflow-hidden rounded-lg shadow-2xl bg-white/50 flex items-center justify-center">
+                <img src="https://opal.google/board/blobs/025b01dd-73f4-40ac-92b6-94f133d1faad" alt="时尚人体结构美学" class="object-cover h-full w-full opacity-90 grayscale hover:grayscale-0 transition-all duration-700">
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            
+            <!-- Left Column Content -->
+            <article class="md:col-span-9 space-y-12">
+                <section class="prose prose-lg prose-charcoal">
+                    <p class="text-xl font-light italic border-l-4 border-charcoal pl-6 mb-12">
+                        “不要问国家能为你做什么，先问问你自己的骨密度，能不能帮你熬过下一次全岛急诊室容量的临界大考。”
+                    </p>
+
+                    <div class="space-y-8">
+                        <h2 class="font-heading text-3xl font-bold flex items-center gap-4">
+                            <span class="text-rose-400">NO.1</span> 深蹲还是深渊
+                        </h2>
+                        <p>各位，请先放下手里那杯加了三份糖的奶茶。如果你还觉得“健康”只是你个人的私事，那你真的太天真了。最近，那个冷冰冰的数字——92%，像一把生了锈的断头台铡刀，悬在每个人的头皮上方。</p>
+                    </div>
+
+                    <div class="space-y-8 mt-12">
+                        <h2 class="font-heading text-3xl font-bold flex items-center gap-4">
+                            <span class="text-rose-400">NO.2</span> 大腿围度与主权信用
+                        </h2>
+                        <p>在过去，医生劝你多运动，那是医者仁心。现在，如果有人盯着你的股四头肌看，那可能是在评估你对国家医疗预算的潜在违约风险。肌少症（Sarcopenia），这个曾经只出现在医学研讨会里的生僻词汇，现在已经成了决定公共网络会不会彻底瘫痪的战略变量。</p>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Sidebar Vertical Text -->
+            <aside class="md:col-span-3">
+                <div class="sticky top-20 bg-white p-6 shadow-sm border-2 border-charcoal">
+                    <p class="font-heading text-sm uppercase tracking-widest text-center">系统监测备忘录</p>
+                    <div class="h-64 flex items-center justify-center my-6">
+                        <p class="vertical-text text-charcoal font-bold text-lg rotate-180" style="writing-mode: vertical-rl;">
+                            你的肌肉流失情况，竟然成了这个国家最高等级的战略情报。
+                        </p>
+                    </div>
+                    <div class="text-[10px] text-gray-500 text-center uppercase">
+                        数据监控 / 内部审计 / 风险规避
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Full Width Footer/Conclusion Section -->
+        <section class="mt-24 border-t-2 border-charcoal pt-12 pb-24">
+            <div class="max-w-2xl mx-auto text-center">
+                <h3 class="font-heading text-2xl mb-8">结语：最后的深蹲</h3>
+                <p class="leading-relaxed">在这个系统里，没有所谓的“慢生活”。如果你跑得不够快，如果你练得不够勤，那么在下一波席卷全岛的“床位荒”来临时，你唯一的选择，可能就是思考自己是如何从一个活生生的人，变成了一个被系统排除在外的错误代码。</p>
+                <div class="mt-12">
+                    <a href="#" class="inline-block px-8 py-3 border-2 border-charcoal hover:bg-charcoal hover:text-white transition-colors duration-300 font-bold uppercase tracking-tighter">
+                        查看完整深度研究报告
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
