@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双重过载：超高龄社会下的看护危机</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;700;900&display=swap');
+
+        :root {
+            --marker-yellow: #fef08a;
+            --marker-red: #fecaca;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .highlight-yellow {
+            background: linear-gradient(120deg, var(--marker-yellow) 0%, var(--marker-yellow) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 80%;
+        }
+
+        .section-line {
+            border-left: 4px solid #000;
+            padding-left: 2rem;
+        }
+
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .asymmetric-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        .hover-effect:hover {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-12 lg:p-20">
+
+    <header class="mb-20">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="w-full md:w-1/2">
+                <h1 class="text-6xl md:text-9xl font-black leading-none mb-6 tracking-tighter">
+                    重构<br>破局
+                </h1>
+                <p class="text-sm uppercase tracking-widest text-gray-500 font-bold border-b border-black pb-2 inline-block">
+                    发布日期：2026-06-17 / 社会研究专题
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 aspect-square bg-gray-200 overflow-hidden relative">
+                <!-- Media placeholder -->
+                <img src='https://opal.google/board/blobs/f8d081ff-fc78-468d-a2c7-41c6cf05cdc1' alt='视觉焦点' class="w-full h-full object-cover mix-blend-multiply opacity-90">
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto">
+        <article class="space-y-24">
+            
+            <section class="max-w-3xl">
+                <h2 class="text-2xl font-bold mb-8">当白发人开始照顾银发人：揭穿优雅养老的盛世谎言</h2>
+                <p class="text-lg md:text-xl font-light leading-relaxed">
+                    在狮城那精心修剪的绿化带和波光粼粼的滨海湾背后，正上演着一场秘而不宣的极限运动。这项运动没有奖牌，没有转播，只有常年散不去的风油精味和永无止境的腰酸背痛。官方文件里，我们优雅地称之为超高龄社会。但在大巴窑、红山或是任何一个略显老旧的组屋区里，这件事的本质极其粗暴：一个六十岁、膝盖已经开始咔咔作响的年轻人，正在试图搬动一个八十岁、神志已经模糊的老人家。
+                </p>
+            </section>
+
+            <section class="asymmetric-grid">
+                <div class="space-y-8">
+                    <h3 class="text-5xl font-black tracking-tight"><span class="text-red-500">01</span> 生理极限的物理性坍塌</h3>
+                    <p class="text-gray-700">
+                        当社会学家在空调房里谈论代际支持时，他们可能忘了最基本的解剖学常识。一个六十岁的人，其骨密度、肌肉总量和心肺功能已经进入了不可逆转的下坡路。研究发现，中下阶层家庭的看护者，本身往往也是慢性病患者。这种弱弱联手的格局，在统计学上被称为家庭看护系统的结构性疲劳。
+                    </p>
+                    <div class="bg-yellow-100 p-6 border-l-4 border-yellow-500">
+                        <p class="text-xl font-bold">核心现状：当看护者本身也需要被看护时，整个系统的冗余度已经降到了零。</p>
+                    </div>
+                </div>
+                <div class="bg-black text-white p-8">
+                    <p class="text-sm font-bold uppercase mb-4">关键数据维度</p>
+                    <ul class="text-4xl font-black space-y-4">
+                        <li class="highlight-yellow text-black px-2">60岁 vs 80岁</li>
+                        <li class="text-white">系统性红线</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section-line">
+                <h3 class="text-4xl font-black mb-8">数字游戏的傲慢</h3>
+                <p class="mb-6">
+                    健康SG计划逻辑很美：少生病，少住院。但对于已经深陷看护泥潭的家庭来说，这更像是一种带着优越感的冷幽默。目前的政策参数，似乎总是默认每个看护者都是精力充沛、财务自由的自由职业者。那些几百块钱的看护者津贴，在日益飞涨的物价和私人看护高昂的时薪面前，更像是一种心理安慰剂，而非实质性的财政支柱。
+                </p>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-gray-100 p-10">
+                    <h4 class="text-2xl font-bold mb-4">无子女化的断裂</h4>
+                    <p>中下阶层家庭面临的是一种绝后的疲劳。没有年轻一代的接力，六十岁的看护者看着八十岁的父母，其实是在看自己二十年后的投影。</p>
+                </div>
+                <div class="bg-gray-100 p-10">
+                    <h4 class="text-2xl font-bold mb-4">贫穷陷阱</h4>
+                    <p>为了照顾老人，看护者必须放弃全职工作。这种因病致贫、因老致贫的路径，在我们的社会结构中清晰得让人胆战心惊。</p>
+                </div>
+            </section>
+
+            <section class="bg-red-600 text-white p-12">
+                <h3 class="text-5xl font-black mb-6">系统性疲劳的终局</h3>
+                <p class="text-2xl font-light">
+                    老人照顾老人不是一种温馨的相守，而是一种系统的失灵。如果继续迷信那些微调的津贴和喊口号式的乐龄计划，我们等待的将不是一个和谐的社会，而是一个大规模崩溃的看护系统。
+                </p>
+            </section>
+
+            <section class="max-w-2xl">
+                <h3 class="text-3xl font-black mb-6 border-b border-black pb-4">拒绝虚伪的温情</h3>
+                <p class="text-lg italic text-gray-600">
+                    别再谈什么优雅老去了。在这个精致的岛屿上，对于很多人来说，老去不过是一场关于体能与钱包的、注定失败的持久战。而那些还在坚持的人，与其说是在尽孝，不如说是在这台名为生活的巨大粉碎机里，绝望地试图留住最后一点做人的尊严。
+                </p>
+            </section>
+
+        </article>
+    </main>
+
+    <div class="mt-32 pt-8 border-t border-black text-xs text-gray-400">
+        END OF REPORT / INTERNAL ARCHIVE
+    </div>
+
+</body>
+</html>
