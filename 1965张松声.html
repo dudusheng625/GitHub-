@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-end Clean Tech | 深度调研</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent-purple': '#8D59E9',
+                        'accent-yellow': '#EBE021',
+                        'bg-gray': '#F5F5F7',
+                        'card-blue': '#D8E2EC',
+                        'text-charcoal': '#1d1d1f'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .premium-shadow { box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); }
+        .text-clip { background: linear-gradient(90deg, #8D59E9, #222); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hover-lift { transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease; }
+        .hover-lift:hover { transform: scale(1.02); }
+        .border-hairline { border-top: 1px solid #e5e7eb; }
+    </style>
+</head>
+<body class="bg-white text-text-charcoal font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+        <div class="font-bold text-xl tracking-tighter">TECH.RESEARCH</div>
+        <div class="text-sm font-medium text-gray-500">2026-06-19</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-7xl mx-auto px-8 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+            <span class="inline-block px-3 py-1 bg-accent-purple text-white text-[10px] font-bold uppercase tracking-widest rounded-sm">深度解析</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-[0.9] tracking-tighter">
+                出了公海就是<br>
+                <span class="text-clip">外包</span>
+            </h1>
+            <p class="text-lg text-gray-600 max-w-md">本地大亨在美被告，如何被拆解为“他国的商业个案”的法理危机分析。</p>
+        </div>
+        <div class="relative w-full aspect-square overflow-hidden rounded-2xl premium-shadow hover-lift">
+            <img src='https://opal.google/board/blobs/6e46125b-1a66-4fdb-9535-b8c319f00844' alt='media_2' class="w-full h-full object-cover">
+        </div>
+    </header>
+
+    <!-- Content Body -->
+    <main class="max-w-5xl mx-auto px-8 pb-24">
+        
+        <!-- Metadata Bar -->
+        <div class="flex items-center gap-4 mb-16 pb-8 border-b border-gray-200">
+            <span class="text-xs font-bold px-2 py-1 bg-accent-yellow text-black uppercase">发布日期：2026-06-19</span>
+            <span class="text-sm text-gray-400">分析师：DeepAnalytics Team</span>
+        </div>
+
+        <article class="prose prose-lg max-w-none">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-accent-purple pl-4">一、 太平洋的水，洗不净本地的“无辜感”</h2>
+            <p class="mb-8 leading-8 text-gray-700">
+                六月的狮城，午后的雷阵雨总是准时得让人心烦。我们要谈的是一种艺术，一种精巧的、极具本地特色的“地缘切割术”。当这一套法理绞杀定向爆破在某个个体身上时，本地舆论的第一反应不是反思结构，而是迅速递上一张“他国个案”的标签。
+            </p>
+
+            <div class="bg-card-blue p-8 rounded-xl my-12">
+                <img src='https://opal.google/board/blobs/c3f908f5-d334-42b1-9cf9-0b7e34f4fef1' alt='media_1' class="rounded-lg shadow-lg mb-6 w-full">
+                <blockquote class="italic text-gray-800 border-l-2 border-accent-purple pl-4">
+                    “这种强行的地缘隔离，实际上是在给本地的信心‘吸氧’。我们太害怕那个幻觉破裂了。”
+                </blockquote>
+            </div>
+
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-accent-yellow pl-4">二、 既得利益集团的“弱势防御”</h2>
+            <p class="leading-8 text-gray-700 mb-8">
+                面对美国人那种带着攻击性的、动辄三倍赔偿的集体诉讼（Class Action），本地的既得利益集团表现出了一种很诡异的“弱势”。他们不敢正面硬刚这种法律霸权背后的地缘逻辑，反而回过头来，对内进行精细的“消音”和“拆解”。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+                <div class="p-6 bg-gray-50 border-t-2 border-accent-purple">
+                    <h4 class="font-bold mb-2">身份的剪辑</h4>
+                    <p class="text-sm text-gray-600">从“华商之光”到“合规瑕疵”，媒体与商界呈现出精准的律动。</p>
+                </div>
+                <div class="p-6 bg-gray-50 border-t-2 border-accent-yellow">
+                    <h4 class="font-bold mb-2">生存的代价</h4>
+                    <p class="text-sm text-gray-600">通过否定关联来维持自尊，这已成为一种病态的生存之道。</p>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold mb-8">三、 结语：被切断的锚链</h2>
+            <p class="leading-8 text-gray-700 mb-8">
+                那个可以靠着信息差、靠着地缘模糊性在大国之间左右逢源的时代，正在像退潮的海水一样远去。而我们，还在努力地在沙滩上画线。我们试图告诉世界，也告诉自己：界线这边是安全的，界线那边是“外包”的。
+            </p>
+            <p class="leading-8 text-gray-700">
+                毕竟，在这座岛上，最不缺的就是修剪枝叶的园丁。
+            </p>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto px-8 py-12 border-hairline mt-12">
+        <div class="flex justify-between items-center text-xs text-gray-400">
+            <p>© 2026 Tech Research Division</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-accent-purple transition-colors">Privacy</a>
+                <a href="#" class="hover:text-accent-purple transition-colors">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
