@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>职场系统诊断 | 战略负债报告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Roboto+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gunmetal: '#1A1A1B',
+                        obsidian: '#0D0D0D',
+                        silver: '#E5E7EB',
+                        hazard: '#F97316',
+                        luminous: '#3B82F6'
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0D0D0D; color: #E5E7EB; font-family: 'Roboto Mono', monospace; }
+        .chassis-card { background: #1A1A1B; border: 2px solid #333; position: relative; }
+        .chassis-card::before { content: ""; position: absolute; top: -8px; left: -8px; width: 16px; height: 16px; border: 2px solid #444; background: #0D0D0D; }
+        .metal-plate { border-left: 4px solid #F97316; background: rgba(255,255,255,0.05); padding: 1rem; }
+        .holographic-glow:hover { box-shadow: 0 0 15px rgba(59, 130, 246, 0.3); border-color: #3B82F6; transition: all 0.3s ease; }
+        .tech-font { font-family: 'Roboto Mono', monospace; }
+    </style>
+</head>
+<body class="selection:bg-hazard selection:text-white">
+
+    <!-- Header Section -->
+    <header class="relative w-full h-[60vh] overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src='https://opal.google/board/blobs/322a9d6b-0a73-46c3-9476-c0c82903b472' alt='Industrial Machinery' class="w-full h-full object-cover opacity-60" />
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-obsidian"></div>
+        </div>
+        <div class="relative z-10 container mx-auto px-6 h-full flex flex-col justify-end pb-20">
+            <h1 class="font-display text-5xl md:text-7xl font-black uppercase italic tracking-tighter text-silver drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
+                从“优质资产”到“战略负债”
+            </h1>
+            <p class="text-hazard font-mono mt-4 text-xl tracking-widest uppercase">精算师们如何批量制造职场“无害化废柴”</p>
+        </div>
+    </header>
+
+    <!-- Metadata Strip -->
+    <div class="container mx-auto px-6 -mt-10 mb-12">
+        <div class="bg-gunmetal border border-slate-700 p-4 inline-flex items-center gap-6 shadow-2xl">
+            <div class="text-xs text-slate-400 uppercase tracking-widest border-r border-slate-600 pr-6">Serial: 2026-06-23-SG</div>
+            <div class="text-silver font-bold">发布日期：2026-06-23</div>
+            <div class="bg-hazard text-obsidian px-2 py-0.5 text-[10px] font-bold">STRICTLY CONFIDENTIAL</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 pb-24">
+        <article class="max-w-4xl mx-auto space-y-16">
+            
+            <!-- Section 1 -->
+            <section class="chassis-card p-8 holographic-glow">
+                <h2 class="font-display text-3xl font-bold text-silver mb-6 border-b border-slate-700 pb-4">一、 数据背后的“沉默行军”</h2>
+                <div class="space-y-6 leading-relaxed text-slate-300">
+                    <p>根据 <strong class="text-luminous">2024年6月 Gallup 发布的《全球职场环境状况报告》</strong>，新加坡职场人的敬业度只有13%，远低于23%的全球平均水平。而在更年轻的群体中，这个数字更是惨不忍睹：只有10%的新加坡年轻员工对工作感到投入。</p>
+                    <p>在精算师和职业经理人精心构建的摩天大楼里，90%的年轻人正在以“无害化废柴”的姿态精准走位。他们不反抗，也不投入；他们准时打卡，然后在大脑里开启静音模式。</p>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="chassis-card p-8 holographic-glow">
+                <h2 class="font-display text-3xl font-bold text-silver mb-6 border-b border-slate-700 pb-4">二、 优绩主义的“迷魂阵”</h2>
+                <div class="metal-plate mb-6">
+                    <p class="text-hazard italic font-mono text-sm uppercase">"晋升渠道的漏斗效应：超过65%的中高层职位是由外部招聘或内部引荐完成，而非基层员工通过KPI达成来实现。"</p>
+                </div>
+                <p class="text-slate-300 leading-relaxed">所谓的优绩主义，在新加坡职场已从“激励机制”异化为“筛选机制”——筛选出那些最能忍受无意义重复劳动、最顺从系统指令的“标准化耗材”。</p>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="chassis-card p-8 holographic-glow">
+                <h2 class="font-display text-3xl font-bold text-silver mb-6 border-b border-slate-700 pb-4">三、 数字化监控的“圆形监狱”</h2>
+                <p class="text-slate-300 leading-relaxed mb-6">在“指标治国”的逻辑下，任何偏离标准流程的行为都是“异常数据”。当管理层依赖高度颗粒化的数字化监控时，他们实际上是在进行一场关于“创造性劳动”的自杀式简化。</p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-black/40 p-4 border border-slate-700 text-sm">监控成本的溢出：监督者的工资成为了企业隐藏的沉没成本。</div>
+                    <div class="bg-black/40 p-4 border border-slate-700 text-sm">内驱力的消失：严密监控环境下，创新意愿下降了约40%。</div>
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="chassis-card p-8 holographic-glow">
+                <h2 class="font-display text-3xl font-bold text-silver mb-6 border-b border-slate-700 pb-4">四、 从“优质资产”到“战略负债”</h2>
+                <p class="text-slate-300 leading-relaxed">这些被系统“驯化”的员工，看似是完美的执行者，实则是公司最危险的负债。当市场环境发生巨变时，这些只会按照既定KPI行事的“标准化耗材”完全不具备应变能力。他们会带着公司一起，优雅地、精准地走向破产。</p>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="chassis-card p-8 holographic-glow border-l-4 border-l-hazard">
+                <h2 class="font-display text-3xl font-bold text-silver mb-6">结语：在系统的缝隙里</h2>
+                <p class="text-slate-300 text-lg leading-relaxed">当整个世界都变成了高效运作的冷冰冰机器时，那一点点“不专业”的温热，才是你作为“人”而非“资产”存在的唯一证据。不要因为KPI而折损自我，在系统的监控之外，保留你的创造力。</p>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-obsidian py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-[10px] text-slate-600 font-mono tracking-[0.5em] mb-4">SYSTEM_STATUS: OPERATIONAL_BUT_FRICTION_HIGH</div>
+            <div class="text-slate-500 text-xs font-mono">ID: 0x4F92A-INDUSTRIAL-ASSEMBLY-UNIT</div>
+            <div class="mt-4 text-hazard font-black text-2xl tracking-tighter">||||||||||||||||</div>
+        </div>
+    </footer>
+
+</body>
+</html>
