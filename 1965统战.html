@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华文报的“精分”艺术 | 深度观察</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Outfit:wght@300;400;600&display=swap');
+        
+        body {
+            background-color: #f4ecec;
+            color: #2d2d2d;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .serif { font-family: 'Noto Serif SC', serif; }
+
+        /* Custom Hand-drawn bubble effect */
+        .bubble-handdrawn {
+            border: 1px solid #333;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            padding: 1rem;
+            background: #fff;
+        }
+
+        /* Corner markers */
+        .corner-marker {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-color: #555;
+            z-index: 10;
+        }
+
+        /* Micro-interaction hover */
+        .hover-paper:hover {
+            transform: translateY(-2px) rotate(0.5deg);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8 relative">
+
+    <!-- Print Crop Marks -->
+    <div class="fixed top-4 left-4 w-10 h-10 border-l-2 border-t-2 border-gray-400"></div>
+    <div class="fixed top-4 right-4 w-10 h-10 border-r-2 border-t-2 border-gray-400"></div>
+    <div class="fixed bottom-4 left-4 w-10 h-10 border-l-2 border-b-2 border-gray-400"></div>
+    <div class="fixed bottom-4 right-4 w-10 h-10 border-r-2 border-b-2 border-gray-400"></div>
+
+    <main class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="relative flex flex-col items-center justify-center py-20">
+            <div class="w-full md:w-3/4 mb-12 overflow-hidden rounded-sm shadow-2xl">
+                <img src='https://opal.google/board/blobs/a0e602f2-dfb0-401d-ba9c-5d365ff1e71d' alt='media_1' class="w-full h-auto object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" />
+            </div>
+            
+            <h1 class="serif text-5xl md:text-7xl font-bold text-center mb-8 tracking-tight">
+                报馆的“精分”艺术与华社的智商税
+            </h1>
+
+            <!-- Metadata -->
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="bubble-handdrawn -rotate-2">
+                    <p class="text-sm">发布日期：2026-06-27</p>
+                </div>
+                <div class="bubble-handdrawn rotate-1">
+                    <p class="text-sm">研究话题：新加坡华文媒体立场分析</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-12">
+            
+            <!-- Left Side: Content -->
+            <article class="lg:col-span-8 space-y-16">
+                <section>
+                    <h2 class="serif text-3xl mb-6 border-l-4 border-gray-800 pl-4">NO.1 引言：一场自打嘴巴的文化盛宴</h2>
+                    <p class="leading-relaxed text-lg text-gray-700">
+                        在新加坡这个弹丸之地，看戏不难，看报纸也不难。难的是，一边看着报纸上的资深媒体人义正辞严地提醒你“这出戏有毒”，一边又看到同一家报馆笑眯眯地把这出戏的票子塞到你手里，顺便问你一句：“老兄，要不要看免费的？”
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="serif text-3xl mb-6 border-l-4 border-gray-800 pl-4">NO.2 报馆的算盘：流量比立场更香吗？</h2>
+                    <p class="leading-relaxed text-lg text-gray-700">
+                        这就涉及到一个非常现实，甚至有点冷酷的问题：在今天的媒体环境下，立场的价值究竟值几个钱？华文报集团买票请读者看戏，美其名曰“回馈读者”，实则是为了维持那点可怜的活跃度。
+                    </p>
+                </section>
+
+                <section class="bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="serif text-2xl mb-4 italic">“读者不是傻瓜：论‘文化统战’与审美自主”</h3>
+                    <p class="text-gray-600 italic">—— 现代读者早已习惯了在碎片化的信息中自我生存。他们可以一边领着报馆发的免费票去看电影，一边在散场后刷着评论吐槽电影里的刻意。</p>
+                </section>
+            </article>
+
+            <!-- Right Side: Sidebar -->
+            <aside class="lg:col-span-4 space-y-8">
+                <div class="bg-white p-6 border-2 border-gray-900 h-full">
+                    <h4 class="serif text-xl font-bold mb-4 uppercase tracking-widest">核心议题</h4>
+                    <ul class="space-y-4">
+                        <li class="hover-paper p-2 border-b border-gray-200">媒体的身份焦虑</li>
+                        <li class="hover-paper p-2 border-b border-gray-200">商业与立场的博弈</li>
+                        <li class="hover-paper p-2 border-b border-gray-200">华社认同感的危机</li>
+                        <li class="hover-paper p-2">公信力的透支</li>
+                    </ul>
+
+                    <div class="mt-12 bg-gray-900 text-white p-6">
+                        <p class="serif text-lg leading-loose">
+                            “当读者发现，报纸上的社论可以跟实际的商业活动完全背道而驰时，他们还会相信你对社会的观察吗？”
+                        </p>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-24 pt-8 border-t border-gray-400 text-center">
+            <div class="flex justify-center gap-4 mb-4 text-gray-500">
+                <span>✦</span>
+                <span>研究观察</span>
+                <span>✦</span>
+            </div>
+            <p class="text-xs uppercase tracking-widest text-gray-400">新加坡华文媒体立场调研报告 · 2026</p>
+        </footer>
+    </main>
+
+</body>
+</html>
