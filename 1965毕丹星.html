@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舆论虚构与政治真相</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ink-black': '#1A1A1A',
+                        'warning-red': '#EF4444',
+                        'electric-yellow': '#FDE047',
+                        'paper-white': '#FAFAFA'
+                    },
+                    fontFamily: {
+                        'display': ['Inter', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap');
+        body { background-color: #FAFAFA; color: #1A1A1A; }
+        .highlight-yellow { background: linear-gradient(120deg, #FDE047 0%, #FDE047 100%); background-repeat: no-repeat; background-size: 100% 40%; background-position: 0 80%; }
+        .highlight-red { background: linear-gradient(120deg, #EF4444 0%, #EF4444 100%); background-repeat: no-repeat; background-size: 100% 40%; background-position: 0 80%; color: white; }
+        .side-line { border-left: 4px solid #1A1A1A; }
+        .vertical-text { writing-mode: vertical-rl; }
+    </style>
+</head>
+<body class="font-body selection:bg-yellow-200">
+
+    <main class="max-w-6xl mx-auto px-6 py-12 md:py-24">
+        
+        <!-- Header Section -->
+        <header class="flex flex-col lg:flex-row gap-12 mb-24">
+            <div class="lg:w-1/2 flex flex-col justify-end">
+                <span class="text-xs uppercase tracking-[0.2em] mb-4 text-gray-500">2026-06-29 • 研究笔记</span>
+                <h1 class="font-display font-black text-6xl md:text-8xl leading-[0.9] tracking-tighter text-ink-black mb-8">
+                    空转的<br>叙事
+                </h1>
+                <p class="text-xl font-light text-gray-600 max-w-md">主流媒体精心布置了血流成河的头版，最后只等来一场无人挑战的合影。</p>
+            </div>
+            <div class="lg:w-1/2">
+                <div class="w-full aspect-[4/3] overflow-hidden bg-gray-200">
+                    <img src='https://opal.google/board/blobs/3b618d5b-1ad9-4c68-b20b-e09a30bf7370' alt='media_2' class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500" />
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <article class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            
+            <!-- Sidebar Metadata -->
+            <aside class="md:col-span-3 flex flex-col gap-6 text-sm">
+                <div class="pt-4 border-t border-black">
+                    <p class="font-bold">核心逻辑</p>
+                    <p class="text-gray-600 mt-2">归谬法与预期管理破产</p>
+                </div>
+                <div class="pt-4 border-t border-black">
+                    <p class="font-bold">权力解构</p>
+                    <p class="text-gray-600 mt-2">媒体作为外部权力延伸的尴尬</p>
+                </div>
+            </aside>
+
+            <!-- Text Content -->
+            <div class="md:col-span-9 lg:col-span-8 flex flex-col gap-12">
+                
+                <section>
+                    <h2 class="text-3xl font-bold mb-6">引言：预期管理的破产</h2>
+                    <p class="leading-relaxed text-lg text-gray-700">
+                        在狮城这片被精确修剪过的舆论丛林里，近期，本地主流媒体针对工人党干部大会及其领导层改选所展现出的创作热情，堪称教科书级别的叙事铺垫。若只看那些连篇累牍的侧面报道，读者恐怕会产生一种错觉：工人党内部正处在刀光剑影的边缘，一场蓄势待发的逼宫大戏即将撕裂阵营。
+                    </p>
+                </section>
+
+                <div class="w-full my-8">
+                    <img src='https://opal.google/board/blobs/b7ecc1dd-50ba-4c34-a25b-91066eba6f0b' alt='media_1' class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700" />
+                </div>
+
+                <section>
+                    <h2 class="text-3xl font-bold mb-6">一、 剧本的虚构</h2>
+                    <p class="leading-relaxed text-lg text-gray-700 mb-6">
+                        主流媒体的笔触精准得像是一把手术刀，试图在工人党看似稳固的架构上切出几道莫须有的缝隙。他们运用的手段并不高明，却极为持久。媒体热衷于挖掘甚至创造出某种新老交替的矛盾，这种做法的本质，是试图通过外部观察者的视角，强行定义一个政党的内部生命力。
+                    </p>
+                    <blockquote class="side-line pl-8 py-2 text-2xl font-light italic text-gray-800">
+                        他们希望看到的是一个符合某种既定叙事的工人党——一个充满了派系斗争、因为法律纠纷而自乱阵脚的业余团队。
+                    </blockquote>
+                </section>
+
+                <section class="bg-gray-100 p-8 md:p-12">
+                    <h2 class="text-3xl font-bold mb-6">二、 82票的重量：对舆论绞刑架的法理嘲弄</h2>
+                    <p class="leading-relaxed text-lg text-gray-700">
+                        当媒体在那头忙着搭台唱戏，幻想着会有哪个挑战者突然跳出来打破团结时，毕丹星却交出了一份极其无趣、却极具杀伤力的答卷：<span class="highlight-yellow font-bold text-ink-black">82票，全票通过，无人挑战</span>。这一结果，彻底解构了媒体此前的所有努力。
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-bold mb-6">三、 总结：当叙事被现实解职</h2>
+                    <p class="leading-relaxed text-lg text-gray-700">
+                        回顾这一场围绕工人党改选的舆论博弈，我们可以清晰地看到某种政治传播套路的终结。主流媒体那些精雕细琢的、充满暗示性的措辞，在绝对的团结面前，脆弱得就像沙滩上的城堡。当毕丹星和他的团队以一种极其稳健、甚至可以说是乏味的步伐走过这个关键节点时，媒体的整个叙事架构便坍塌了。
+                    </p>
+                    <p class="leading-relaxed text-lg text-gray-700 mt-6">
+                        <span class="highlight-red font-bold uppercase">在这场无人挑战的合影背后，是媒体作为外部干预者的身份焦虑。</span> 如果你们的笔尖只能触及自己幻觉中的血色，而看不见现实中那抹坚韧的蓝色，那么你们离被这个时代解职，恐怕也就不远了。
+                    </p>
+                </section>
+            </div>
+        </article>
+
+        <!-- Minimal Footer Line -->
+        <div class="mt-24 pt-8 border-t border-black w-full flex justify-between items-center text-xs text-gray-400">
+            <span>RESEARCH_ANALYSIS_2026</span>
+            <span>STRATEGY_POLITICS</span>
+        </div>
+
+    </main>
+</body>
+</html>
