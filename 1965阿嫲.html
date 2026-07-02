@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雕塑波普艺术研究博客</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pop: '#FF00FF',
+                        electric: '#7000FF',
+                        acid: '#CCFF00',
+                        cyan: '#00FFFF'
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Noto Sans SC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0F0F0F; color: #FFFFFF; }
+        .bento-card { border: 4px solid #000; transition: transform 0.3s ease; }
+        .bento-card:hover { transform: translateY(-5px); }
+        .bubble-shadow { box-shadow: 8px 8px 0px #000; }
+        .text-outline { -webkit-text-stroke: 1px #000; }
+    </style>
+</head>
+<body class="font-body p-4 md:p-8">
+
+    <!-- Header Section -->
+    <header class="max-w-6xl mx-auto mb-16">
+        <div class="relative w-full aspect-[21/9] overflow-hidden bento-card bubble-shadow bg-electric">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <!-- Media Render -->
+                <img src='https://opal.google/board/blobs/94b7c650-b9d3-4ed7-8ceb-251f5503e154' alt='雕塑波普拼贴' class="w-full h-full object-cover mix-blend-multiply" />
+            </div>
+            <div class="absolute bottom-4 left-4 bg-acid text-black p-4 font-black text-2xl md:text-5xl uppercase tracking-tighter">
+                超现实研究: 政策的波普伪装
+            </div>
+        </div>
+
+        <!-- Meta -->
+        <div class="mt-8 flex gap-4">
+            <div class="bg-pop text-white px-6 py-2 font-bold rotate-[-1deg] border-2 border-white">发布日期：2026-06-30</div>
+            <div class="bg-cyan text-black px-6 py-2 font-bold rotate-[1deg] border-2 border-black">研究员：系统观察者</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto space-y-12">
+        
+        <article class="bg-white text-black p-8 md:p-12 bento-card">
+            <h1 class="font-display font-black text-4xl md:text-6xl mb-8 leading-tight uppercase">
+                150场潮州话的“胜利”：当方言成了艺术，政策就永远不会输
+            </h1>
+
+            <p class="text-lg md:text-xl leading-relaxed mb-8">
+                在新加坡，有些事情的发展逻辑，比电影情节还要精彩。最近一则关于150场潮州话放映的消息，在我们的文化圈子里投下了一枚不大不小的深水炸弹。这哪里是方言的逆袭？这分明是“讲华语运动”在四十年后演化出的最高境界。
+            </p>
+
+            <!-- Section 1 -->
+            <div class="grid md:grid-cols-12 gap-8 my-12 items-start">
+                <div class="md:col-span-1 text-6xl font-black text-pop">01</div>
+                <div class="md:col-span-11">
+                    <h2 class="text-3xl font-display font-bold uppercase mb-4 border-l-8 border-acid pl-4">艺术的归艺术，政策的归面子</h2>
+                    <p>只要把这些潮州话内容锁在“非商业/传统艺术”的定义柜子里，它们就不再是对官方语言政策的挑战，而是成了博物馆里的精美展品。</p>
+                </div>
+            </div>
+
+            <!-- Quote Box -->
+            <div class="bg-electric text-white p-8 mb-12 relative bubble-shadow border-2 border-black">
+                <div class="absolute -top-4 left-8 w-8 h-8 bg-electric rotate-45 border-t-2 border-l-2 border-black"></div>
+                <p class="text-2xl font-bold italic leading-relaxed">
+                    “如果某种语言的流通需要通过150场放映来‘证明’其合法性，那恰恰说明这门语言在主流生活中早已被宣判了死刑。”
+                </p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="space-y-6">
+                <h2 class="text-3xl font-display font-bold uppercase mb-4">二、 数量的幻觉：用繁荣掩盖失效</h2>
+                <p>这种“超预期”的放映场数，恰恰是用来掩饰政策空洞的绝佳掩体。管理层没有选择硬堵，而是选择了“招安”。他们可以摊开双手说：“瞧，我们并没有限制方言，我们甚至支持了150场放映！”</p>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="mt-12 bg-gray-100 p-8 bento-card">
+                <h2 class="text-3xl font-display font-bold uppercase mb-6 text-electric">三、 权力的偏见：渠道隔离统治术</h2>
+                <ul class="space-y-4 list-none">
+                    <li class="flex gap-4"><span class="text-pop font-bold">●</span>当你走进电影院去听潮州话时，你不是在生活，你是在“参与艺术活动”。</li>
+                    <li class="flex gap-4"><span class="text-pop font-bold">●</span>身份的转换，无形中剥夺了方言作为一种生存工具的尊严。</li>
+                    <li class="flex gap-4"><span class="text-pop font-bold">●</span>管理层只需掌控“艺术”的定义权，便能稳握方言的生死节奏。</li>
+                </ul>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="mt-16 p-8 border-t-4 border-black">
+                <h3 class="font-display font-black text-2xl uppercase mb-4">结论：程序正义掩盖下的文化真空</h3>
+                <p class="leading-relaxed">
+                    这场关于潮州话放映的行政秀，最终只会沦为历史的一段注脚。它证明了权力的自傲，也证明了权力的虚弱。150场放映结束了，观众散去，而那个被称为“讲华语运动”的庞然大物依然在蹒跚前行，假装自己从未迷失过方向。这种幽默感，确实非常新加坡。
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-5xl mx-auto mt-16 py-8 border-t border-white/20 text-center">
+        <div class="inline-block p-4 border-2 border-dashed border-white uppercase text-xs font-bold tracking-widest">
+            行政逻辑存档: 文化博弈观测站
+        </div>
+    </footer>
+
+</body>
+</html>
