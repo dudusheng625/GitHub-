@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新加坡：顶级昂贵的修罗场</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fashion-pink': '#F4EAE6',
+                        'deep-charcoal': '#2D2D2D',
+                        'paper-white': '#FFFFFF',
+                    },
+                    fontFamily: {
+                        'serif-display': ['Georgia', 'Times New Roman', 'serif'],
+                        'body-sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'handwriting': ['cursive', 'Dancing Script', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F4EAE6; color: #2D2D2D; }
+        .crop-marks::before, .crop-marks::after {
+            content: "";
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #999;
+            pointer-events: none;
+        }
+        .crop-tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+        .crop-tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+        .crop-bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+        .crop-br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+        
+        .bento-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease;
+        }
+        .bento-card:hover { transform: scale(1.01); }
+        
+        @media (max-width: 768px) {
+            .side-bar { display: none; }
+        }
+    </style>
+</head>
+<body class="font-body-sans p-8 md:p-16 crop-marks">
+    <div class="crop-tl absolute"></div>
+    <div class="crop-tr absolute"></div>
+    <div class="crop-bl absolute"></div>
+    <div class="crop-br absolute"></div>
+
+    <!-- Header Section -->
+    <header class="flex flex-col items-center mb-24 relative">
+        <div class="absolute top-0 left-0 p-4 border border-deep-charcoal italic font-handwriting rotate-[-5deg]">
+            发布日期：2026-07-09
+        </div>
+        
+        <div class="w-full max-w-2xl overflow-hidden shadow-2xl mb-8">
+            <img src='https://opal.google/board/blobs/c09c80c3-93a1-4180-a1fd-569d360fa9b4' alt='Header Visual' class="w-full h-auto object-cover grayscale-[20%]" />
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-serif-display text-center leading-tight tracking-tight text-deep-charcoal">
+            第一名的紧箍咒：当新加坡成为富人的“修罗场”，凡人该如何谢幕？
+        </h1>
+    </header>
+
+    <div class="flex gap-12 max-w-6xl mx-auto">
+        <!-- Main Content -->
+        <main class="flex-1 space-y-16">
+            <article class="prose prose-lg prose-slate max-w-none">
+                <p class="text-xl font-light italic border-l-4 border-deep-charcoal pl-6 mb-8">
+                    当全世界最富有的一群人，都开始对着新加坡的账单皱眉头时，这究竟说明了什么？
+                </p>
+                
+                <div class="space-y-12">
+                    <section class="bento-card p-8 border border-white">
+                        <h2 class="text-3xl font-serif-display mb-4">NO.1 豪车的碎钞机</h2>
+                        <p class="text-deep-charcoal leading-relaxed">
+                            在新加坡，拥有一辆高端轿车的成本是全球平均水平的两倍多。那张名为“拥车证”（COE）的废纸，足以在某些国家买下一整栋带花园的别墅。对于富人，这是奢侈税；对于我们，则是断念书。
+                        </p>
+                    </section>
+
+                    <div class="flex justify-center">
+                        <img src='https://opal.google/board/blobs/871bab29-d979-49b2-aa54-8a72144648bf' alt='Life in Singapore' class="w-full max-w-md shadow-lg rotate-1 rounded-sm" />
+                    </div>
+
+                    <section class="bento-card p-8 border border-white">
+                        <h2 class="text-3xl font-serif-display mb-4">NO.2 房地产的幻象</h2>
+                        <p class="text-deep-charcoal leading-relaxed">
+                            当私人公寓的租金和售价被全球资金推向云端，百万组屋已从“稀有新闻”变成了“日常播报”。富人感叹投资回报，我们则在冷气坏掉的组屋里研究转售价。
+                        </p>
+                    </section>
+
+                    <section class="bento-card p-8 border border-white">
+                        <h2 class="text-3xl font-serif-display mb-4">NO.3 “吃”的尊严</h2>
+                        <p class="text-deep-charcoal leading-relaxed">
+                            高端餐厅的红酒加价，只是小贩中心鸡饭从三块五涨到五块的缩影。我们体谅了每一个人，唯独没有人体谅我们的钱包。
+                        </p>
+                    </section>
+                </div>
+            </article>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="side-bar w-64 shrink-0">
+            <div class="sticky top-20 bg-white p-8 border-l-4 border-deep-charcoal shadow-sm h-fit">
+                <h3 class="font-serif-display text-lg uppercase tracking-widest mb-6">编辑手记</h3>
+                <p class="text-sm italic text-gray-600 mb-6 font-handwriting">
+                    "外溢式贫困"：即便你的收入在增长，也永远赶不上由于全球财富涌入而导致的成本激增。
+                </p>
+                <div class="h-px w-full bg-deep-charcoal my-6"></div>
+                <p class="text-xs text-gray-500 uppercase tracking-tighter">
+                    本专题旨在探讨高净值资金流入对本地普通市民生活的渗透与挤压。
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-32 pt-8 border-t border-deep-charcoal/30 text-center">
+        <p class="text-sm font-light text-deep-charcoal/70 tracking-[0.2em]">
+            — 观察者手记 · 在金色的牢笼里寻找答案 —
+        </p>
+        <div class="mt-4 flex justify-center gap-4">
+            <div class="w-2 h-2 rounded-full bg-deep-charcoal"></div>
+            <div class="w-2 h-2 rounded-full bg-deep-charcoal"></div>
+            <div class="w-2 h-2 rounded-full bg-deep-charcoal"></div>
+        </div>
+    </footer>
+</body>
+</html>
