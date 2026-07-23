@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究博客 | 一场由规则制定者导演的‘双重奏’</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fashion: {
+                            bg: '#fdf4f4',
+                            text: '#2d2d2d',
+                            accent: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif SC"', 'Georgia', 'serif'],
+                        sans: ['"Inter"', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        
+        body {
+            background-color: #f8f1f1;
+            color: #2d2d2d;
+        }
+
+        .crop-mark {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-style: solid;
+            border-color: #d1d5db;
+        }
+
+        .l-top-left { top: 20px; left: 20px; border-width: 1px 0 0 1px; }
+        .l-top-right { top: 20px; right: 20px; border-width: 1px 1px 0 0; }
+        .l-bottom-left { bottom: 20px; left: 20px; border-width: 0 0 1px 1px; }
+        .l-bottom-right { bottom: 20px; right: 20px; border-width: 0 1px 1px 0; }
+
+        .hand-drawn-bubble {
+            border: 1px solid #94a3b8;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .hand-drawn-bubble:hover {
+            transform: rotate(-1deg) scale(1.02);
+        }
+
+        .content-section {
+            border-left: 1px solid #d1d5db;
+            padding-left: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .vertical-text-box {
+            writing-mode: vertical-rl;
+            letter-spacing: 0.2rem;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-rose-200 selection:text-black p-4 md:p-12 relative min-h-screen">
+
+    <!-- Crop Marks -->
+    <div class="crop-mark l-top-left"></div>
+    <div class="crop-mark l-top-right"></div>
+    <div class="crop-mark l-bottom-left"></div>
+    <div class="crop-mark l-bottom-right"></div>
+
+    <main class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <header class="relative flex flex-col items-center mb-20 mt-10">
+            <div class="absolute left-0 top-0 hidden md:block">
+                <div class="hand-drawn-bubble rotate-[-5deg] bg-white text-xs p-4">
+                    发布日期：2026-07-23
+                </div>
+            </div>
+
+            <div class="relative w-full max-w-lg mx-auto grayscale-[20%] hover:grayscale-0 transition-all duration-700 ease-in-out">
+                <img src='https://opal.google/board/blobs/39ffa0b8-cd8a-47ef-9271-7eb3d9fa0da8' alt='media_2' class="w-full h-auto object-cover rounded-lg shadow-2xl">
+            </div>
+
+            <h1 class="font-serif text-3xl md:text-5xl mt-12 text-center leading-tight">
+                有人漏夜赴冷战<br>有人高唱《甜蜜蜜》
+            </h1>
+            <p class="mt-4 italic text-slate-500">一场由规则制定者导演的‘双重奏’</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- Main Content -->
+            <article class="md:col-span-9 space-y-12">
+                <section class="content-section">
+                    <h2 class="font-serif text-2xl font-bold mb-6">前言：地缘政治的“卡拉OK”与冰封的现实</h2>
+                    <p class="leading-relaxed text-lg text-slate-700">在这个即便连天气预报都充满了博弈色彩的2026年，国际政坛的舞台美术显然已经进化到了一个荒诞的新高度。如果你只看新闻头条，你会觉得世界正坐在一辆没有刹车的重型卡车上。</p>
+                </section>
+
+                <section class="content-section">
+                    <h3 class="font-serif text-xl mb-4">NO.1 “老歌外交”的演技：为什么是《甜蜜蜜》？</h3>
+                    <div class="hand-drawn-bubble bg-white">
+                        <p>这不仅仅是外交礼仪，而是一场精心导演的“双重奏”。它残酷地揭示了一个事实：当全世界的普通民众正在为断裂的供应链和飞涨的物价买单时，站在权力金字塔顶端的那一拨人，正通过这种极具表演性质的“老歌外交”，完成利益勾兑。</p>
+                    </div>
+                </section>
+
+                <section class="content-section">
+                    <h3 class="font-serif text-xl mb-4">NO.2 漏夜赴冷战：被“规则”撕裂的底层世界</h3>
+                    <p class="leading-relaxed">那些整天高喊“基于规则的国际秩序”的大佬们，其实是玩双标的高手。所谓的“冷战叙事”，本质上是规则制定者为了防止自身霸权流失而人为制造的恐慌。</p>
+                </section>
+
+                <section class="content-section">
+                    <h3 class="font-serif text-xl mb-4">NO.3 小国的生存美学：在裂缝中“起舞”</h3>
+                    <img src='https://opal.google/board/blobs/4bd8d637-4a30-4e50-a48a-746c4c4fbd26' alt='media_1' class="w-full h-64 object-cover rounded shadow-lg my-6">
+                    <p class="leading-relaxed">泰国这次的表演给所有的中小国家上了一课。这种生存美学，概括起来就是：不选边，只选利；不谈主义，只谈生意。</p>
+                </section>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="md:col-span-3">
+                <div class="bg-white p-6 shadow-sm sticky top-12 border-l-4 border-rose-200">
+                    <div class="vertical-text-box font-serif text-lg text-slate-800">
+                        利益润滑剂
+                    </div>
+                    <div class="mt-8 text-sm text-slate-500">
+                        “当大国开始变得偏执和疯狂，小国必须保持清醒和幽默。”
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Minimal Footer -->
+        <footer class="mt-24 pt-8 border-t border-slate-300 text-center">
+            <div class="flex justify-center space-x-4 mb-4">
+                <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+            </div>
+            <p class="text-xs text-slate-400 uppercase tracking-widest">In-depth Editorial Research</p>
+        </footer>
+    </main>
+</body>
+</html>
