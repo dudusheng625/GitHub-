@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究博客：现代外交的荒诞剧</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'arch-white': '#FFFFFF',
+                        'arch-light-grey': '#E9E9E9',
+                        'arch-black': '#000000',
+                        'arch-dark-grey': '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; }
+        .sharp-border-l { border-left: 4px solid #000000; }
+        .thin-line { border-top: 1px solid #000000; }
+        .vertical-line { border-left: 1px solid #000000; }
+        .hover-effect:hover { opacity: 0.6; transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-arch-white text-arch-dark-grey antialiased selection:bg-arch-black selection:text-white">
+
+    <!-- Header Section -->
+    <header class="h-screen flex flex-col justify-end p-12 md:p-24 relative">
+        <div class="absolute inset-0 z-0">
+            <img src='https://opal.google/board/blobs/2506df99-b8f7-44d0-91ab-ffcac13d3ba1' alt='media_2' class="w-full h-full object-cover grayscale opacity-60">
+        </div>
+        <div class="relative z-10 max-w-4xl">
+            <span class="text-arch-black font-bold tracking-[0.2em] uppercase text-sm">01. 核心引言</span>
+            <h1 class="text-5xl md:text-8xl font-black text-arch-black mt-6 leading-tight">
+                《拿着 Excel 算盘去应对劫匪，是现代外交的最大幽默》
+            </h1>
+            <div class="mt-8 flex items-center space-x-6 border-t border-arch-black pt-6">
+                <span class="text-sm tracking-widest text-arch-black font-bold uppercase">发布日期</span>
+                <span class="text-sm text-arch-dark-grey">2026-07-25</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto p-12 md:p-24">
+        
+        <!-- Bento Grid Layout -->
+        <div class="bento-grid">
+            <!-- Left Side Narrative -->
+            <article class="col-span-12 lg:col-span-8 space-y-12">
+                <section>
+                    <h2 class="text-3xl font-bold text-arch-black mb-6">导言：当文明遇上撬棍</h2>
+                    <p class="leading-relaxed text-lg text-arch-dark-grey tracking-wide">
+                        在文明的演进史上，我们曾天真地以为，人类社会的终极形态是一场永不落幕的董事会会议。我们相信“数据会说话”，相信“互惠互利”是跨国交往的公理。然而，面对美方那如期而至、不讲武德的关税大棒，维文医生依然保持着一名资深眼科医生特有的冷静与严谨，试图用贸易顺差的数据，去劝说一个正处于更年期躁郁症且手持板砖的巨兽。
+                    </p>
+                </section>
+
+                <div class="sharp-border-l pl-8 py-2">
+                    <p class="italic text-xl text-arch-black">“这种场景产生了一种极其诡异的幽默感：一个文明人在巷战中遇到了抢劫，他没有报警，而是掏出了一份家庭收支明细表，试图向劫匪证明抢他是不符合边际效用递减规律的。”</p>
+                </div>
+            </article>
+
+            <!-- Data Highlight -->
+            <aside class="col-span-12 lg:col-span-4 vertical-line pl-8">
+                <div class="mb-12">
+                    <h3 class="text-xs font-bold uppercase tracking-widest mb-4">逻辑失效指数</h3>
+                    <div class="text-8xl font-black text-arch-black">98.2%</div>
+                </div>
+                <img src='https://opal.google/board/blobs/4824e4e7-16e9-44bd-80a9-830db1f3d08e' alt='media_1' class="w-full grayscale hover-effect">
+            </aside>
+        </div>
+
+        <!-- Problem vs Solution -->
+        <div class="mt-24 pt-24 border-t border-arch-black">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="pr-12">
+                    <h3 class="text-2xl font-black text-arch-black mb-6">问题：制度性执念</h3>
+                    <p class="text-arch-dark-grey">我们害怕承认那个残酷的事实：国际秩序正在从“合同法”回归到“自然法”。在合同法时代，Excel 是神像；在自然法时代，它只是引火用的废纸。</p>
+                </div>
+                <div class="pl-12 border-l border-arch-black">
+                    <h3 class="text-2xl font-black text-arch-black mb-6">方案：认知重构</h3>
+                    <p class="text-arch-dark-grey">我们需要意识到，当逻辑在强权面前集体失灵，所有的证明都是对智商的一种自我践踏。收好你的 Excel，在没有伞的情况下，学会如何不再试图向暴雨讲理。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Full text content flow -->
+        <div class="mt-24 space-y-12 max-w-4xl">
+            <h2 class="text-4xl font-black text-arch-black">深度剖析：为何“理性”成了负资产？</h2>
+            <p class="leading-relaxed text-arch-dark-grey">在当前的国际政治语境下，理性反而成了一种负资产。首先，理性限制了想象力。一个理性的外交官无法想象一个超级大国会为了短期的政治选票而长期破坏全球供应体系。其次，理性消解了威慑力。当你试图用逻辑去说服对手时，你实际上是在向对方摊牌——你是一个文明人，你不会掀桌子。</p>
+            <p class="leading-relaxed text-arch-dark-grey">新加坡的处境，正是全球中小型经济体的缩影。我们曾经以为，通过成为“模范生”，就能获得老师的青睐。现在我们发现，那个曾经制定校规的老师，现在正带着校霸在操场上收保护费。</p>
+        </div>
+
+    </main>
+
+    <!-- Minimalist Separator -->
+    <div class="max-w-7xl mx-auto px-12 pb-24">
+        <div class="thin-line w-full"></div>
+        <p class="mt-8 text-xs text-arch-black font-bold uppercase tracking-[0.2em]">End of Analysis</p>
+    </div>
+
+</body>
+</html>
