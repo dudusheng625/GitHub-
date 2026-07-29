@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白嫖：防御性勋章与社会心理学研究</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fashionPink: '#F4EAE6',
+                        charcoal: '#2D2D2D',
+                        offWhite: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        display: ['Georgia', 'serif'],
+                        body: ['ui-sans-serif', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400&display=swap');
+        body { font-family: 'Noto Sans SC', sans-serif; background-color: #F4EAE6; color: #2D2D2D; }
+        h1, h2, h3 { font-family: 'Noto Serif SC', serif; }
+        .crop-mark { position: absolute; width: 20px; height: 20px; border-color: #2D2D2D; }
+        .hover-paper { transition: transform 0.3s ease, border-color 0.3s ease; }
+        .hover-paper:hover { transform: translateY(-2px); border-color: #000; }
+        .vertical-text { writing-mode: vertical-rl; text-orientation: mixed; }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8 relative overflow-x-hidden">
+
+    <!-- Crop Marks -->
+    <div class="crop-mark top-4 left-4 border-t-2 border-l-2"></div>
+    <div class="crop-mark top-4 right-4 border-t-2 border-r-2"></div>
+    <div class="crop-mark bottom-4 left-4 border-b-2 border-l-2"></div>
+    <div class="crop-mark bottom-4 right-4 border-b-2 border-r-2"></div>
+
+    <main class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="text-center py-12 relative">
+            <div class="flex flex-col items-center">
+                <div class="w-64 h-64 overflow-hidden rounded-full border-4 border-white shadow-xl mb-8 flex items-center justify-center bg-white">
+                    <img src='https://opal.google/board/blobs/f5c0d3d7-4bb4-4642-86b9-190b48af2525' alt='media_1' class="w-full h-full object-cover" />
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold italic tracking-tight mb-4">道德遮羞布与免费午餐</h1>
+                <p class="text-lg text-gray-600 font-light">论“白嫖”如何从互联网耻辱柱变身为防御性勋章</p>
+            </div>
+            
+            <!-- Metadata Bubbles -->
+            <div class="absolute top-10 left-0 hidden lg:block p-4 border border-charcoal rotate-[-5deg] rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] bg-white/50 text-sm">
+                发布日期：2026-07-28
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mt-12">
+            
+            <!-- Main Article -->
+            <article class="md:col-span-9 space-y-12">
+                <section class="hover-paper p-8 bg-white shadow-sm border border-transparent">
+                    <h2 class="text-2xl font-bold mb-6 border-b border-charcoal pb-2">NO.1 语义的流变：从道德污名到社交符号</h2>
+                    <p class="leading-relaxed">在当下互联网语境中，如果你想不掏一个子儿就消费内容，那你多半会被贴上“白嫖”的标签。然而，风向在短短几年内转了个一百八十度的大弯。如今的社交平台上，大家不仅不再避讳这个词，反而争先恐后地往自己头上扣这顶帽子。甚至有人在评论区理直气壮地留言：“只要我先承认我是白嫖怪，资本的道德枷锁就追不上我。”</p>
+                </section>
+
+                <section class="hover-paper p-8 bg-white shadow-sm border border-transparent">
+                    <h2 class="text-2xl font-bold mb-6 border-b border-charcoal pb-2">NO.2 预先自我矮化：消费心理中的防御战</h2>
+                    <p class="leading-relaxed">当下的商业逻辑里，充满了各种精巧的道德陷阱。通过主动承认自己“不脸红”的无耻，用户在心理上完成了一次精准的隔离。这是一种非常聪明的修辞策略：通过泛化和自嘲，将一个本来具有杀伤力的贬义词，消解成了一个中性的、甚至带点幽默感的社交符号。你骂我白嫖？没错，我就是。我都承认我是“白嫖党”了，你总不好意思再跟我谈什么“内容创作者的眼泪”了吧？</p>
+                </section>
+
+                <section class="hover-paper p-8 bg-white shadow-sm border border-transparent">
+                    <h2 class="text-2xl font-bold mb-6 border-b border-charcoal pb-2">NO.3 资本的围猎与心理反弹</h2>
+                    <p class="leading-relaxed">在一个内容被算法切成碎片、注意力被高度货币化的时代，用户其实早已在不知不觉中支付了高昂的代价。所谓的“道德绑架”，往往建立在一种信息不对等和权力不对等的基础上。平台拥有制定规则的权力，它可以随时修改会员协议。这种“看似不脸红”的防御机制，实际上是普通人在面对庞大商业机器时的最后一点自保。</p>
+                </section>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="md:col-span-3 hidden md:flex flex-col gap-4">
+                <div class="bg-white p-6 border-l-4 border-charcoal shadow-md">
+                    <h3 class="vertical-text text-xl font-bold tracking-widest text-charcoal h-64">深度研究：当代社交生存指南</h3>
+                </div>
+                <div class="bg-charcoal text-fashionPink p-6">
+                    <p class="text-sm font-light italic">“与其在一个被精心包装的消费主义牢笼里装模作样地优雅，不如撕掉那层伪装，大大方方地承认：我就是想不花钱。”</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Minimalist Footer -->
+        <footer class="mt-20 pt-8 border-t border-charcoal flex justify-center items-center gap-4">
+            <span class="w-2 h-2 rounded-full bg-charcoal"></span>
+            <span class="text-xs uppercase tracking-widest text-charcoal">RESEARCH · 2026</span>
+            <span class="w-2 h-2 rounded-full bg-charcoal"></span>
+        </footer>
+    </main>
+</body>
+</html>
