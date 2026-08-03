@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你以为倒积水就够了？为什么“越精致的家，越容易养出黑斑蚊”</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700&family=Outfit:wght@200;400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#0A0F1D',
+                        asphalt: '#121620',
+                        misty: '#E2E8F0',
+                        cobalt: '#1D4ED8',
+                        cyan: '#0891B2',
+                        amber: '#B45309',
+                        slate: '#475569'
+                    },
+                    fontFamily: {
+                        display: ['"Noto Serif SC"', 'serif'],
+                        body: ['"Outfit"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0A0F1D; color: #E2E8F0; }
+        .graffiti-text { text-shadow: 0 0 20px rgba(29, 78, 216, 0.5); }
+        .drip-line { 
+            position: relative;
+            background: linear-gradient(to bottom, #1D4ED8, transparent);
+            width: 2px;
+            height: 100px;
+            margin: 2rem auto;
+            opacity: 0.3;
+        }
+        .rain-soak { background: rgba(255, 255, 255, 0.03); border-left: 2px solid #475569; }
+        .flicker { animation: breathe 4s ease-in-out infinite; }
+        @keyframes breathe {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 0.4; }
+        }
+        .stencil-h2 { letter-spacing: 0.05em; border-left: 4px solid #0891B2; padding-left: 1rem; }
+    </style>
+</head>
+<body class="font-body selection:bg-cyan selection:text-white">
+
+    <!-- Header Section -->
+    <header class="relative h-screen flex flex-col items-center justify-center overflow-hidden p-6">
+        <div class="absolute inset-0 z-0 opacity-40 grayscale contrast-125">
+            <img src='https://opal.google/board/blobs/bc21306f-a029-4cf2-aa8f-f7f00d4e4a7c' alt='Midnight City' class="w-full h-full object-cover" />
+        </div>
+        <div class="relative z-10 text-center">
+            <h1 class="font-display text-4xl md:text-6xl font-bold graffiti-text text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400 mb-6">
+                你以为倒积水就够了？<br>为什么“越精致的家，越容易养出黑斑蚊”
+            </h1>
+            <p class="text-slate-400 font-mono tracking-widest text-sm uppercase">发布日期：2026-08-01</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-6 py-20">
+        <article class="space-y-12">
+            
+            <section class="text-lg leading-relaxed">
+                <p class="mb-6">各位每天在朋友圈晒“极简风”、“北欧风”或者是“新中式雅居”的精英们，先别忙着给你的绿萝浇水。在你们自我陶醉于那种“一尘不染”的精致生活时，我不得不遗憾地告诉各位：你费尽心机营造的避世港湾，在黑斑蚊（伊蚊）眼里，其实是一座恒温、无天敌、且提供全天候自助餐的五星级希尔顿酒店。</p>
+            </section>
+
+            <div class="drip-line"></div>
+
+            <h2 class="stencil-h2 font-display text-3xl text-cyan-400">一、 精致的悖论：干净水才是它们的“育婴室”</h2>
+            <p>很多人有个认知误区，觉得蚊子是脏乱差的产物。2023年新加坡环境局（NEA）发布的年度监测报告指出，在本地骨痛热症高发区，约有65%的蚊虫滋生点竟然位于住家内部，而非室外建筑工地或下水道。</p>
+
+            <h2 class="stencil-h2 font-display text-3xl text-cyan-400">二、 室内绿植：你以为是氧吧，其实是食堂</h2>
+            <blockquote class="rain-soak p-6 italic border-l-4">
+                "伊蚊的卵具有极强的“抗旱性”。意味着，如果你只是简单地把水倒掉，而没有用力刷洗容器内壁，那些贴在壁上的卵就像是“脱水蔬菜”，只要你再次加水，它们就能在几小时内原地复活。"
+            </blockquote>
+
+            <h2 class="stencil-h2 font-display text-3xl text-cyan-400">三、 现代建筑设计的“隐形温床”</h2>
+            <p>现代装修追求视觉上的“平整”和“隐藏”，但这恰恰为蚊子提供了绝佳的潜伏点。从隐藏式地漏到嵌入式轨道，每一处微小的水膜都可能是它们繁衍的温床。</p>
+
+            <div class="drip-line"></div>
+
+            <h2 class="stencil-h2 font-display text-3xl text-cyan-400">四、 判决书：如何救赎你的“精致”？</h2>
+            <ul class="space-y-4 list-decimal pl-6 text-slate-300">
+                <li><strong>刷洗，而不是倾倒：</strong> 拿个刷子，用力刷洗容器内壁。</li>
+                <li><strong>地漏加碱：</strong> 定期倒入少量稀释的碱水，改变酸碱度。</li>
+                <li><strong>封锁“禅意”：</strong> 如果一定要摆流水盆，请放入食蚊鱼。</li>
+                <li><strong>监测而非盲喷：</strong> 装一个专业的粘网式捕蚊灯。</li>
+            </ul>
+
+            <div class="mt-20 pt-10 border-t border-slate-800">
+                <p class="text-slate-500 font-display text-2xl text-right flicker">—— 你的精致，即是它们的避世天堂。</p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Interactive script for breathing effect -->
+    <script>
+        document.querySelectorAll('h2').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                el.classList.add('text-amber');
+                el.style.transition = 'all 0.5s ease';
+            });
+            el.addEventListener('mouseleave', () => {
+                el.classList.remove('text-amber');
+            });
+        });
+    </script>
+</body>
+</html>
