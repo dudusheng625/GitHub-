@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小贩摊位的二维码警示 - 深度调查研究</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'page-bg': '#f3edea',
+                        'text-dark': '#2d2d2d',
+                        'highlight': '#ffffff',
+                    },
+                    fontFamily: {
+                        'serif': ['"Noto Serif SC"', 'Georgia', 'serif'],
+                        'sans': ['"Inter"', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        
+        body {
+            background-color: #f3edea;
+            color: #2d2d2d;
+            overflow-x: hidden;
+        }
+
+        .crop-mark {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-color: #2d2d2d;
+            z-index: 50;
+        }
+
+        .hover-paper:hover {
+            transform: translateY(-5px) rotate(1deg);
+            transition: all 0.4s ease;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.05);
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        .hand-drawn-bubble {
+            border: 2px solid #2d2d2d;
+            border-radius: 45% 55% 45% 55% / 55% 45% 55% 45%;
+            padding: 2rem;
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-rose-200">
+
+    <!-- Crop Marks -->
+    <div class="crop-mark top-4 left-4 border-t-2 border-l-2"></div>
+    <div class="crop-mark top-4 right-4 border-t-2 border-r-2"></div>
+    <div class="crop-mark bottom-4 left-4 border-b-2 border-l-2"></div>
+    <div class="crop-mark bottom-4 right-4 border-b-2 border-r-2"></div>
+
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        
+        <!-- Header Section -->
+        <header class="relative mb-24 text-center">
+            <div class="absolute left-0 top-10 w-24 hidden md:block">
+                <p class="text-sm italic font-serif">Investigation</p>
+                <div class="h-px bg-black mt-2"></div>
+                <p class="text-xs mt-2">2026-08-07</p>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-serif text-text-dark leading-tight mb-8">
+                小贩摊位的二维码竟敢偷偷换掉？<br>警方 24 小时破案抓人
+            </h1>
+
+            <div class="relative inline-block hover-paper">
+                <img src='https://opal.google/board/blobs/cb2a6f3f-074e-42b3-a1c5-9e84fa32932d' alt='调查现场' class="w-full max-w-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" />
+            </div>
+
+            <div class="absolute right-0 top-20 w-12 hidden md:flex flex-col items-center">
+                <div class="bg-white p-4 shadow-lg border border-gray-200">
+                    <span class="vertical-text text-sm font-semibold tracking-widest text-text-dark">时尚杂志编辑部整理</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Sections -->
+        <article class="space-y-20">
+            
+            <section>
+                <h2 class="text-3xl font-serif mb-8 border-b border-text-dark pb-4 inline-block">《当科技遇到厚脸皮：二维码下的“空手套白狼”》</h2>
+                <div class="prose prose-lg text-text-dark leading-relaxed">
+                    <p class="mb-6">在这个连路边卖纸巾的阿婆都可能掏出一个二维码让你扫码付款的时代，新加坡正以一种近乎偏执的热情拥抱“无现金社会”。我们出门可以不带钱包，可以不带钥匙，但绝对不能不带手机。</p>
+                    
+                    <div class="hand-drawn-bubble my-12">
+                        <p class="text-lg italic font-serif">“熟食中心里，SGQR的红白标识像勋章一样挂满每一个摊位，这本该是效率与现代化的象征。然而，这种信任被两个投机取巧的小毛贼狠狠地扇了一记耳光。”</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 space-y-12">
+                    <div id="no1">
+                        <h3 class="text-xl font-bold mb-4 font-serif">NO.1 瞒天过海的“贴贴乐”</h3>
+                        <p>趁着深夜熟食中心收摊、四下无人之际，带着自己预先打印好的个人收款二维码，像贴小广告一样，悄悄覆盖在小贩原本的收款牌上。这就是现代版的“贴纸游戏”，不需要高深技术，利用的仅仅是人们对数字化信任的盲区。</p>
+                    </div>
+
+                    <div id="no2">
+                        <h3 class="text-xl font-bold mb-4 font-serif">NO.2 24小时的“天网”追击</h3>
+                        <p>如果这两个小贼以为在数字支付的掩护下可以消失得无影无踪，那他们显然低估了新加坡警方的办事效率。通过遍布全岛的“天网”监控系统（PolCam），不到24小时，这两名试图挑战社会底线的嫌犯就被绳之以法。</p>
+                    </div>
+                </div>
+                
+                <aside class="hidden md:block">
+                    <div class="bg-white p-6 shadow-sm border border-gray-100">
+                        <h4 class="font-serif text-sm uppercase tracking-widest mb-4">警示要点</h4>
+                        <ul class="space-y-4 text-xs">
+                            <li>• 开摊前的“摸骨术”</li>
+                            <li>• 升级硬质收款面板</li>
+                            <li>• 开启语音播报功能</li>
+                            <li>• 核对收款方名称</li>
+                        </ul>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="bg-white p-10 border border-gray-200 shadow-xl">
+                <h3 class="text-2xl font-serif mb-6 italic">结语：莫因恶小而纵之</h3>
+                <p class="leading-loose">科技本身没有善恶，它只是一个放大器。在“扫一扫”已经成为肌肉记忆的今天，这起案件是一个及时的警钟。它提醒我们，在享受数字化带来的便利时，别忘了带上最基本的常识和警惕心。守护熟食中心的那份烟火气，不应该只是警方的责任，更是我们每一个爱吃鱼片米粉、爱喝奶茶的新加坡人共同的责任。</p>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Decorative Line -->
+    <div class="max-w-4xl mx-auto px-6 pb-20">
+        <div class="flex items-center gap-4">
+            <div class="h-px bg-text-dark flex-grow"></div>
+            <div class="text-text-dark text-xs italic tracking-widest">DIGITAL SAFETY & COMMUNITY TRUST</div>
+            <div class="h-px bg-text-dark flex-grow"></div>
+        </div>
+    </div>
+
+</body>
+</html>
