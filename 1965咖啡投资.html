@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研讨会极简风研究博客</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#ef4444',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .dynamic-header {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            line-height: 1.1;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+        }
+
+        .content-block {
+            line-height: 1.8;
+            font-size: 1.125rem;
+        }
+
+        .red-line {
+            border-left: 4px solid #ef4444;
+        }
+
+        .hover-red:hover {
+            color: #ef4444;
+            transition: color 0.3s ease;
+        }
+
+        .border-t-subtle {
+            border-top: 1px solid #000000;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <main class="max-w-5xl mx-auto px-6 py-16">
+        <!-- Hero Section -->
+        <header class="mb-20">
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <div class="w-full md:w-2/3">
+                    <h1 class="dynamic-header mb-8">听起来稳赚不赔的<span class="text-brand-red">商业加盟？</span></h1>
+                    <p class="text-xs tracking-[0.2em] uppercase font-bold text-gray-500 mb-6">识破“保本高收益”商业骗局的实操避坑指南</p>
+                    
+                    <div class="flex items-center gap-4 text-xs font-medium">
+                        <span class="bg-black text-white px-3 py-1">2026-08-08</span>
+                        <span class="text-brand-red">● 深度观察</span>
+                        <span class="text-gray-400">| 关联：女商人陷咖啡投资骗局损失40万（联合早报/新明日报）</span>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3">
+                    <img src='https://opal.google/board/blobs/f68e8370-b7e6-4151-9e2f-f008da6ffe06' alt='media_3' class="w-full aspect-[3/4] object-cover border-b-4 border-brand-red" />
+                </div>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <article class="content-block space-y-16">
+            
+            <section class="max-w-3xl">
+                <h2 class="text-4xl font-bold mb-8">前言：四十万新币的“咖啡因”幻觉</h2>
+                <p>在新加坡这个连呼吸都要算税的地方，竟然还有人相信“天上掉下的不是馅饼，而是黄金雨”。近日，一则新闻令人唏嘘：一名本地女商人被名为“Fun Coffee”的投资项目骗走四十万新币。这是骗子的剧本，也是贪欲的镜子。</p>
+            </section>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-t-subtle pt-12">
+                <img src='https://opal.google/board/blobs/f3e0759f-c732-452e-b6f6-5d1ffc4c07a0' alt='media_1' class="w-full h-64 object-cover" />
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold"><span class="text-brand-red mr-2">01</span> 算术题的崩塌</h3>
+                    <p class="text-lg">所有的“保本高收益”骗局，其核心矛盾在于盈利模式。一个卖咖啡的项目，无法在物理世界中产生如此夸张的溢价。</p>
+                </div>
+            </div>
+
+            <section class="red-line pl-8 my-12">
+                <p class="text-gray-600 italic text-xl">“当一个生意人开始用你听不懂的怪词来解释他怎么赚钱时，他多半是想把你的钱变成他的钱。”</p>
+            </section>
+
+            <section>
+                <h3 class="text-3xl font-bold mb-6">02 “高大上”的布景板</h3>
+                <p class="mb-6">骗子们利用了人们对权威的迷信。滨海湾金沙酒店的活动，本质是一场大型沉浸式话剧。</p>
+                <img src='https://opal.google/board/blobs/b31120a4-8ace-4f31-b69e-091fdfd4b38f' alt='media_2' class="w-full aspect-[21/9] object-cover mb-8" />
+            </section>
+
+            <section class="border-t-subtle pt-12 space-y-6">
+                <h3 class="text-3xl font-bold">03 社交圈的背叛</h3>
+                <p>“Fun Coffee”利用熟人信任链，将投资风险包装成社交红利。这是一种极其阴险的庞氏结构，让受害者成为了加害者。</p>
+            </section>
+
+            <section class="bg-gray-50 p-12 border-l-4 border-brand-red">
+                <h3 class="text-3xl font-bold mb-8">04 实操避坑指南</h3>
+                <ul class="space-y-6 list-none">
+                    <li class="flex items-start">
+                        <span class="text-brand-red font-bold mr-4">01</span>
+                        <span><strong>查户口：</strong> 别看发布会规模，去ACRA查注册资本。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-red font-bold mr-4">02</span>
+                        <span><strong>看黑名单：</strong> MAS投资者警惕名单是最后的底线。</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-brand-red font-bold mr-4">03</span>
+                        <span><strong>问基本法：</strong> 如果回报过高，请立刻转身逃跑。</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="pb-24">
+                <h2 class="text-4xl font-bold mb-8 text-brand-red">结语：贪念是骗子最好的催化剂</h2>
+                <p class="text-xl font-light">在这个急功近利的社会，保持清醒比发财更难，也更有价值。下次听到“22%回报”这种鬼话时，请记得先喝一杯五毛钱的普通咖啡醒醒脑。</p>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-5xl mx-auto px-6 pb-12">
+        <div class="border-t-subtle pt-8 text-[10px] uppercase tracking-widest text-gray-500">
+            <p>本博文旨在剖析商业诈骗模式，提升公众防范意识。所有案例均参考自正规媒体报道。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
