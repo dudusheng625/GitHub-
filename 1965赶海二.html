@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流水线安全感 | 论现代人的存在焦虑</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700;900&family=Inter:wght@300;400;600&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#0A0F1D',
+                        asphalt: '#121620',
+                        misty: '#E2E8F0',
+                        cobalt: '#1D4ED8',
+                        cyan: '#0891B2',
+                        amber: '#B45309',
+                        slate: '#475569'
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        hand: ['Zhi Mang Xing', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0A0F1D; color: #E2E8F0; overflow-x: hidden; }
+        .bg-wet-concrete { background: radial-gradient(circle at 50% 0%, #1a202c, #0A0F1D); }
+        .drip-line { height: 120px; width: 2px; background: linear-gradient(to bottom, #1D4ED8, transparent); margin: 0 auto; opacity: 0.4; }
+        .flicker { animation: flicker-animation 4s infinite alternate; }
+        @keyframes flicker-animation { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        .glass { background: rgba(18, 22, 32, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); }
+        .stencil-text { letter-spacing: 0.05em; text-transform: uppercase; }
+        .hover-glow:hover { text-shadow: 0 0 15px rgba(184, 83, 9, 0.5); transition: all 1s ease; }
+    </style>
+</head>
+<body class="font-body selection:bg-cobalt selection:text-white">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[80vh] flex flex-col items-center justify-center p-8 text-center bg-wet-concrete">
+        <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#334155 1px, transparent 1px); background-size: 50px 50px;"></div>
+        
+        <h1 class="font-display text-4xl md:text-7xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-br from-cobalt via-cyan to-misty drop-shadow-[0_0_10px_rgba(29,78,216,0.3)]">
+            《野生的螃蟹是危险品，带发票的才是美食：<br>论现代人的“流水线安全感”》
+        </h1>
+        
+        <div class="mt-8 font-hand text-slate text-xl opacity-80 italic">
+            发布日期：2026-08-11
+        </div>
+
+        <div class="mt-12 w-full max-w-4xl overflow-hidden rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-[2000ms]">
+            <img src='https://opal.google/board/blobs/51d954f4-685d-4cb6-85c5-d7b6a0caefc9' alt='Midnight city harbor' class="w-full h-auto object-cover opacity-90 contrast-125" />
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-6 py-20">
+        
+        <article class="space-y-12">
+            <section>
+                <h2 class="font-display text-3xl font-bold text-cyan mb-6 border-l-4 border-cyan pl-4">一、 发票：现代文明的避邪符咒</h2>
+                <p class="leading-loose text-lg text-misty/90">
+                    在这个连呼吸都要看PM2.5指数的时代，人类对“自然”的恐惧已经演变成了一种病态的迷信。如果你在新加坡的东海岸随手抓到一只肥美的青蟹，你的第一反应大概率不是“加餐”，而是“这玩意儿有毒吧？”但如果这只螃蟹穿上塑料马甲，躺在冷气十足的超市货架上，旁边立着一张打印出来的发票，你不仅会觉得它鲜美无比，甚至愿意为它多付三倍的价格。
+                </p>
+            </section>
+
+            <div class="drip-line"></div>
+
+            <section>
+                <blockquote class="bg-asphalt p-8 rounded-tr-3xl border-l-2 border-amber italic text-slate-300 shadow-xl">
+                    “决定食物能否下肚的不再是生物学上的‘蛋白质’或‘毒素’，而是行政学上的‘公章’与‘凭证’。我们正在进入一个‘流水线安全感’的时代。”
+                </blockquote>
+            </section>
+
+            <section>
+                <h2 class="font-display text-3xl font-bold text-cobalt mb-6">二、 被驯化的味觉与被阉割的胆量</h2>
+                <p class="leading-loose text-lg text-misty/90">
+                    根据 2023年 Fortune Business Insights 发布的研究报告，全球食品追溯市场规模已从2021年的183亿美元增长至2022年的195.4亿美元，并预计到2029年将达到348.2亿美元。消费者并不在乎螃蟹在泥滩里怎么活，他们在乎的是这只螃蟹在变成尸体后的每一秒钟是否都在系统的监控之下。
+                </p>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="glass p-6 rounded-xl hover-glow cursor-pointer transition-all">
+                        <h4 class="font-bold text-amber mb-2">责任转嫁的舒适感</h4>
+                        <p class="text-sm">2021年发表在《Appetite》的研究指出，现代消费者愿意支付平均25%的溢价，以换取“出了事有人负责”的免责声明。</p>
+                    </div>
+                    <div class="glass p-6 rounded-xl hover-glow cursor-pointer transition-all">
+                        <h4 class="font-bold text-amber mb-2">行政印章迷信</h4>
+                        <p class="text-sm">爱德曼信任晴雨表显示，民众对官方监管的依赖在波动中上升了15%。</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="drip-line"></div>
+
+            <section>
+                <h2 class="font-display text-3xl font-bold text-cyan mb-6">三、 支付“合法性税”：新加坡钓鱼佬的魔幻现实</h2>
+                <p class="leading-loose text-lg text-misty/90">
+                    在新加坡，越来越多的钓鱼爱好者在抓到鱼后，会选择前往提供代加工服务的餐厅。即使鱼是你自己从海里拉上来的，你也得花一笔钱（12-30新币/公斤），让它穿过餐厅的后厨，换取一张写着“姜葱蒸鱼”的项目账单。那一笔代加工费，本质上是一份临时购买的“食品安全保险”。
+                </p>
+            </section>
+
+            <section class="bg-asphalt p-10 rounded-2xl border border-slate-800">
+                <h3 class="font-display text-2xl font-bold mb-4 text-misty">认知的闭塞：从“经验主义”到“凭证主义”</h3>
+                <p class="leading-loose text-slate-300">
+                    当人类失去了判断一只螃蟹是否新鲜的能力，而只能通过扫描二维码来确定是否可以食用时，这种安全感是极度脆弱的。只要手续齐全，即便那只螃蟹是在充满微塑料的环境下饲养的，现代人也会吃得心安理得。
+                </p>
+            </section>
+        </article>
+
+        <!-- Footer Signature -->
+        <footer class="mt-24 text-center">
+            <p class="font-hand text-4xl text-slate-600 hover:text-slate-400 transition-colors cursor-default">
+                ~ 只有在冷柜中，螃蟹才拥有历史。
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        // Micro-animation for interactive elements
+        document.querySelectorAll('.hover-glow').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                el.style.borderColor = '#B45309';
+            });
+            el.addEventListener('mouseleave', () => {
+                el.style.borderColor = 'rgba(255,255,255,0.05)';
+            });
+        });
+    </script>
+</body>
+</html>
