@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字巴刹：重构湿市场研究</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warmgrey: '#E0E0D0',
+                        charcoal: '#333333',
+                        fluorescent: '#DFFF00',
+                    },
+                    fontFamily: {
+                        display: ['"Noto Serif SC"', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                        mono: ['"Courier New"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #E0E0D0; color: #333333; }
+        .grid-bg {
+            background-image: linear-gradient(#333333 0.5px, transparent 0.5px), linear-gradient(90deg, #333333 0.5px, transparent 0.5px);
+            background-size: 40px 40px;
+        }
+        .clip-shape { clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); }
+        .clip-triangle { clip-path: polygon(0 0, 100% 0, 50% 100%); }
+        .border-fine { border: 0.5px solid #333333; }
+        .marker-line { border-bottom: 2px solid #DFFF00; }
+    </style>
+</head>
+<body class="grid-bg font-body p-4 md:p-8">
+
+    <main class="max-w-6xl mx-auto space-y-12">
+        <!-- Hero Section -->
+        <header class="border-fine p-6 bg-white/50 backdrop-blur">
+            <div class="flex justify-between items-start mb-6">
+                <div class="space-y-2">
+                    <span class="bg-charcoal text-fluorescent px-2 py-1 text-[10px] font-mono tracking-widest uppercase">Research File: #2026-08-14</span>
+                    <h1 class="text-4xl md:text-6xl font-display font-bold leading-tight">不上巴刹也能买到新鲜鱼？年轻人把湿巴刹搬上网，为什么熟客更买账</h1>
+                </div>
+                <div class="hidden md:block text-right">
+                    <p class="font-mono text-sm text-charcoal/70">DATE</p>
+                    <p class="font-mono text-xl">2026-08-14</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="clip-shape bg-charcoal overflow-hidden h-64 md:h-96">
+                    <img src='https://opal.google/board/blobs/d9e53322-25cf-4f14-82b4-ad333cb3dbb6' alt='media_1' class="w-full h-full object-cover opacity-80" />
+                </div>
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-display border-l-4 border-fluorescent pl-4">核心逻辑阐释</h2>
+                    <p class="text-base leading-relaxed">大家都以为买鱼必须亲自去巴刹挑挑拣拣才有温度，搬到网上就冷冰冰了。标题故意抛出这种反差，讲述年轻鱼贩如何用直播和贴心处理把“巴刹人情味”延续到网上，打破传统买菜观念。</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Radar Chart & Intro -->
+        <section class="grid md:grid-cols-3 gap-6">
+            <div class="md:col-span-1 border-fine p-6 bg-white/30">
+                <h3 class="font-mono text-sm uppercase mb-6 tracking-tighter">感知模型：买菜维度分析</h3>
+                <svg viewBox="0 0 200 200" class="w-full">
+                    <polygon points="100,20 180,150 20,150" fill="none" stroke="#333" stroke-width="0.5"/>
+                    <polygon points="100,50 150,135 50,135" fill="#DFFF00" fill-opacity="0.7" stroke="#333" stroke-width="2"/>
+                    <text x="90" y="15" font-size="10" font-family="monospace">新鲜度</text>
+                    <text x="185" y="155" font-size="10" font-family="monospace">价格</text>
+                    <text x="0" y="155" font-size="10" font-family="monospace">人情味</text>
+                </svg>
+            </div>
+            <div class="md:col-span-2 border-fine p-6 bg-charcoal text-warmgrey">
+                <img src='https://opal.google/board/blobs/7e797b12-ea39-4132-ab57-aee456a30f24' alt='media_2' class="w-full h-48 object-cover mb-4 clip-shape" />
+                <h3 class="text-2xl font-display mb-4">隔着屏幕也能嗅到腥味？当湿巴刹的人情味变成了一种“数字玄学”</h3>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <article class="space-y-8 bg-white/60 p-8 border-fine">
+            <div class="prose prose-lg max-w-none text-charcoal">
+                <h4 class="font-mono text-xs uppercase tracking-widest text-charcoal/60 mb-2">【前言：谁还记得那双湿漉漉的长筒雨靴？】</h4>
+                <p>在新加坡，如果你想考验一个年轻人对“生活”的认知深度，别问他大选投给谁，也别问他公积金（CPF）攒了多少，直接带他去早晨六点的湿巴刹。在那片地板永远湿滑、空气中弥漫着血腥味与香料味的方寸之地，才是检验生存能力的终极考场。</p>
+                
+                <hr class="border-charcoal border-dashed my-8"/>
+
+                <h4 class="font-mono text-xl font-bold border-b-2 border-fluorescent inline-block">第一章：鱼贩三代的华丽转身</h4>
+                <p>最近，《联合早报》和《新明日报》都在报道一位叫郭慧婷的第三代鱼贩。这位37岁的女性，放着体面的销售工作不干，跑回去继承祖业。如果是在几十年前，家里老一辈可能会觉得这孩子“没出息”；但在2026年的今天，这被包装成了一个“传统行业转型升级”的励志典型。</p>
+                
+                <h4 class="font-mono text-xl font-bold border-b-2 border-fluorescent inline-block">第二章：直播间里的演技大赏</h4>
+                <p>在传统的湿巴刹，人情味是具体的：是鱼贩知道你婆婆最近牙口不好，特意帮你选了一块最嫩的午鱼。而线上的人情味，则更像是一场精心排练的独角戏。直播间里的郭小姐，需要耐心地解释鱼的产地、重量、处理方式。</p>
+
+                <h4 class="font-mono text-xl font-bold border-b-2 border-fluorescent inline-block">第三章：儿童鲜鱼包——救命稻草</h4>
+                <p>作为一名阅人无数的社会观察者，我从这个小小的真空袋里，读出了新加坡中产阶级最深沉的悲哀。曾几何时，处理一条鱼是必备技能，现在却成了育儿焦虑的收割机。</p>
+
+                <h4 class="font-mono text-xl font-bold border-b-2 border-fluorescent inline-block">第四章：感官权力的让渡</h4>
+                <p>判断鱼新不新鲜，我们有自己的一套“土办法”。但在直播间，你把判断“新鲜”的权力，彻底交给了对方。这种转场，实际上是在消耗祖辈积累下来的“信誉红利”。</p>
+                
+                <div class="p-6 bg-fluorescent/20 border-l-4 border-fluorescent mt-8">
+                    <p class="font-display italic text-xl">“我们正在进入一个‘精致利己主义’的消费时代。我们既想要巴刹的实惠和人情，又想要超市的干净和便捷。”</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Closing/Signature -->
+        <section class="grid md:grid-cols-2 gap-8 border-fine p-8 bg-charcoal text-fluorescent font-mono">
+            <div>
+                <h4 class="text-2xl font-bold uppercase mb-4">结语：那一抹挥之不去的鱼腥味</h4>
+                <p>就这样吧。我要下楼去巴刹转转了。即便不买鱼，我也想去踩踩那滩积水，听听那几声最地道的、不带任何营销目的的骂娘。那才是新加坡，那才是生活。</p>
+            </div>
+            <div class="flex items-center justify-end">
+                <div class="w-24 h-24 bg-fluorescent clip-triangle"></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
