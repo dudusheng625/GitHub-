@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>从一箱大白兔奶糖到一台赛道机车：三代侨批里的“地位更迭史”</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        calmBlue: '#60a5fa',
+                        inkBlack: '#1e293b',
+                        paperWhite: '#f8fafc',
+                        subtleGray: '#94a3b8'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Outfit', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; color: #1e293b; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .gradient-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(96, 165, 250, 0.05), transparent),
+                        radial-gradient(circle at 90% 80%, rgba(167, 139, 250, 0.03), transparent);
+            z-index: -1;
+        }
+        .line-arrow { border-left: 1px solid #cbd5e1; position: relative; }
+        .line-arrow::before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 0;
+            width: 8px;
+            height: 8px;
+            background: #60a5fa;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+    <div class="gradient-bg"></div>
+
+    <main class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+        <!-- Header Section -->
+        <header class="mb-24">
+            <div class="flex items-center space-x-2 text-calmBlue mb-6 font-mono text-xs uppercase tracking-widest">
+                <span>Artifact</span>
+                <span>/</span>
+                <span>Historical Mapping</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-bold text-inkBlack leading-tight mb-8">
+                三代侨批的<br><span class="text-calmBlue">地位更迭史</span>
+            </h1>
+            <p class="text-xl text-subtleGray max-w-2xl font-light">
+                从施恩与感恩的物资馈赠，到商业合伙的原始平衡，再到高科技驱动下的心理逆转。这不是简单的家庭变迁，而是一个大时代的横切面。
+            </p>
+        </header>
+
+        <!-- Hero Media -->
+        <section class="mb-32">
+            <div class="rounded-2xl overflow-hidden shadow-2xl">
+                <img src='https://opal.google/board/blobs/6eca1ff9-cf24-40a0-95e4-087d18df6367' alt='media_2' class="w-full h-auto object-cover" />
+            </div>
+        </section>
+
+        <!-- Core Analysis Layout (Bento Grid) -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+            <!-- Gen 1 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex flex-col gap-4">
+                <span class="text-calmBlue font-bold text-sm">01 / 70s-80s</span>
+                <h3 class="text-2xl font-display font-bold">施舍者的荣光</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">大白兔奶糖与电子表，是那个年代的“圣餐”。物资匮乏构建了绝对的心理优越感与依附关系。</p>
+            </div>
+            <!-- Gen 2 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex flex-col gap-4">
+                <span class="text-calmBlue font-bold text-sm">02 / 90s-00s</span>
+                <h3 class="text-2xl font-display font-bold">商业合伙的冷峻</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">资本与工厂入场。亲情被现代商业逻辑重塑，关系从单纯接济变为脆弱的利害博弈。</p>
+            </div>
+            <!-- Gen 3 -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 flex flex-col gap-4">
+                <span class="text-calmBlue font-bold text-sm">03 / Current</span>
+                <h3 class="text-2xl font-display font-bold">心理定位的彻底逆转</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">赛道机车作为新的文化符号，见证了制造地位的转换。曾经的资助者成了被资助者，旧优越感灰飞烟灭。</p>
+            </div>
+        </section>
+
+        <!-- Deep Content Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <article class="space-y-8">
+                <h2 class="text-3xl font-display font-bold">思想的界面：从侨批到赛道</h2>
+                <div class="space-y-6 text-slate-700 leading-relaxed">
+                    <p>
+                        侨批不仅是信件，更是关于“体面”的成绩单。在每一份泛黄的纸张中，记录了长辈们在南洋的辛酸与回乡时的昂首挺胸。
+                    </p>
+                    <p>
+                        如今，那台从国内反向寄出的赛道机车，成了时代的休止符。它代表了技术的自主权，更宣告了地域优越论的终结。当亲情脱下了物质的伪装，剩下的才是最纯粹的联结。
+                    </p>
+                    <blockquote class="border-l-2 border-calmBlue pl-6 italic text-slate-500 font-light">
+                        "面子是给别人看的，日子是给自己过的。"
+                    </blockquote>
+                </div>
+            </article>
+
+            <!-- Visual Component -->
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100">
+                <img src='https://opal.google/board/blobs/69d8e803-dff0-414b-93e1-54fa52230c51' alt='media_1' class="rounded-lg mb-6 w-full" />
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-calmBlue">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-inkBlack">数据可视化：地位更迭</p>
+                        <p class="text-xs text-slate-500">2026年8月23日 归档</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Closing Statement -->
+        <section class="mt-32 pt-16 border-t border-slate-200">
+            <div class="max-w-xl">
+                <p class="text-slate-400 uppercase tracking-widest text-xs font-bold mb-4">Conclusion</p>
+                <h2 class="text-2xl text-inkBlack font-medium">
+                    在这个物欲流动的世界里，维持一份体面的亲情，从来都不是一件简单的事。
+                </h2>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
