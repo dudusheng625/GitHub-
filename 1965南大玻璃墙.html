@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玻璃幕墙的救赎 | 雕塑波普艺术研究</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        heading: ['Noto Sans SC', 'sans-serif'],
+                    },
+                    colors: {
+                        neonPurple: '#8a2be2',
+                        acidLime: '#ccff00',
+                        hotPink: '#ff007f',
+                        electricCyan: '#00ffff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0d0d0d; color: #ffffff; }
+        .clip-art { clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%); }
+        .pop-card { border: 4px solid #000; box-shadow: 8px 8px 0px #ccff00; transition: transform 0.3s ease; }
+        .pop-card:hover { transform: translate(-4px, -4px); box-shadow: 12px 12px 0px #ff007f; }
+        .speech-bubble { position: relative; background: #8a2be2; padding: 20px; border-radius: 20px; }
+        .speech-bubble:after { content: ''; position: absolute; bottom: -15px; left: 30px; border-width: 15px 15px 0; border-style: solid; border-color: #8a2be2 transparent; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-acidLime selection:text-black">
+
+    <!-- Header Section -->
+    <header class="relative min-h-[80vh] flex flex-col items-center justify-center p-6 bg-electricCyan overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        
+        <div class="z-10 w-full max-w-4xl text-center">
+            <div class="mb-8 w-full max-h-[400px] overflow-hidden rounded-2xl border-8 border-white shadow-2xl">
+                <img src='https://opal.google/board/blobs/36955d34-c75b-4ba5-a078-d17b1849c89c' alt='Header Collage' class="w-full h-full object-cover transform hover:scale-105 transition duration-700" />
+            </div>
+            <h1 class="font-heading font-black text-5xl md:text-7xl text-black leading-tight uppercase tracking-tighter">
+                玻璃幕墙的<br/><span class="text-white bg-black px-4">自恋矫正</span>
+            </h1>
+        </div>
+    </header>
+
+    <!-- Meta Info -->
+    <section class="max-w-5xl mx-auto px-6 py-12">
+        <div class="flex flex-wrap gap-4 justify-center">
+            <div class="bg-hotPink text-white font-bold py-2 px-6 rounded-full transform -rotate-2 border-2 border-black">发布日期: 2026-08-26</div>
+            <div class="bg-acidLime text-black font-bold py-2 px-6 rounded-full transform rotate-1 border-2 border-black">研究视角: 建筑生态学</div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-6 pb-24">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+            <div class="pop-card bg-white text-black p-8">
+                <h2 class="font-heading font-black text-3xl mb-6 border-l-8 border-hotPink pl-4">01. 剔透的谎言</h2>
+                <p class="text-lg leading-relaxed">南洋理工大学（NTU）的ADM大楼是一座精致的“视觉陷阱”。那些被誉为杰作的流线型玻璃幕墙，在候鸟眼中不过是一场关于生存的残酷错觉。当建筑的“透明”成为一种自负，代价便是那些沉闷的撞击声。</p>
+            </div>
+            <div class="rounded-2xl border-4 border-electricCyan overflow-hidden">
+                <img src='https://opal.google/board/blobs/7febc207-b83f-454c-9364-fd2e62afa09f' alt='NTU Building' class="w-full h-auto hover:grayscale transition duration-500" />
+            </div>
+        </div>
+
+        <div class="speech-bubble mb-16 text-xl italic border-4 border-white">
+            “这种声音在校园里并不罕见。它沉闷、短促，是生物骨骼与高硬度二氧化硅碰撞后的唯一注脚。这便是现代审美支付给自然的‘环境税’。”
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-black border-2 border-acidLime p-6">
+                <h3 class="text-2xl font-black mb-4 text-acidLime">自恋景观</h3>
+                <p class="text-sm">玻璃幕墙不仅是物理边界，更是人类自恋癖的投射。我们爱看倒影，却忽略了自然物种并不理解“反射”的神经机制。</p>
+            </div>
+            <div class="bg-black border-2 border-electricCyan p-6">
+                <h3 class="text-2xl font-black mb-4 text-electricCyan">5厘米哲学</h3>
+                <p class="text-sm">“手掌法则”告诉我们，只要缝隙小于5厘米，候鸟便能识破幻象。这是精确到毫米的生存博弈。</p>
+            </div>
+            <div class="bg-black border-2 border-hotPink p-6">
+                <h3 class="text-2xl font-black mb-4 text-hotPink">降格救赎</h3>
+                <p class="text-sm">当圆点贴纸覆盖了玻璃，大楼从“艺术神迹”降格为“补给站”。审美让位于生存，这是最高级的进化。</p>
+            </div>
+        </div>
+
+        <div class="mt-24 text-center">
+            <h2 class="font-heading font-black text-4xl mb-8">我们的社会，是否也需要“圆点”？</h2>
+            <div class="max-w-2xl mx-auto text-lg leading-loose opacity-80">
+                这些圆点不好看。它们甚至让整个画面看起来有些破碎。但正是这些破碎的视觉干扰，提醒着每一个飞速前进的个体：减速，前方有墙。如果一个社会过于追求“透明”与“气派”，它必然会成为弱势者的坟场。
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t-2 border-white/20 py-12 flex justify-center items-center">
+        <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-white flex items-center justify-center font-black text-black">QR</div>
+            <p class="text-sm tracking-widest uppercase">建筑与生存的最后对话</p>
+        </div>
+    </footer>
+
+</body>
+</html>
