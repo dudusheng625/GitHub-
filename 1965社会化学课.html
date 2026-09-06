@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大众“被动词汇库”变迁图谱</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mag-yellow': '#FFD700',
+                        'ink-black': '#0a0a0a',
+                        'paper-white': '#fdfbf7',
+                    },
+                    fontFamily: {
+                        'serif-display': ['"Noto Serif SC"', 'SimSun', 'Songti SC', 'serif'],
+                        'body-text': ['"Noto Serif SC"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&display=swap');
+
+        body {
+            background-color: #fdfbf7;
+            cursor: default;
+        }
+
+        .paper-texture {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .doodle-underline {
+            text-decoration: underline wavy #ff0000 2px;
+        }
+
+        .polaroid {
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .polaroid:hover {
+            transform: rotate(-2deg) scale(1.02);
+        }
+
+        .handwritten {
+            font-family: cursive;
+            transform: rotate(-3deg);
+        }
+
+        .sticker {
+            background: white;
+            padding: 0.5rem;
+            border: 2px solid black;
+            box-shadow: 3px 3px 0px black;
+        }
+    </style>
+</head>
+<body class="font-body-text text-ink-black paper-texture overflow-x-hidden">
+
+    <!-- Header Section -->
+    <header class="relative bg-mag-yellow min-h-[90vh] flex flex-col justify-center items-center p-8 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle, black 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="z-10 w-full max-w-5xl flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2">
+                <h1 class="font-serif-display text-7xl md:text-9xl font-black tracking-tighter leading-none mb-6">
+                    被动<br>词汇<br>扩容
+                </h1>
+                <div class="flex items-center gap-4 sticker bg-white inline-block">
+                    <span class="handwritten text-xl font-bold">发布日期：2026-09-05</span>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-1/2 transform rotate-3">
+                <img src='https://opal.google/board/blobs/f39e2800-b0cc-49d6-9615-579035856839' alt='media_2' class="w-full h-auto border-4 border-black object-cover polaroid" />
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-10 hidden md:block">
+            <svg class="w-24 h-24 stroke-black" viewBox="0 0 100 100" fill="none">
+                <path d="M10,80 Q50,20 90,80" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-20">
+        
+        <article class="space-y-12">
+            <!-- Intro -->
+            <section class="prose prose-xl max-w-none">
+                <h2 class="font-serif-display text-4xl mb-6 border-b-4 border-black inline-block">引言：一场永无止境的“化学补课”</h2>
+                <p class="leading-relaxed">在新加坡的牛车水或是任何一个繁忙的熟食中心，如果你问一个端着咖啡的老板：什么是“三聚氰胺”？他可能会皱着眉头告诉你：“那是让小孩子生病的东西。”但如果你问他什么是“瓜尔胶”或者“卡拉胶”，他大概率会翻个白眼。</p>
+                <p class="italic bg-yellow-100 p-6 border-l-4 border-black">这份词汇表，不是为了增广见闻，而是为了死里逃生；这份图谱，记录的不是科学的昌明，而是信任的崩塌。</p>
+            </section>
+
+            <!-- Evolution Section -->
+            <section class="bg-white p-8 md:p-12 shadow-[20px_20px_0px_rgba(0,0,0,0.1)]">
+                <h3 class="font-serif-display text-3xl mb-8">一、 词汇进化史：从“求生”到“防骗”</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-xl mb-2">1. 生存挑战期 (2000s)</h4>
+                        <p class="text-sm text-gray-700">三聚氰胺、塑化剂、瘦肉精。这时候的被动词汇库，是一本《末日求生指南》。</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xl mb-2">2. 生活质感期 (2010s)</h4>
+                        <p class="text-sm text-gray-700">反式脂肪酸、植脂末、代可可脂。应对慢性自杀的防御课。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content with Media -->
+            <section class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/2">
+                    <img src='https://opal.google/board/blobs/bb13c067-d943-4109-a1f3-3ea204823554' alt='media_1' class="w-full grayscale hover:grayscale-0 transition-all duration-500 border-2 border-black" />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="font-serif-display text-3xl mb-4">二、 认知成本账单</h3>
+                    <p>当一个社会要求买菜的阿婆必须具备区分“天然提取胶体”与“非法添加物”的能力时，这个社会的信用体系其实已经破产了。配料表的字数，变成了我们为行业不透明度支付的“额外学费”。</p>
+                </div>
+            </section>
+
+            <!-- Research Insight -->
+            <section class="py-12 border-t-2 border-b-2 border-dashed border-black">
+                <h3 class="font-serif-display text-3xl mb-8">三、 研究亮点：行业演进规律</h3>
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <span class="text-4xl font-black text-mag-yellow stroke-black stroke-2">01</span>
+                        <p><strong>合法性掩护：</strong> 从非法添加到合规下的违规使用，行业在不断重塑规则。</p>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-4xl font-black text-mag-yellow stroke-black stroke-2">02</span>
+                        <p><strong>词汇中性化：</strong> 极具诱惑力的营销术语正在包裹工业合成物。</p>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="py-20 text-center">
+        <div class="inline-block border-t-4 border-black pt-4">
+            <p class="handwritten text-2xl">—— 在词汇荒原上的幸存者们</p>
+            <div class="mt-4 flex justify-center gap-2">
+                <span class="w-2 h-2 bg-black rounded-full"></span>
+                <span class="w-2 h-2 bg-black rounded-full"></span>
+                <span class="w-2 h-2 bg-black rounded-full"></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Micro-interactions: Paper roll effect on hover
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.style.filter = 'sepia(0.2)';
+            });
+            img.addEventListener('mouseleave', () => {
+                img.style.filter = '';
+            });
+        });
+    </script>
+</body>
+</html>
