@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深度调查：健身房的预付费陷阱</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandYellow: '#FFD700',
+                        brandBlack: '#000000',
+                    },
+                    fontFamily: {
+                        display: ['"Playfair Display"', 'serif'],
+                        body: ['"Outfit"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;600&display=swap');
+        
+        body {
+            background-color: #FFD700;
+            color: #000000;
+            overflow-x: hidden;
+        }
+
+        .magazine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .stamp-effect {
+            border: 2px dashed #000;
+            padding: 10px;
+            transform: rotate(-2deg);
+            background: rgba(255, 255, 255, 0.4);
+            display: inline-block;
+        }
+
+        .paper-fold {
+            transition: transform 0.3s ease;
+        }
+
+        .paper-fold:hover {
+            transform: rotate(1deg) scale(1.02);
+        }
+
+        .marker-highlight {
+            background: linear-gradient(120deg, transparent 0%, #000 0%, #000 100%) no-repeat;
+            background-size: 100% 0.2em;
+            background-position: 0 88%;
+        }
+
+        .hand-drawn-border {
+            border: 3px solid #000;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-black selection:text-yellow-400">
+
+    <!-- Header Section -->
+    <header class="relative w-full h-[80vh] flex flex-col justify-end p-8 md:p-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src='https://opal.google/board/blobs/fe332f4e-ea51-4ce0-9491-309865353017' alt='Fashion Editorial' class="w-full h-full object-cover grayscale contrast-150">
+        </div>
+        <div class="relative z-10 max-w-4xl">
+            <span class="bg-black text-yellow-400 px-4 py-1 text-sm font-bold tracking-widest uppercase mb-4 inline-block">深度调查 · 2026</span>
+            <h1 class="font-display text-5xl md:text-8xl font-black leading-none mb-6">
+                全岛分店<br>一夜关清！
+            </h1>
+            <p class="text-2xl font-medium border-l-4 border-black pl-4">从知名健身房突然倒闭看“长期预付费”到底有多坑</p>
+        </div>
+    </header>
+
+    <!-- Meta Data -->
+    <section class="px-8 py-10 flex justify-center">
+        <div class="stamp-effect">
+            <p class="font-mono text-sm uppercase">发布日期: 2026-09-11</p>
+            <p class="font-bold">状态: 深度商业分析</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-8 pb-20">
+        <article class="space-y-12">
+            
+            <div class="text-xl md:text-2xl leading-relaxed font-light">
+                <p><strong>汗水已干，钱袋已空：全岛True Fitness“突然死亡”后的冷思考与商业陷阱深度剖析</strong></p>
+                <br>
+                <p>九月的狮城，阳光依旧毒辣，但对于成千上万名True Fitness和True Yoga的会员来说，这个早晨的寒意是从脚底板直冲天灵盖的。</p>
+            </div>
+
+            <!-- Interleaved Media -->
+            <div class="my-12 paper-fold hand-drawn-border p-4 bg-white">
+                <img src='https://opal.google/board/blobs/354d5769-2575-4958-9df2-874371e7402d' alt='Gym Facility' class="w-full h-auto grayscale">
+                <p class="text-center italic mt-4 font-bold text-sm uppercase">当繁华落幕，剩下的只有冰冷的卷闸门。</p>
+            </div>
+
+            <section class="space-y-8">
+                <h2 class="text-4xl font-display font-bold marker-highlight inline-block">【研究焦点一：预付费配套的博弈】</h2>
+                <p class="text-lg leading-loose">
+                    这种“长期预付费”模式，在商业话术中被包装成了“平摊到每天只需一杯咖啡钱”的终极优惠。但如果你仔细算一笔账，就会发现这本质上是一场极不对称的博弈。你一次性付出了三五年甚至十年的现金流，而对方给你的只是一个关于未来的、不确定的服务承诺。
+                </p>
+            </section>
+
+            <section class="bg-black text-yellow-400 p-8 md:p-12 rotate-[-1deg] shadow-2xl">
+                <h2 class="text-3xl font-display font-bold mb-6">【研究焦点二：资本的“金蝉脱壳”】</h2>
+                <p class="leading-relaxed">
+                    True Fitness和True Yoga的关店，往往伴随着一种被称为“临时清盘”的法律程序。这意味着公司已经意识到资产无法抵补债务，只能让专业人士介入。对于经营者来说，这是一种合法的止损；但对于会员来说，这无异于一场白昼里的抢劫。
+                </p>
+            </section>
+
+            <section class="space-y-8">
+                <h2 class="text-4xl font-display font-bold">【研究焦点三：为什么我们总是那个被收割的“瓮中之鳖”？】</h2>
+                <p class="text-lg leading-loose">
+                    首先是“怕输”（Kiasu）心理。销售人员只要一说“明天就涨价”或者“只有这三个名额”，我们的理智就会瞬间下线。其次是对“大品牌”的盲目迷信。我们总觉得，开了这么多家分店的公司，总不至于说倒就倒吧？可惜，在资本市场，规模大往往意味着亏损的窟窿也大。
+                </p>
+            </section>
+
+            <section class="border-t-4 border-black pt-12">
+                <h2 class="text-3xl font-display font-bold mb-6">【研究焦点四：法律的骨感】</h2>
+                <p class="text-lg italic">“在新加坡的法律框架下，这种长期会籍的损失，在大多数情况下只能被定性为‘商业纠纷’。除非你能证明对方在收款时就存在诈骗意图，否则，这只是一桩失败的买卖。”</p>
+            </section>
+
+            <div class="bg-yellow-200 p-8 border-2 border-black font-bold text-center">
+                <h3 class="text-2xl mb-4">总结：别再给明天的你，挖一个今天的坑</h3>
+                <p>在这个充斥着不确定性的时代，请保护好你的钱包。你的汗水应该是为了健康而流，而不是为了那些落荒而逃的资本家流泪。</p>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center pb-10">
+        <div class="inline-block border-t-2 border-black pt-4">
+            <p class="font-display text-2xl font-bold tracking-tighter italic">Research Insight Log</p>
+            <p class="text-xs uppercase mt-2">Verified Investigation & Analysis</p>
+        </div>
+    </footer>
+
+</body>
+</html>
