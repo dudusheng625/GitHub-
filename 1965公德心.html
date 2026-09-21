@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工业风科研记录 | 巴士公共行为法治化研究</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gunmetal: '#1A1A1B',
+                        obsidian: '#0D0D0D',
+                        hazard: '#F97316',
+                        luminous: '#3B82F6',
+                        coolsilver: '#E5E7EB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Roboto Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0D0D0D; color: #E5E7EB; }
+        .stud-pattern { background-image: radial-gradient(#333 1px, transparent 1px); background-size: 20px 20px; }
+        .chassis-card { border: 2px solid #333; background: #1A1A1B; position: relative; }
+        .chassis-card::before { content: ""; position: absolute; top: -10px; left: 10px; width: 10px; height: 10px; background: #333; border-radius: 2px; }
+        .hazard-glow { box-shadow: 0 0 15px rgba(249, 115, 22, 0.2); }
+        .blueprint-line { border-left: 2px solid #F97316; padding-left: 1rem; }
+        .tech-font { font-family: 'Roboto Mono', monospace; }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+
+    <!-- Header Section -->
+    <header class="max-w-5xl mx-auto mb-16">
+        <div class="relative overflow-hidden rounded-lg shadow-2xl border-b-4 border-l-4 border-hazard hazard-glow">
+            <img src='https://opal.google/board/blobs/dfc125e9-ee51-4f22-b184-03ee1ad3629f' alt='Header Image' class="w-full h-80 object-cover opacity-80 mix-blend-screen" />
+            <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-obsidian via-obsidian/80 to-transparent">
+                <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter text-white">
+                    《坐巴士外放短视频要罚500块？把“公德心”写进法律到底是不是小题大做》
+                </h1>
+            </div>
+        </div>
+
+        <!-- Serial Metadata -->
+        <div class="mt-6 flex gap-4 text-xs tech-font text-gray-500 uppercase tracking-widest border border-gray-800 p-4 bg-obsidian">
+            <span>SERIAL-ID: SG-2026-LTA-09</span>
+            <span>DATE: 2026-09-21</span>
+            <span>STATUS: ACTIVE_REGULATION</span>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-5xl mx-auto space-y-12">
+        
+        <section class="chassis-card p-8">
+            <h2 class="text-hazard text-2xl font-bold mb-6 flex items-center">
+                <span class="mr-3">01.</span> 500新元买个耳根清净：当“公德心”不再靠自觉，新加坡法律开始教你做人
+            </h2>
+            <p class="leading-relaxed mb-6">在新加坡，如果你想体验一种名为“大型社会性死亡”的瞬间，最好的方式不是在乌节路裸奔，而是在一辆挤满通勤者的巴士上，把手机音量拉满，循环播放那些自带魔性笑声的短视频。</p>
+            <blockquote class="blueprint-line text-luminous italic mb-6">
+                “从9月23日起，在巴士上大声播放音频、将脚踩在座椅上等行为，最高可面临500新元的罚款。”
+            </blockquote>
+            <img src='https://opal.google/board/blobs/1ba9c20e-40e8-4ce7-b537-7569d4b6aa85' alt='Industrial Context' class="w-full rounded-md border border-gray-700 my-4" />
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="chassis-card p-6">
+                <h3 class="text-luminous font-bold mb-4">一、 数据说话：500新元到底贵不贵？</h3>
+                <ul class="space-y-3 text-sm tech-font">
+                    <li class="border-b border-gray-800 py-2">雇员中位数薪资：5197 SGD</li>
+                    <li class="border-b border-gray-800 py-2">公共满意度投诉：乘客行为名列前茅</li>
+                    <li class="border-b border-gray-800 py-2">核心目的：建立威慑溢价</li>
+                </ul>
+            </div>
+            
+            <div class="chassis-card p-6">
+                <h3 class="text-luminous font-bold mb-4">二、 为什么“劝说”在短视频时代失效了？</h3>
+                <p class="text-sm leading-relaxed text-gray-400">智能手机外放音量常在80-90分贝，在一个封闭车厢内，其伤害性堪比小型声波武器。当个人社交成本被转嫁给公众，法律的介入是强制性的“社会感知神经”校准。</p>
+            </div>
+        </section>
+
+        <section class="chassis-card p-8 border-l-8 border-l-luminous">
+            <h3 class="text-xl font-bold mb-4">三、 资产管理视角</h3>
+            <p class="leading-relaxed">将脚踩在座位上，不仅是卫生挑战，更涉及SBS Transit的资产维护与清洁成本。在人口稠密的新加坡，边界感是生存的润滑剂。</p>
+        </section>
+
+        <section class="chassis-card p-8 bg-gradient-to-br from-gray-900 to-obsidian">
+            <h3 class="text-hazard font-bold mb-6">四、 全球视角下的一致性</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <div class="bg-black p-4 border border-gray-800">
+                    <p class="font-bold">东京</p>
+                    <p class="text-xs text-gray-500">读空气压力</p>
+                </div>
+                <div class="bg-black p-4 border border-gray-800">
+                    <p class="font-bold">伦敦</p>
+                    <p class="text-xs text-gray-500">驱逐出车机制</p>
+                </div>
+                <div class="bg-black p-4 border border-gray-800">
+                    <p class="font-bold">香港</p>
+                    <p class="text-xs text-gray-500">最高罚款2000港币</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="chassis-card p-8">
+            <h3 class="text-2xl font-bold mb-4">五、 结论：法治是公共空间的起点</h3>
+            <p class="leading-relaxed text-gray-300">将公德心写进法律，看似小题大做，实则是碎片化时代防范公共生活全面崩塌的必要防线。500新元买不来高尚的灵魂，但能买来一个宁静的车厢。</p>
+        </section>
+    </main>
+
+    <!-- Footer Sign-off -->
+    <footer class="max-w-5xl mx-auto mt-20 pt-10 border-t border-gray-800 flex justify-between items-end tech-font text-xs text-gray-600">
+        <div class="flex flex-col">
+            <span>UNIT: LTA_RESEARCH_DIV</span>
+            <span>MODEL: PUBLIC_ORDER_09</span>
+        </div>
+        <div class="flex flex-col items-end">
+            <span>VERIFIED: SYSTEM_ADMIN</span>
+            <span>SIGNATURE: [ 0x88F2A1 ]</span>
+        </div>
+    </footer>
+
+</body>
+</html>
