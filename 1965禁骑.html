@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城市笔记：最后一公里的逻辑失守</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        parchment: '#F5E6D3',
+                        ink: '#2C2C2C',
+                        burntOrange: '#CC5500',
+                        sage: '#7D8471',
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'serif'],
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #EFE9E1;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d6cfc5' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .vintage-filter {
+            filter: sepia(20%) contrast(1.1) saturate(0.8);
+            mix-blend-mode: multiply;
+        }
+        .paper-card {
+            background-color: #F5E6D3;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .fleuron::after {
+            content: "❦";
+            display: block;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #CC5500;
+            margin: 2rem 0;
+        }
+        .letterpress {
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.7), -1px -1px 0px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="py-12 px-4 md:px-0 font-serif text-ink">
+
+    <main class="max-w-2xl mx-auto paper-card p-8 md:p-16 border border-[#dcd0bf] rounded-sm">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <div class="mb-8 overflow-hidden rounded-sm border-4 border-white shadow-inner">
+                <img src='https://opal.google/board/blobs/0948419e-5b85-4fcd-b1b5-266f670d09af' alt='Vintage Header' class="vintage-filter w-full object-cover h-64 grayscale-[20%]" />
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6 letterpress">
+                《4800人被禁骑背后：这不是公民教育的失败，而是城市“最后一公里”接口的系统性失效》
+            </h1>
+            <div class="text-sm tracking-widest uppercase text-sage border-t border-b border-sage py-2">
+                发布日期：2026-09-21 • 深度评论
+            </div>
+        </header>
+
+        <!-- Article Body -->
+        <article class="prose prose-lg mx-auto prose-p:leading-8 prose-headings:text-ink">
+            
+            <p class="mb-6">看到那则“4800人因违规停放共享单车被禁骑”的新闻时，我正坐在牛车水的一间咖啡店里，看着窗外那些被漆成亮橙色或黄色的单车，像一堆被遗弃的乐高积木，杂乱无章地堆在地铁站出口。社交媒体上的“道德裁判团”已经迅速集结，键盘敲得震天响，字里行间全是“国民素质低下”、“丢脸丢到家”或者“德育失败”的陈词滥调。</p>
+
+            <p class="mb-6">这些高尚的看客们，最擅长在冷气房里端着拿铁，对着那些在烈日下奔命的打工人指点江山。他们觉得，只要把这4800人钉在耻辱柱上，城市的交通动线就能自动变得丝滑顺畅。</p>
+
+            <div class="fleuron"></div>
+
+            <h2 class="text-2xl font-bold text-burntOrange mb-4 uppercase tracking-wide">“素质”：一个万能且廉价的背锅侠</h2>
+            <p class="mb-6">每当公共政策出现偏差，或者基础设施跟不上需求时，“国民素质”总是第一个被拉出来挡枪的。这招好用得很，因为它完美地避开了对系统性缺陷的审视，把矛盾直接转嫁到了用户个体身上。</p>
+
+            <blockquote class="border-l-4 border-burntOrange bg-[#EFE9E1] p-6 italic my-8 shadow-inner">
+                “如果我设计了一扇门，必须要向左旋转360度再用力向外拉才能打开，结果每天有几千人撞在门板上。这时候，我是该责怪这几千人不懂开门艺术，还是该承认这扇门根本就是反人类的垃圾？”
+            </blockquote>
+
+            <h2 class="text-2xl font-bold text-burntOrange mb-4 uppercase tracking-wide">断裂的动线：消失的“最后一公里”接口</h2>
+            <p class="mb-6">我们总在谈“最后一公里”，仿佛只要有了单车，这段距离就自动弥合了。但在实际的城市规划中，这一公里往往是断裂的。</p>
+
+            <p class="mb-6">目前的城市接口设计，往往是基于“网格化管理”的方便，而不是基于“人流动向”的逻辑。规划者坐在办公室里，在地图上随手画几个圈，觉得这就是“规范管理”。他们忽略了人流是有惯性的，是有生理极限的。</p>
+
+            <h2 class="text-2xl font-bold text-burntOrange mb-4 uppercase tracking-wide">惩戒的平庸与设计的缺位</h2>
+            <p class="mb-6">一个健康的社会系统，应该让“做正确的事”变得简单，让“做错误的事”变得困难。而我们现在的做法恰恰相反：在那些最需要单车的地方，你找不到车位；在那些荒无人烟的空地，白框划得整整齐齐。</p>
+
+            <div class="fleuron"></div>
+
+            <h2 class="text-2xl font-bold text-burntOrange mb-4 uppercase tracking-wide">结语：莫让城市变成冷冰冰的指令集</h2>
+            <p class="mb-6">4800人被禁骑，不是什么道德新闻，而是一篇关于城市治理的检讨书。如果我们的城市规划，永远只停留在“发布禁令”和“加强执法”的维度，而忽视了对“人因工程”的起码尊重，那么这种系统性的失效将会蔓延到更多领域。</p>
+            
+            <p class="font-bold">别再拿素质当遮羞布了。那4800个人，只是替我们所有人的不便，买了一次单。</p>
+        </article>
+
+        <!-- Colophon Footer -->
+        <footer class="mt-16 pt-8 border-t border-sage text-center">
+            <div class="text-burntOrange text-2xl mb-2 italic">Reflections on Urbanism</div>
+            <div class="text-sm text-sage uppercase tracking-[0.2em]">Designed in the Spirit of Scholarly Inquiry</div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
