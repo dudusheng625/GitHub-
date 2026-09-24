@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垃圾桶里的金矿：清洁工阿哥的月入两千之路</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neonPink: '#FF00FF',
+                        neonCyan: '#00FFFF',
+                        neonPurple: '#BF00FF',
+                        bgWhite: '#FDFDFD'
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Noto Sans SC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FDFDFD; background-image: radial-gradient(#E5E7EB 1px, transparent 1px); background-size: 20px 20px; font-family: 'Noto Sans SC', sans-serif; }
+        .blob-shadow { filter: drop-shadow(4px 4px 0px rgba(0,0,0,1)); }
+        .sticker { transform: rotate(-2deg); transition: transform 0.3s ease; }
+        .sticker:hover { transform: rotate(0deg) scale(1.02); }
+        .text-outline { -webkit-text-stroke: 2px black; color: white; }
+        .wave-divider { height: 20px; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23FF00FF" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,176C672,160,768,160,864,170.7C960,181,1056,203,1152,208C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') repeat-x; }
+        .bubble { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    </style>
+</head>
+<body class="text-black antialiased overflow-x-hidden">
+
+    <!-- Header Section -->
+    <header class="relative flex flex-col items-center justify-center pt-20 pb-24 px-6">
+        <div class="relative blob-shadow z-10 bg-neonCyan px-10 py-16 rounded-full flex flex-col items-center justify-center text-center max-w-2xl border-4 border-black">
+            <h1 class="text-4xl md:text-6xl font-black font-display text-outline uppercase tracking-tight">
+                大家都在抱怨多花一毛钱<br>为什么这位清洁工阿哥却能月入两千？
+            </h1>
+            <div class="absolute -top-6 -right-6 text-4xl">✨</div>
+            <div class="absolute -bottom-8 left-10 text-4xl">🔥</div>
+        </div>
+        
+        <!-- Metadata -->
+        <div class="mt-12 flex gap-4 rotate-1">
+            <div class="bg-neonPink p-4 border-2 border-black sticker">
+                <p class="font-bold">发布日期：2026-09-24</p>
+            </div>
+            <div class="bg-yellow-300 p-4 border-2 border-black sticker">
+                <p class="font-bold">深度观察：新加坡民生</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+        
+        <!-- Hero Image -->
+        <div class="w-full h-80 rounded-3xl overflow-hidden border-4 border-black blob-shadow">
+            <img src='https://opal.google/board/blobs/42cb4db3-c706-4352-a8bd-c8b4ea4336ec' alt='media_1' class="w-full h-full object-cover">
+        </div>
+
+        <article class="prose prose-lg max-w-none">
+            <h2 class="text-3xl font-black font-display border-b-4 border-neonPurple inline-block mb-6">那一毛钱的尊严与两千块的野路子</h2>
+            <p class="text-xl leading-relaxed">最近的新加坡，除了天气热得让人想钻进冰箱，最火热的话题莫过于那多出来的“一毛钱”。自打饮料瓶罐退费制（BCRS）的小风一吹，全岛上下仿佛陷入了一种奇妙的集体焦虑。</p>
+            
+            <div class="bg-neonCyan/20 p-8 rounded-3xl border-2 border-black my-10">
+                <p class="text-2xl font-bold italic font-display">“政府真是吃饱了没事干，退个瓶子还要专门跑一趟回收机，这一毛钱够买什么？”</p>
+            </div>
+
+            <p class="text-xl leading-relaxed">就在绝大多数人为了这一毛钱的“麻烦”而愤愤不平，甚至宁愿随手把空瓶扔进垃圾桶以示“老子不差钱”的傲骨时，一位53岁的清洁工阿哥却悄无声息地打了一场漂亮的翻身仗。当你在抱怨生活成本上涨的时候，人家靠着你随手丢掉的“麻烦”，每个月额外给自己加薪两千块。</p>
+        </article>
+
+        <!-- Data Visualization Section -->
+        <section class="bg-white border-4 border-black p-8 rounded-3xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+            <h3 class="text-2xl font-black font-display mb-8">被忽视的市场：数字真相</h3>
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/2 space-y-4">
+                    <div class="p-4 bg-neonPurple text-white font-bold rounded-xl">累计回收：553吨</div>
+                    <div class="p-4 bg-neonPink text-white font-bold rounded-xl">预计回收：3300万个瓶罐</div>
+                    <div class="p-4 bg-neonCyan text-black font-bold rounded-xl">潜在价值：330万新币</div>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center">
+                     <img src='https://opal.google/board/blobs/9201cfb3-e5c2-49eb-b945-f1070eb9cd62' alt='media_2' class="rounded-full w-48 h-48 border-4 border-black object-cover">
+                </div>
+            </div>
+        </section>
+
+        <article class="prose prose-lg max-w-none">
+            <h2 class="text-3xl font-black font-display">那些“聪明人”的盲区</h2>
+            <ul class="space-y-4">
+                <li class="flex items-start">
+                    <span class="mr-4 text-neonPink text-2xl font-black">01</span>
+                    <p><strong>由于嫌弃而产生的壁垒：</strong> 绝大多数人嫌垃圾桶脏，这种心理上的嫌弃，就是天然的竞争壁垒。</p>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-4 text-neonCyan text-2xl font-black">02</span>
+                    <p><strong>被忽视的复利效应：</strong> 一天400个瓶子，持之以恒的简单算术题，被傲慢的人忽略。</p>
+                </li>
+            </ul>
+
+            <div class="mt-12 bg-gray-900 text-white p-8 rounded-3xl">
+                <h3 class="text-2xl font-bold font-display mb-4">总结：尊严不是捡来的，是赚来的</h3>
+                <p>在这个世界上，最不值钱的就是那点虚伪的自尊心。张先生每天两三个小时的汗水，换来了一份足以应对一日三餐开销的底气。这种底气，比那些刷着信用卡过日子的“精致穷”们要足得多。</p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Simple Footer Section -->
+    <footer class="w-full py-16 mt-20 bg-black text-white flex flex-col items-center justify-center">
+        <div class="flex gap-8 mb-8 text-neonCyan">
+            <span class="text-4xl font-black italic">#SingaporeLife</span>
+            <span class="text-4xl font-black italic">#Recycle</span>
+            <span class="text-4xl font-black italic">#Action</span>
+        </div>
+        <p class="text-gray-400 font-display">数字新式流行风研究记录</p>
+    </footer>
+
+</body>
+</html>
