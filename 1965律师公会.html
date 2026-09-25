@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>律政精英的“后院失火”</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ash-pink': '#F4EFEA',
+                        'charcoal': '#2D2D2D',
+                        'soft-shell': '#E8D8D0',
+                    },
+                    fontFamily: {
+                        'display': ['"Noto Serif SC"', 'serif'],
+                        'body': ['"Outfit"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F4EFEA;
+            color: #2D2D2D;
+            overflow-x: hidden;
+        }
+        .crop-mark {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border-color: #A09E9B;
+        }
+        .serif-font { font-family: 'Noto Serif SC', serif; }
+        .body-font { font-family: 'Outfit', sans-serif; }
+        .vertical-text { writing-mode: vertical-rl; }
+        
+        /* Smooth hover transition */
+        .hover-paper {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hover-paper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-soft-shell selection:text-charcoal">
+
+    <!-- Crop Marks -->
+    <div class="crop-mark top-4 left-4 border-t-2 border-l-2"></div>
+    <div class="crop-mark top-4 right-4 border-t-2 border-r-2"></div>
+    <div class="crop-mark bottom-4 left-4 border-b-2 border-l-2"></div>
+    <div class="crop-mark bottom-4 right-4 border-b-2 border-r-2"></div>
+
+    <main class="max-w-5xl mx-auto px-8 py-20">
+        
+        <!-- Header Section -->
+        <header class="relative mb-24 text-center">
+            <div class="inline-block relative">
+                <div class="w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-white shadow-xl mb-8">
+                    <img src="https://opal.google/board/blobs/510b104c-1931-4468-9db7-7eae0a5c6b6e" alt="深度研究主体" class="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 transition-all duration-700">
+                </div>
+                <!-- Hand-drawn style bubble -->
+                <div class="absolute -top-10 -right-10 bg-white p-4 rounded-full border border-charcoal rotate-12 text-sm italic shadow-sm">
+                    发布日期：2026-09-25
+                </div>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-display font-bold leading-tight mb-8">
+                《天天帮别人打官司的律师公会，<br>为什么自家内部管理却引来警方调查？》
+            </h1>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            
+            <!-- Left: Primary Content -->
+            <article class="md:col-span-9 space-y-16">
+                
+                <section>
+                    <h2 class="text-2xl serif-font font-bold mb-6 flex items-center">
+                        <span class="text-soft-shell mr-4 text-3xl">NO.1</span>
+                        招聘闹剧：精英阶层的“程序正义”哪里去了？
+                    </h2>
+                    <p class="leading-relaxed text-lg text-gray-700">
+                        在新加坡，如果你想找一群最懂规则、最擅长在文字缝隙里寻找公义的人，你一定会直奔那个坐落在中央商业区核心地带的建筑——律师公会。然而，最近的一则新闻却让全岛哗然：这群平日里教导别人如何守法的人，竟然因为自家的内部管理问题，引来了警方的立案调查。
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl serif-font font-bold mb-6 flex items-center">
+                        <span class="text-soft-shell mr-4 text-3xl">NO.2</span>
+                        权力的迷雾：为什么“专业”并不等于“合规”？
+                    </h2>
+                    <p class="leading-relaxed text-lg text-gray-700">
+                        这次律师公会的翻车告诉我们：专业能力和机构治理完全是两码事。律师们擅长的是解释法律，但在治理一个社会组织时，他们往往会陷入一种“自恋式”的盲区。因为太懂规则，所以比任何人都清楚如何绕过规则。
+                    </p>
+                </section>
+
+                <blockquote class="p-8 border border-charcoal bg-white relative hover-paper">
+                    <p class="text-xl italic font-display">“这不仅是一个关于职场招聘的八卦，更是一次关于专业团体内部治理、权力监督和‘精英神话’破灭的深刻案例。”</p>
+                </blockquote>
+
+                <section>
+                    <h2 class="text-2xl serif-font font-bold mb-6 flex items-center">
+                        <span class="text-soft-shell mr-4 text-3xl">NO.3</span>
+                        独立审查的尴尬：从自救到自首
+                    </h2>
+                    <p class="leading-relaxed text-lg text-gray-700">
+                        律师公会这次选择公开招聘并启动独立审查，初衷或许是为了挽回声誉，但讽刺的是，正是这场审查撕开了最后一块遮羞布。这也暴露了一个严峻的问题：专业团体在面对内部腐朽时，往往缺乏及时的预警机制。
+                    </p>
+                </section>
+            </article>
+
+            <!-- Right: Decorative Sidebar -->
+            <aside class="md:col-span-3">
+                <div class="sticky top-20">
+                    <div class="bg-white p-6 border border-charcoal vertical-text h-96 shadow-lg rotate-2">
+                        <p class="text-sm tracking-widest font-semibold uppercase mb-4">Editorial Insight</p>
+                        <p class="text-lg font-display leading-loose">
+                            当法律的守护者成了被调查的对象，信任的基石便已开始动摇。治理的底线，不因职位的尊卑而改变。
+                        </p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-32 pt-12 border-t border-gray-400">
+            <div class="flex justify-center items-center space-x-4 opacity-60">
+                <span class="w-2 h-2 bg-charcoal rounded-full"></span>
+                <span class="text-sm font-display tracking-widest uppercase">Law Society Scandal Analysis</span>
+                <span class="w-2 h-2 bg-charcoal rounded-full"></span>
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>
