@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>承受力特权 | 精英叙事下的结构性病理</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        electricPurple: '#8D59E9',
+                        acidYellow: '#EBE021',
+                        blueGray: '#D8E2EC',
+                        charcoal: '#1A1A1B',
+                        lightBg: '#F5F5F7'
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', '"PingFang SC"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F5F5F7; color: #1A1A1B; }
+        .hero-title { font-size: clamp(2.5rem, 8vw, 6rem); line-height: 0.9; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .text-clip { background: linear-gradient(90deg, #8D59E9, #EBE021); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .accent-border { border-left: 4px solid #8D59E9; }
+        img { border-radius: 12px; object-fit: cover; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 px-8 py-6 flex justify-between items-center glass border-b border-gray-200">
+        <div class="text-xl font-bold tracking-tighter">RESEARCH_LAB_2026</div>
+        <div class="text-sm font-medium text-gray-500">2026-09-28</div>
+    </header>
+
+    <main class="pt-32 px-4 md:px-16 max-w-7xl mx-auto">
+        
+        <!-- Hero Section -->
+        <section class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+                <span class="inline-block px-3 py-1 bg-electricPurple text-white text-xs font-bold uppercase tracking-widest mb-4">深度研报</span>
+                <h1 class="hero-title font-extrabold mb-6 tracking-tight">被精英叙事遮蔽的<br><span class="text-clip">“承受力特权”</span></h1>
+                <p class="text-xl text-gray-600 leading-relaxed max-w-lg">当“苦尽甘来”的确定性消失之后，我们如何拆解那些美化痛苦的逻辑伪装？</p>
+            </div>
+            <div class="relative group">
+                <img src='https://opal.google/board/blobs/6b853bdd-4b5a-45e4-862c-b2870589bc35' alt='media_1' class="w-full shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+            </div>
+        </section>
+
+        <!-- Gallery Header -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+            <img src='https://opal.google/board/blobs/971346c8-be1b-4408-b9a7-8fa00bd5d731' alt='media_2' class="h-64 w-full object-cover">
+            <img src='https://opal.google/board/blobs/b6231cdf-a816-4cbb-8d10-2b998de9d6f1' alt='media_3' class="h-64 w-full object-cover">
+            <img src='https://opal.google/board/blobs/a6dedfc2-ded8-4c4c-9210-a0a142b6a466' alt='media_4' class="h-64 w-full object-cover">
+        </section>
+
+        <!-- Main Content -->
+        <article class="grid lg:grid-cols-3 gap-16">
+            <div class="lg:col-span-2 space-y-12">
+                <div class="bg-blueGray p-8 rounded-2xl">
+                    <h2 class="text-3xl font-bold mb-6 text-electricPurple">01. 咖啡、红绿灯与“忍受”的零售价</h2>
+                    <p class="text-lg leading-8 text-gray-800">上周二早上八点一刻，我站在莱佛士坊的地铁站出口，手里攥着一杯劣质三合一咖啡。那天气温三十二度，衬衫后背由于汗水黏在身上，像一张甩不掉的膏药。那一刻，我正看着屏幕上某位企业家论述：“不快乐，是成功的先决条件。”</p>
+                </div>
+
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold border-l-4 border-acidYellow pl-6">02. 风险溢价：谁在为你的“不快乐”托底？</h2>
+                    <p class="text-lg leading-8 text-gray-700">精英们的“不快乐”背后，有三个隐形变量：高掌控力、高回报预期以及充足的托底资源。相比之下，普通人的“苦”往往只是单纯的损耗。这种忍受没有溢价，只有枯竭。</p>
+                </div>
+
+                <blockquote class="bg-blueGray p-10 rounded-r-lg accent-border">
+                    <p class="text-2xl font-medium italic text-gray-900">“精英们的‘苦’是带有杠杆的投资，而普通人的‘苦’往往只是单纯的折旧。”</p>
+                </blockquote>
+
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold border-l-4 border-electricPurple pl-6">03. 时代的剪刀差：当“苦尽”不再对应“甘来”</h2>
+                    <p class="text-lg leading-8 text-gray-700">在2026年的今天，汇率崩盘了。你忍受了三年的无休加班，换来的可能不是晋升，而是遣散信。庄家修改了赔率表，却要求你继续支付同样的门票费。</p>
+                </div>
+
+                <div class="bg-black text-white p-12 rounded-3xl">
+                    <h3 class="text-2xl font-bold mb-4 text-acidYellow">诊断报告：模型背后的谎言</h3>
+                    <ul class="space-y-4 text-lg">
+                        <li>• <strong>比例谎言：</strong> 痛苦与成功不再成正比。</li>
+                        <li>• <strong>因果谎言：</strong> 精英因有保障才拥抱痛苦，而非痛苦带来保障。</li>
+                        <li>• <strong>终点谎言：</strong> “苦尽甘来”已成算法迷雾中的幻象。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="space-y-8">
+                <div class="bg-white p-8 rounded-2xl border border-blueGray shadow-sm">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">核心结论</h4>
+                    <p class="text-gray-600">承认“我不快乐，且这毫无意义”，或许才是普通人打破精英叙事洗脑的第一步。</p>
+                </div>
+                <div class="p-8 border-t border-gray-300">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">数据标签</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-acidYellow text-black font-bold text-xs rounded-full">#承受力特权</span>
+                        <span class="px-3 py-1 bg-electricPurple text-white font-bold text-xs rounded-full">#阶层隔离</span>
+                        <span class="px-3 py-1 bg-blueGray text-black font-bold text-xs rounded-full">#社会病理</span>
+                    </div>
+                </div>
+            </aside>
+        </article>
+    </main>
+
+    <footer class="mt-32 py-12 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-400">Precision Research Lab • 2026</p>
+    </footer>
+
+</body>
+</html>
