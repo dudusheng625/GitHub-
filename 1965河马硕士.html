@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重构生存 | AI时代的反脆弱指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-yellow': '#FDE047',
+                        'alert-red': '#EF4444',
+                        'ink-black': '#0A0A0A',
+                        'cold-grey': '#F3F4F6',
+                    },
+                    fontFamily: {
+                        'display': ['Outfit', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .highlight-yellow { background: linear-gradient(120deg, transparent 0%, #FDE047 0%, #FDE047 100%, transparent 100%); }
+        .highlight-red { background: linear-gradient(120deg, transparent 0%, #EF4444 0%, #EF4444 100%, transparent 100%); }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #0A0A0A; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header Section -->
+    <header class="relative w-full h-screen flex flex-col justify-end p-8 md:p-20">
+        <div class="absolute top-10 left-10">
+            <span class="text-xs tracking-widest uppercase border-l-2 border-black pl-4">研究博客 | 2026-09-28</span>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-end">
+            <div>
+                <h1 class="text-[12rem] md:text-[18rem] leading-[0.8] font-black uppercase text-ink-black">重构</h1>
+                <p class="text-xl md:text-3xl mt-6 max-w-lg font-light leading-tight">
+                    走出冷气房，将高阶认知嵌入不可替代的物理现场。
+                </p>
+                <div class="mt-8 flex gap-4">
+                    <span class="bg-neon-yellow px-4 py-2 font-bold text-sm uppercase">AI 时代生存论</span>
+                </div>
+            </div>
+            <div class="w-full h-[400px] md:h-[600px] grayscale overflow-hidden">
+                <img src='https://opal.google/board/blobs/b2029bb0-c198-4ade-8c5a-99e50ef0d6c3' alt='Abstract data art' class="w-full h-full object-cover">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-8 py-20">
+        
+        <!-- Intro -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-32">
+            <div class="md:col-span-4">
+                <h2 class="text-6xl font-black mb-6">告别<br>显示屏</h2>
+                <div class="w-16 h-1 bg-alert-red mb-6"></div>
+            </div>
+            <div class="md:col-span-8 text-xl leading-relaxed font-light text-gray-700">
+                <p class="mb-6">2026年，当那些只会写诗的算法顺便包圆了你的法务合同与工作报表，你是否感到那张办公桌已成了被围猎的十字架？</p>
+                <p class="border-l-4 border-ink-black pl-8 py-2 text-2xl font-semibold text-ink-black">
+                    那位在动物园铲河马粪的硕士，并不是在堕落，而是在进行一场教科书级别的职业资产转移。
+                </p>
+            </div>
+        </section>
+
+        <!-- Step 1 -->
+        <section class="bg-cold-grey p-12 md:p-20 mb-32">
+            <h3 class="text-sm font-bold uppercase tracking-widest mb-4">步骤一</h3>
+            <h2 class="text-5xl font-black mb-12">知识剥离：剪掉标准化脐带</h2>
+            <div class="grid md:grid-cols-2 gap-16">
+                <p class="text-lg leading-loose">如果你每天的工作内容可以总结为整理信息、套用公式、输出文档，那么你在AI眼里就是一个效率极低的旧款处理器。我们要无情地剥离掉那些看起来很高级的PPT幻觉泡沫。</p>
+                <div class="text-5xl font-black text-alert-red">70%<br><span class="text-xl text-ink-black font-normal">被算法秒杀的工作比例</span></div>
+            </div>
+        </section>
+
+        <!-- Step 2 -->
+        <section class="grid md:grid-cols-12 gap-12 items-center mb-32">
+            <div class="md:col-span-6">
+                <img src='https://opal.google/board/blobs/1b6f27c8-782c-44fe-a452-d59c7426f0c6' alt='Physical site interaction' class="w-full h-auto grayscale">
+            </div>
+            <div class="md:col-span-6">
+                <h3 class="text-sm font-bold uppercase tracking-widest mb-4 text-alert-red">步骤二</h3>
+                <h2 class="text-5xl font-black mb-8">锚定物理触觉</h2>
+                <p class="text-xl leading-relaxed text-gray-700">算法可以模拟完美的夕阳，但无法感知泥土湿润后的土腥味。寻找那些必须依赖嗅觉、触觉、生命交互的细分领域——濒危物种保育、特种农业、生态修复。</p>
+            </div>
+        </section>
+
+        <!-- Step 3 -->
+        <section class="py-20 border-t border-b border-black">
+            <h3 class="text-sm font-bold uppercase tracking-widest mb-12">步骤三</h3>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="space-y-4">
+                    <span class="text-6xl font-black text-gray-300">01</span>
+                    <h4 class="text-2xl font-bold">科研思维赋能</h4>
+                    <p class="text-gray-600">用系统化方法论去重塑传统体力劳动，从铲屎官变身为生物系统监控专家。</p>
+                </div>
+                <div class="space-y-4">
+                    <span class="text-6xl font-black text-gray-300">02</span>
+                    <h4 class="text-2xl font-bold">现场即指挥</h4>
+                    <p class="text-gray-600">拒绝做办公室囚徒。成为掌控复杂现场、处理突发意外的实干专家。</p>
+                </div>
+                <div class="space-y-4">
+                    <span class="text-6xl font-black text-gray-300">03</span>
+                    <h4 class="text-2xl font-bold">硬着陆价值</h4>
+                    <p class="text-gray-600">产出必须是看得见、摸得着、闻得到的真实存在，而非数字化模型。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="mt-32">
+            <div class="bg-ink-black text-white p-16">
+                <h2 class="text-6xl font-black mb-10">结语：去买铲子</h2>
+                <p class="text-2xl font-light leading-relaxed max-w-3xl">
+                    别等写字楼的灯熄灭了才想起去买铲子。走出那间该死的办公室，去呼吸带味道的空气。因为在这个真作假时假亦真的时代，唯有那些让你感到疲惫、泥泞甚至发臭的物理现场，才是我们唯一能抓住的真理。
+                </p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
