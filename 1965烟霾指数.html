@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>均值困局：空气中的信任裂痕</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pixelPink: '#FF69B4',
+                        pixelYellow: '#FFD700',
+                        pixelCyan: '#00FFFF',
+                        cream: '#FDFBF7',
+                    },
+                    fontFamily: {
+                        sans: ['ui-sans-serif', 'system-ui', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFBF7;
+            background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .pixel-border {
+            border: 4px solid #000;
+            box-shadow: 6px 6px 0px #000;
+        }
+        .pixel-title {
+            text-shadow: 3px 3px 0px #000;
+        }
+        .hover-shift:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0px #000;
+            transition: all 0.1s ease;
+        }
+    </style>
+</head>
+<body class="text-black font-mono p-4 md:p-10">
+
+    <main class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="mb-12">
+            <div class="relative inline-block mb-6">
+                <div class="absolute -top-3 -left-3 w-full h-full border-4 border-black z-0"></div>
+                <div class="bg-pixelYellow p-6 relative z-10 pixel-border">
+                    <h1 class="text-4xl md:text-6xl font-black pixel-title leading-tight tracking-tighter">
+                        消失在数学模型里的呼吸
+                    </h1>
+                    <p class="text-sm uppercase tracking-widest mt-2 font-bold opacity-70">SYSTEM ARCHITECTURE / TRUST CRISIS</p>
+                </div>
+            </div>
+            
+            <!-- Metadata -->
+            <div class="flex gap-4 mb-8">
+                <div class="bg-pixelCyan px-4 py-2 font-bold border-2 border-black">发布日期: 2026-10-03</div>
+                <div class="bg-pixelPink px-4 py-2 font-bold border-2 border-black">主题: 公众信任与数据治理</div>
+            </div>
+
+            <!-- Header Image -->
+            <div class="pixel-border overflow-hidden bg-white mb-8">
+                <img src='https://opal.google/board/blobs/195dc017-4199-4e9f-af43-b1cc92c6216e' alt='空气污染视觉化' class="w-full h-auto object-cover" />
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <article class="space-y-12">
+            
+            <!-- Section 1 -->
+            <section class="bg-white p-6 md:p-8 pixel-border hover-shift">
+                <div class="flex items-center mb-4 border-b-4 border-black pb-2">
+                    <span class="text-2xl mr-2 text-pixelPink">◆</span>
+                    <h2 class="text-2xl font-black uppercase">一、均值的艺术：如何用数学抹杀个体的痛苦</h2>
+                </div>
+                <p class="leading-relaxed text-lg">
+                    在统计学里，均值是个伟大的发明。但在现实生活中，尤其是当你正处在PM2.5爆表的微环境中时，均值就是一种最体面的冷漠。技术官僚们认为，只要长期的、慢性的暴露风险没有超标，那么你当下那一小时、在那条特定街道上感受到的窒息感，在科学上就是“不具备统计学意义”的干扰项。
+                </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="bg-white p-6 md:p-8 pixel-border hover-shift">
+                <div class="flex items-center mb-4 border-b-4 border-black pb-2">
+                    <span class="text-2xl mr-2 text-pixelCyan">◆</span>
+                    <h2 class="text-2xl font-black uppercase">二、确定性陷阱：傲慢是信任流失的催化剂</h2>
+                </div>
+                <p class="leading-relaxed text-lg">
+                    我们的管理机构似乎患有一种严重的“不确定性恐惧症”。为了维持这种虚假的、坚不可摧的“确定性”，他们宁愿躲在滞后的数据后面，也不愿承认现实的复杂。公众并不傻，当肉眼可见的浓烟遮蔽了天际线，而官方读数依然稳如泰山时，阴谋论自然会填补事实与感受之间的真空。
+                </p>
+            </section>
+
+            <!-- Section 3: Quote Block -->
+            <div class="bg-pixelYellow p-8 pixel-border rotate-1">
+                <p class="text-xl font-black italic">
+                    “任何试图用公式来抹平真实痛感的行为，最终都会被现实狠狠打脸。”
+                </p>
+            </div>
+
+            <!-- Section 4 -->
+            <section class="bg-white p-6 md:p-8 pixel-border hover-shift">
+                <div class="flex items-center mb-4 border-b-4 border-black pb-2">
+                    <span class="text-2xl mr-2 text-pixelPink">◆</span>
+                    <h2 class="text-2xl font-black uppercase">三、科学的迷信：当数据成为挡箭牌</h2>
+                </div>
+                <p class="leading-relaxed text-lg">
+                    在现代行政管理中，数据已经成为了一种新型的宗教。只要有了数据，就可以不用去现场调研；只要有了模型，就可以理直气壮地拒绝公众的诉求。这实质上是行政责任的某种逃避。承认不确定性，承认数据有其局限性，才是建立信任的第一步。
+                </p>
+            </section>
+
+        </article>
+
+        <!-- Conclusion -->
+        <footer class="mt-20 border-t-4 border-black pt-8">
+            <div class="bg-black text-white p-6 font-mono text-sm">
+                <p class="mb-2">>> SYSTEM TERMINAL OUTPUT:</p>
+                <p class="opacity-70">结论：管理机构需要明白，公众要求的不是一个完美的数字，而是一个诚实的交代。少一点数学上的“平滑”，多一点人文上的“关怀”。</p>
+                <div class="mt-4 flex gap-2">
+                    <div class="w-3 h-3 bg-pixelCyan animate-pulse"></div>
+                    <div class="w-3 h-3 bg-pixelPink animate-pulse delay-75"></div>
+                    <div class="w-3 h-3 bg-pixelYellow animate-pulse delay-150"></div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+</body>
+</html>
