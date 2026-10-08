@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO Technic Industrial Research Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gunmetal: '#1A1A1B',
+                        obsidian: '#0D0D0D',
+                        silver: '#E5E7EB',
+                        hazard: '#F97316',
+                        core: '#3B82F6',
+                    },
+                    fontFamily: {
+                        display: ['"Impact"', 'sans-serif'],
+                        mono: ['"Roboto Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .stud-grid {
+            background-image: radial-gradient(#333 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .lego-stud {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #222;
+            border-radius: 50%;
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);
+            z-index: 10;
+        }
+        .metal-plate {
+            border: 2px solid #444;
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.5), inset 1px 1px 1px rgba(255,255,255,0.1);
+        }
+        .glowing-border {
+            border-left: 4px solid #F97316;
+        }
+        .hover-snap:hover {
+            transform: translate(2px, 2px);
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-silver font-sans selection:bg-hazard selection:text-white">
+
+    <!-- Header Section -->
+    <header class="relative w-full min-h-[400px] flex flex-col items-center justify-center p-8 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <img src='https://opal.google/board/blobs/189ad36d-d3e6-488f-90ce-923786aaee7c' alt='Mega-Build Header' class="absolute inset-0 w-full h-full object-cover grayscale brightness-50 z-0" />
+        
+        <div class="relative z-10 text-center space-y-4">
+            <h1 class="text-4xl md:text-6xl font-display font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 drop-shadow-[0_4px_0_rgba(0,0,0,1)]">
+                《当我们争论“早报与海峡时报”时，谁在听马来语和泰米尔语的静音？》
+            </h1>
+            <div class="inline-block px-4 py-1 bg-hazard text-obsidian font-mono text-sm font-bold uppercase tracking-widest">
+                2026-10-08 | 深度产业分析报告
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto p-6 md:p-12 space-y-12">
+        
+        <!-- Metadata Tag -->
+        <section class="metal-plate p-6 relative">
+            <div class="absolute -top-2 -left-2 w-4 h-4 bg-obsidian border-2 border-hazard"></div>
+            <p class="font-mono text-xs text-gray-400">SERIAL_NO: 2026.10.08.SG-LANG-ANALYSIS</p>
+            <h2 class="text-xl font-bold text-core mt-2 uppercase tracking-wide">核心视角：揭示多数族群的盲区</h2>
+        </section>
+
+        <!-- Content Block 1 -->
+        <article class="metal-plate p-8 md:p-12 transition-all hover:scale-[1.01] hover-snap">
+            <div class="glowing-border pl-6 mb-8">
+                <h3 class="text-2xl font-bold text-white mb-2">《等不到的广播与消失的国语：在CMIO的阴影下，谁在给马来语和泰米尔语按静音键？》</h3>
+                <p class="font-mono text-gray-400 italic">在新加坡，如果你想知道什么叫“有声的抗议”和“无声的消失”，最好的地方不是国会演说厅，而是早高峰的地铁站。</p>
+            </div>
+            
+            <img src='https://opal.google/board/blobs/7d40a7fc-dd8c-447d-babd-b33db0338b92' alt='Industrial Research Context' class="w-full rounded border-2 border-gray-800 shadow-2xl mb-8" />
+
+            <div class="prose prose-invert max-w-none text-silver font-mono leading-relaxed space-y-6">
+                <p>2026年10月，当SMRT运营的68个地铁站开始循环播放《海峡时报》（The Straits Times）的新闻简报时，华社的神经又一次被精准地挑动了。大家愤怒的焦点非常一致：凭什么英文新闻能进耳朵，而《联合早报》只能上屏幕？</p>
+                <p>然而，在这种看似激烈的“双语拉锯战”中，有一种寂静显得尤为震耳欲聋——那就是马来语新闻《每日新闻》（Berita Harian）和泰米尔语新闻《泰米尔之声》（Tamil Murasu）的彻底缺席。</p>
+            </div>
+        </article>
+
+        <!-- Modular Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="metal-plate p-6">
+                <h4 class="text-hazard font-bold uppercase mb-4 text-lg border-b border-gray-800 pb-2">广播特权</h4>
+                <p class="text-sm text-gray-300">根据2020年宪法第153A条，马来语拥有国语地位。然而，公共交通系统的广播配置中，其地位却处于被彻底忽视的边缘。</p>
+            </div>
+            <div class="metal-plate p-6">
+                <h4 class="text-core font-bold uppercase mb-4 text-lg border-b border-gray-800 pb-2">数字鸿沟</h4>
+                <p class="text-sm text-gray-300">非英语使用者在数字化转型中面临巨大资源获取障碍，缺乏如华社庞大社团网络的有效支撑。</p>
+            </div>
+        </section>
+
+        <!-- Final Reflection -->
+        <section class="border-t-4 border-hazard pt-12 text-center">
+            <blockquote class="italic text-2xl font-light text-silver leading-tight tracking-wider">
+                “别让‘平等’变成一场自嗨的垄断。如果捍卫华文文化意味着对更少数群体的漠视，那么这种捍卫本质上就是另一种霸权。”
+            </blockquote>
+        </section>
+
+    </main>
+
+    <!-- Footer Sign-off -->
+    <footer class="w-full bg-obsidian border-t-2 border-gray-800 p-8 flex flex-col items-center justify-center text-center">
+        <div class="flex gap-4 mb-4">
+            <div class="w-4 h-4 bg-hazard rotate-45"></div>
+            <div class="w-4 h-4 bg-core rotate-45"></div>
+            <div class="w-4 h-4 bg-gray-500 rotate-45"></div>
+        </div>
+        <div class="font-mono text-[10px] text-gray-600 uppercase tracking-widest">
+            FACILITY_REF: SINGAPORE-MODULAR-ANALYSIS-UNIT-2026<br>
+            MAINTAINED_BY: AI_WEB_ENGINEER_SYSTEM
+        </div>
+    </footer>
+
+</body>
+</html>
