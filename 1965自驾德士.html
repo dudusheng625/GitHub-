@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双轨竞合策略：自动驾驶的狮城法则</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: radial-gradient(circle at 0% 0%, #0f172a, #1e3a8a, #831843);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24, #f472b6, #2dd4bf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hover-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .prose-content {
+            line-height: 1.75;
+            color: #f8fafc;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            color: #f1f5f9;
+        }
+    </style>
+</head>
+<body class="text-slate-100 antialiased">
+
+    <!-- Background Decoration -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-teal-500/20 blur-[120px]"></div>
+        <div class="absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full bg-pink-500/20 blur-[120px]"></div>
+        <div class="absolute -bottom-[10%] left-[20%] w-[40%] h-[40%] rounded-full bg-yellow-500/20 blur-[120px]"></div>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 relative z-10">
+        
+        <!-- Hero Section -->
+        <section class="glass p-8 md:p-12 rounded-3xl mb-12 border-t border-l border-white/20">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight gradient-text">
+                《双轨竞合策略：外来技术巨头如何借力本土车队（Grab / 康福德高）穿透监管》
+            </h1>
+            <div class="flex items-center gap-4 text-sm text-slate-400">
+                <span>发布日期：2026-10-10</span>
+                <span class="w-1 h-1 rounded-full bg-slate-500"></span>
+                <span>深度研究 · 自动驾驶出海</span>
+            </div>
+            
+            <div class="mt-8 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                <img src='https://opal.google/board/blobs/8097f8aa-91d1-450b-b0d2-de7a5e93c981' alt='media_2' class="w-full object-cover h-64 md:h-96" />
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <article class="space-y-12">
+            
+            <section class="glass p-8 rounded-3xl hover-card">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-teal-400 pl-4">视角解构</h2>
+                <p class="prose-content">
+                    新加坡是自动驾驶企业出海东南亚乃至全球英语体系的第一站，其法规标准（CETRAN 体系）具有高度的指标性。本选题以 Waymo、文远知行（WeRide）、小马智行（Pony.ai）的不同路径为样本，梳理出一份可复用的跨国部署操作手册。
+                </p>
+                <div class="mt-6 p-4 rounded-xl bg-white/5 border border-white/10 italic text-slate-300">
+                    目标受众：自动驾驶出海团队、车企软件合规专家、城市空中交通/车联网产品总监。
+                </div>
+            </section>
+
+            <section class="glass p-8 rounded-3xl hover-card">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-yellow-400 pl-4">借壳出海还是真诚结亲？</h2>
+                <p class="prose-content mb-6">
+                    在这个连呼吸都要被征收某种“潜在碳排放费”的精细化岛国，如果你觉得只要带上几颗激光雷达和一捆美元就能在乌节路上横着走，那说明你对新加坡的理解还停留在鱼尾狮喷水的明信片阶段。
+                </p>
+                <img src='https://opal.google/board/blobs/9fb85ec8-a3ac-4267-a5a4-e13113ba598e' alt='media_1' class="w-full rounded-2xl mb-6 shadow-xl" />
+                <p class="prose-content">
+                    最近，全球自动驾驶圈子里的各路神仙——Waymo、文远知行（WeRide）、小马智行（Pony.ai）——都不约而同地把目光投向了这片只有700多平方公里的“压力锅”。为什么要来？因为这里的 CETRAN 体系是通往英语体系国家乃至全球市场的硬通货。
+                </p>
+            </section>
+
+            <section class="glass p-8 rounded-3xl hover-card">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-pink-400 pl-4">模块一：环境适应性工程</h2>
+                <p class="prose-content">
+                    新加坡的高湿度不仅让你的发型崩塌，更会让传感器的镜头蒙上一层挥之不去的薄雾。外来团队必须在这里重新标定他们的硬件。所谓的“环境适应性”，在这里被具象化为：你的激光雷达能不能在每小时100毫米的降雨量中，分辨出前面是一辆正在急刹的五菱宏光，还是仅仅是一团由于路面积水反射出的虚幻倒影？
+                </p>
+            </section>
+
+            <section class="glass p-8 rounded-3xl hover-card">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-teal-400 pl-4">模块二：监管穿透流水线</h2>
+                <p class="prose-content">
+                    LTA 要求的不是你每个月交一份漂亮的 PPT，而是要一种近乎病态的透明度。他们建立了一套事件驱动型（Event-driven）的数据流水线。这意味着，你的车辆在路上的每一个动作——位置、速度，尤其是每一次“驾驶脱离”，都必须在规定时间内变成结构化的数据，呈递到监管者的屏幕上。
+                </p>
+            </section>
+
+            <section class="glass p-8 rounded-3xl hover-card">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-yellow-400 pl-4">模块三：地缘伙伴模型选择</h2>
+                <p class="prose-content italic text-lg text-yellow-100">
+                    “技术巨头负责‘脑子’，本地巨头负责‘四肢’和‘身份’。”
+                </p>
+                <p class="prose-content mt-4">
+                    在监管者看来，一家由康福德高背书的自动驾驶车队，其可信度天然就比一家纯外资的实验室高出几个量级。这就是所谓的“借力穿透”。
+                </p>
+            </section>
+
+        </article>
+
+        <!-- Footer -->
+        <footer class="mt-20 py-8 text-center border-t border-white/10">
+            <p class="text-slate-500 text-sm">© 2026 Autonomous Driving Strategy Research. 严谨、专业、前瞻。</p>
+        </footer>
+    </main>
+
+</body>
+</html>
