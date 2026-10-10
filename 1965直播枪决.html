@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>别错怪中世纪：算法景观下的审判</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fashionPink: '#F4EAE6',
+                        charcoal: '#333333',
+                        paperWhite: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'Georgia', 'Songti SC', 'serif'],
+                        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+                        hand: ['"Dancing Script"', 'cursive', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F4EAE6; color: #333333; overflow-x: hidden; }
+        .crop-mark { position: fixed; width: 20px; height: 20px; border: 1px solid #333; pointer-events: none; }
+        .crop-tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+        .crop-tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+        .crop-bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+        .crop-br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+        .magazine-serif { font-family: 'Times New Roman', serif; letter-spacing: 0.05em; }
+        .vertical-text { writing-mode: vertical-rl; text-orientation: mixed; }
+        .bubble-hover { transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .bubble-hover:hover { transform: scale(1.02); }
+    </style>
+</head>
+<body class="p-8 md:p-16">
+
+    <!-- Crop Marks -->
+    <div class="crop-mark crop-tl"></div>
+    <div class="crop-mark crop-tr"></div>
+    <div class="crop-mark crop-bl"></div>
+    <div class="crop-mark crop-br"></div>
+
+    <main class="max-w-5xl mx-auto">
+        <!-- Header Section -->
+        <header class="relative mb-24">
+            <div class="flex justify-between items-start mb-8 text-sm italic font-hand text-gray-500">
+                <div class="border-l-2 border-charcoal pl-4">发布日期：2026-10-10</div>
+                <div class="border-r-2 border-charcoal pr-4">深度议题：文明的景观化</div>
+            </div>
+            
+            <h1 class="magazine-serif text-4xl md:text-6xl font-bold text-center mb-12 leading-tight">
+                别错怪中世纪：网络直播处决，<br>是晚期资本主义与算法景观的私生子
+            </h1>
+
+            <div class="flex justify-center mb-16">
+                <div class="relative w-full max-w-lg aspect-[3/4] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+                    <img src='https://opal.google/board/blobs/af3ca394-4bec-4b15-8460-e59f9d5c3c0f' alt='media_2' class="w-full h-full object-cover rounded-sm">
+                </div>
+            </div>
+
+            <!-- Floating Sidebar Text -->
+            <div class="hidden xl:block absolute right-[-80px] top-48 bg-white p-6 shadow-sm border border-gray-200">
+                <p class="vertical-text text-sm tracking-widest font-bold">POLITICAL SPECTACLE</p>
+            </div>
+        </header>
+
+        <!-- Content Grid -->
+        <article class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            
+            <!-- Main Column -->
+            <div class="md:col-span-9 space-y-16">
+                <section>
+                    <h2 class="magazine-serif text-3xl font-bold mb-6 italic">NO.1 欢迎来到“沉浸式”审判现场</h2>
+                    <p class="text-lg leading-relaxed mb-8">
+                        清晨七点二十七分。当智能闹钟跳过轻音乐，推送了美国战争部宣布直播处决哈桑的消息时，我的职业敏感度告诉我：这不仅仅是一场行刑，这是一场数字资产的收割。
+                    </p>
+                    <div class="bg-white p-8 border border-gray-300 bubble-hover">
+                        <p class="italic text-gray-700 font-serif">“中世纪的公开行刑依赖于实体广场与宗教救赎仪式；而今天的行刑直播，本质上是一场高度数字化的政治景观秀。”</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="magazine-serif text-3xl font-bold mb-6 italic">NO.2 断头台与带宽</h2>
+                    <img src='https://opal.google/board/blobs/1dcd583c-5377-474b-8079-3b86a3385c82' alt='media_1' class="w-full h-64 object-cover mb-8 grayscale opacity-90">
+                    <p class="text-lg leading-relaxed">
+                        现在的直播不需要广场，它需要的是AWS服务器集群和全球加速。这不是野蛮，这是极致的效率。当法律的尊严需要通过增加点击率来体现，正义便在逻辑上彻底破产了。
+                    </p>
+                </section>
+
+                <section class="space-y-8">
+                    <h2 class="magazine-serif text-3xl font-bold italic">NO.3 身份降格：作为一个数据点的自我修养</h2>
+                    <p class="text-lg leading-relaxed">
+                        当赫格塞斯宣称“公开处决能让其他人明白后果”时，他是在对用户说话，而非公民。我们已从法律的见证者降格为暴力的消费者。弹幕里的“666”是对文明底线的最大讽刺。
+                    </p>
+                </section>
+
+                <section class="bg-white p-10 border-t-4 border-charcoal">
+                    <h2 class="magazine-serif text-2xl font-bold mb-4">逻辑推演：当处决变为互动视频</h2>
+                    <p class="text-base text-gray-600 italic mb-4">——如果我们将司法的神圣性剥离，投射到充满算计的屏幕上，争议即是流量，流量即是权力。</p>
+                    <ul class="list-disc pl-6 space-y-2 text-lg">
+                        <li>多机位切换与实时解说</li>
+                        <li>煽情BGM与情绪最大化</li>
+                        <li>互动选项：是否执行？（观看广告以继续）</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Asymmetrical Sidebar -->
+            <aside class="md:col-span-3 space-y-12">
+                <div class="bg-white p-6 border-l-4 border-gray-900 sticky top-12">
+                    <h3 class="font-bold text-xs uppercase tracking-widest mb-4">批判导向</h3>
+                    <nav class="space-y-4 text-sm font-sans">
+                        <a href="#" class="block hover:underline">· 颗粒化逻辑的道德避风港</a>
+                        <a href="#" class="block hover:underline">· 空气炸锅与行刑队的结构缝合</a>
+                        <a href="#" class="block hover:underline">· 算法的冷漠：不再哀悼</a>
+                    </nav>
+                </div>
+                
+                <div class="bg-charcoal text-fashionPink p-6 shadow-2xl">
+                    <p class="font-hand text-xl">“屏幕变黑，倒映出我们疲惫、冷漠且略显浮肿的脸。我们才真正完成了这场祭祀。”</p>
+                </div>
+            </aside>
+        </article>
+
+        <!-- Final Closing Section -->
+        <section class="mt-24 pt-12 border-t border-gray-400">
+            <h2 class="magazine-serif text-4xl font-bold text-center mb-8">算法不会哀悼</h2>
+            <p class="text-center text-lg text-gray-700 max-w-2xl mx-auto">
+                下一次，当系统再次推送类似的“景观”时，请记得：你不是在见证历史，你只是在一台巨型收割机的传送带上，作为一个即将被收割的数据点，为它提供了最后一点润滑油。
+            </p>
+        </section>
+    </main>
+
+</body>
+</html>

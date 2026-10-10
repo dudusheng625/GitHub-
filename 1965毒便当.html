@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消灭了学校食堂阿姨，我们得到了更安全的毒便当？</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neonPink: '#FF00FF',
+                        neonCyan: '#00FFFF',
+                        neonPurple: '#8A2BE2',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Roboto', 'sans-serif'],
+                        display: ['"Archivo Black"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Outfit:wght@300;400;700&display=swap');
+        
+        body {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-color: #f9fafb;
+        }
+
+        .text-outline {
+            -webkit-text-stroke: 2px black;
+            text-shadow: 4px 4px 0px #000;
+        }
+
+        .blob {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        }
+
+        .sticker {
+            transform: rotate(-2deg);
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .sticker:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        .bubble {
+            backdrop-filter: blur(10px);
+            border: 2px solid #000;
+        }
+
+        .hand-drawn-underline {
+            background: linear-gradient(120deg, transparent 0%, #00ffff 0%, #00ffff 100%) no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 90%;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-900 overflow-x-hidden">
+
+    <!-- Header Section -->
+    <header class="relative py-20 flex flex-col items-center justify-center text-center px-4">
+        <div class="blob bg-gradient-to-br from-neonPink to-neonPurple p-8 md:p-12 w-full max-w-4xl flex items-center justify-center z-10">
+            <h1 class="font-display text-4xl md:text-6xl text-white text-outline leading-tight">
+                消灭了学校食堂阿姨，我们得到了更安全的毒便当？
+            </h1>
+        </div>
+        <div class="absolute top-10 left-10 text-neonCyan animate-pulse">✦</div>
+        <div class="absolute bottom-10 right-10 text-neonPink animate-bounce">✿</div>
+        <div class="mt-8 z-20">
+            <img src='https://opal.google/board/blobs/eb0207b9-3f55-4c63-b70b-af59d499d7ef' alt='header_illustration' class="w-64 h-64 object-cover rounded-full border-4 border-black shadow-lg" />
+        </div>
+    </header>
+
+    <!-- Meta Data -->
+    <div class="max-w-4xl mx-auto px-6 -mt-10">
+        <div class="sticker inline-block bg-yellow-300 px-6 py-2 border-2 border-black font-bold uppercase tracking-wider">
+            发布日期：2026-10-10
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        
+        <!-- Intro Section -->
+        <section class="bubble bg-white/60 p-8 rounded-3xl mb-12 shadow-[8px_8px_0px_0px_#000]">
+            <h2 class="text-3xl font-display mb-6">盲区剖析</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                整个社会在讨论“如何管好中央厨房”，却彻底遗漏了根本问题：为什么我们的孩子非要吃几小时前在工业区流水线上生产的盒饭？
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-neonCyan/20 p-4 rounded-xl border border-black">
+                    <h3 class="font-bold mb-2">本地生态的挤压</h3>
+                    <p class="text-sm">过去校内档口摊主现炒现卖，食物从出锅到入口只有15分钟，视觉、嗅觉一目了然。</p>
+                </div>
+                <div class="bg-neonPink/20 p-4 rounded-xl border border-black">
+                    <h3 class="font-bold mb-2">现代化的代价</h3>
+                    <p class="text-sm">为了“易于统一管理”和“集约化降本”，换来了一个链条冗长、需要靠防腐冷链、假标签维持的脆弱工业巨兽。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Insert -->
+        <div class="my-16 flex justify-center">
+            <img src='https://opal.google/board/blobs/3ca618a3-d6ba-4e6e-8631-1bb5e1f6b56d' alt='Analysis Visual' class="rounded-2xl border-4 border-black shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-500" />
+        </div>
+
+        <!-- Article Content -->
+        <article class="prose prose-lg max-w-none">
+            <h2 class="font-display text-4xl mb-8 border-b-4 border-black pb-4">一、耗材与计算</h2>
+            <p class="mb-6">立化小学（River Valley Primary School）的45个孩子在今年1月14日成了某种社会实验的耗材。他们的肠胃在哀鸣，而我们的管理系统在计算。</p>
+            
+            <blockquote class="border-l-4 border-neonPurple pl-6 py-4 bg-purple-50 italic text-xl">
+                “我们用一种更昂贵、更复杂的方式，换取了一种更高效的灾难。”
+            </blockquote>
+
+            <h2 class="font-display text-4xl mt-12 mb-8 hand-drawn-underline">二、集约化崇拜的逻辑</h2>
+            <p class="mb-6">在集约化的逻辑里，一份给8岁孩子的午餐，其生产流程必须和生产螺丝钉一样标准化。既然是螺丝钉，那么最重要的属性就不是“口感”或“新鲜”，而是“物流效率”。</p>
+
+            <h2 class="font-display text-4xl mt-12 mb-8">三、系统病理学</h2>
+            <p class="mb-6">监管部门不可能派人24小时盯着每一个中央厨房的打标机。于是，供应商的工作重心就从“如何让食物更卫生”转变成了“如何让记录看起来更完美”。</p>
+            
+            <div class="bg-black text-white p-6 rounded-2xl mt-10">
+                <p class="text-xl font-bold">结论：我们宁愿有秩序地中毒，也不愿混乱地活着。</p>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 text-center border-t-2 border-black mt-20">
+        <div class="flex justify-center space-x-6 mb-8">
+            <div class="w-10 h-10 border-2 border-black rounded-full flex items-center justify-center font-bold">IG</div>
+            <div class="w-10 h-10 border-2 border-black rounded-full flex items-center justify-center font-bold">TW</div>
+            <div class="w-10 h-10 border-2 border-black rounded-full flex items-center justify-center font-bold">WB</div>
+        </div>
+        <p class="text-sm tracking-widest text-slate-500">研究仍在继续... 别忘了那位阿姨。</p>
+    </footer>
+
+    <script>
+        // Simple hover effect for stickers
+        document.querySelectorAll('.sticker').forEach(el => {
+            el.addEventListener('mouseover', () => {
+                el.style.borderColor = '#FF00FF';
+            });
+            el.addEventListener('mouseout', () => {
+                el.style.borderColor = '#000';
+            });
+        });
+    </script>
+</body>
+</html>
