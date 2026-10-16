@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小贩中心微调价指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bloodOrange: '#FF4500',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@700;900&display=swap');
+        
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .heading-display {
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: -0.05em;
+        }
+
+        .line-accent {
+            width: 40px;
+            height: 2px;
+            background-color: #FF4500;
+        }
+
+        .vertical-line-accent {
+            width: 4px;
+            background-color: #FF4500;
+        }
+
+        .hover-reveal:hover .reveal-line {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="relative w-full min-h-[80vh] flex flex-col justify-center px-6 md:px-20 lg:px-32 py-10">
+        <div class="max-w-6xl mx-auto w-full">
+            <div class="flex items-center mb-8">
+                <span class="text-sm font-semibold tracking-widest text-bloodOrange uppercase">Insight & Strategy</span>
+                <div class="ml-4 h-px w-20 bg-black"></div>
+            </div>
+            
+            <h1 class="heading-display text-5xl md:text-8xl font-black leading-[0.9] mb-8">
+                小贩中心微调价指南
+            </h1>
+            <h2 class="text-xl md:text-2xl font-light text-gray-700 max-w-2xl mb-12">
+                如何收这两角钱才不会把食客逼上报纸？从公关灾难与生存智慧谈起。
+            </h2>
+
+            <div class="w-full h-64 md:h-96 overflow-hidden bg-gray-100 mb-12">
+                <img src='https://opal.google/board/blobs/210e5735-5e96-4571-beed-df9f41aed262' alt='Header Visual' class="w-full h-full object-cover opacity-90">
+            </div>
+
+            <div class="flex flex-wrap gap-4 text-xs font-bold tracking-tighter uppercase">
+                <span class="px-3 py-1 border border-black">发布日期: 2026-10-16</span>
+                <span class="px-3 py-1 bg-black text-white">危机公关管理</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-20">
+        
+        <article class="prose prose-lg max-w-none text-black">
+            <p class="text-2xl font-light mb-12 border-l-4 border-bloodOrange pl-6 italic">
+                在新加坡，如果你想一夜之间成为社交媒体的顶流，并不需要去乌节路裸奔，你只需要在你的小贩摊位前，用一支快要没墨的水笔，写下一个模糊不清的价格。
+            </p>
+
+            <h3 class="heading-display text-4xl font-black mt-16 mb-8">一、 小数点的“谋杀案”：那是加虾，还是加戏？</h3>
+            <div class="line-accent mb-8"></div>
+            <p class="mb-6">我们先来看看那张引发众怒的价目表。加虾1.5元，本是合情合理的市场价。可坏就坏在那只握笔的手，小数点写得比尘埃还要渺小。于是，在食客眼里，那不是“$1.5”，那是赫然在目的“$15”。</p>
+            
+            <div class="my-12 p-2 bg-gray-50 border border-gray-200">
+                <img src='https://opal.google/board/blobs/f93ca491-8d75-420b-ad47-9abd2936de80' alt='Analysis Visual' class="w-full h-auto">
+            </div>
+
+            <h3 class="heading-display text-4xl font-black mt-16 mb-8">二、 “干”得漂亮：这两角钱里藏着多少“傲慢”？</h3>
+            <div class="line-accent mb-8"></div>
+            <p class="mb-6">再聊聊那备受争议的“干面多收20分”。摊主的理由很充分：干面要多用酱料，要多洗一个汤碗。但在食客看来，这种做法简直就是一种“惩罚”。</p>
+            <p class="mb-6">你把“干 (Dry) +20¢”冷冰冰地贴在玻璃上，给人的观感就像是：“你想吃得爽？想多用我的酱？行，交买路钱。”这种标价方式，精准地踩中了食客的心理红线——被算计感。</p>
+
+            <h3 class="heading-display text-4xl font-black mt-16 mb-8">三、 同行陈先生的智慧：统一售价是最高级的慈悲</h3>
+            <div class="line-accent mb-8"></div>
+            <p class="mb-6">新闻里提到了另一位同行陈先生，他的做法就非常值得玩味。陈先生明白，为了这两角钱，每天要多费多少唇舌去解释？要面对多少次食客的白眼？</p>
+            <p class="mb-6">把价格统一，表面上是少赚了两角钱，实际上是买断了所有的潜在纷争。这不叫妥协，这叫经营的豁达。</p>
+
+            <h3 class="heading-display text-4xl font-black mt-16 mb-8">四、 避坑指南：如何优雅地让食客多掏钱？</h3>
+            <div class="line-accent mb-8"></div>
+            <p class="mb-6">如果成本压力真的大到不加这两角钱就要倒闭的地步，我们该怎么办？摊主们需要学习的，不是会计学，而是营销心理学。</p>
+            <ul class="list-none space-y-4 mb-8">
+                <li class="flex items-start">
+                    <span class="text-bloodOrange font-black mr-4 text-2xl">01</span>
+                    <span class="text-lg">抛弃惩罚式标签：用“体验升级法”包装，推出“招牌捞面”系列，而不是加收酱料费。</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-bloodOrange font-black mr-4 text-2xl">02</span>
+                    <span class="text-lg">展示背后价值：通过展示手工熬制的酱料过程，让食客觉得溢价合理且充满诚意。</span>
+                </li>
+            </ul>
+
+            <h3 class="heading-display text-4xl font-black mt-16 mb-8">五、 结语：别让两角钱杀死了小贩文化的温情</h3>
+            <div class="line-accent mb-8"></div>
+            <p class="mb-6 italic text-gray-600">在这个资讯透明到近乎赤裸的时代，任何一点自以为是的“聪明”，最后都会变成回旋镖。</p>
+        </article>
+    </main>
+
+    <!-- Minimal Separator -->
+    <div class="max-w-4xl mx-auto px-6 py-10">
+        <div class="w-full border-t border-black"></div>
+        <div class="flex justify-between mt-4">
+            <span class="text-[10px] tracking-widest text-gray-500 uppercase">Strategic Review</span>
+            <div class="w-2 h-2 bg-bloodOrange rounded-full"></div>
+        </div>
+    </div>
+
+</body>
+</html>
