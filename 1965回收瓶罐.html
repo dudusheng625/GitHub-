@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雕塑波普艺术研究 | 经济与时间的博弈</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #0f0f0f;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .display-font { font-family: 'Outfit', sans-serif; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid #ffffff;
+        }
+
+        .pop-shadow {
+            box-shadow: 8px 8px 0px #000;
+        }
+
+        .neon-border {
+            border: 4px solid #fcfc03;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Header Section -->
+    <header class="relative h-[80vh] flex flex-col items-center justify-center overflow-hidden border-b-8 border-black">
+        <div class="absolute inset-0 z-0">
+            <img src='https://opal.google/board/blobs/4cf32d33-a915-42f3-952c-52499cb8c2f2' alt='Header Artistic Concept' class="w-full h-full object-cover opacity-80" />
+        </div>
+        <div class="relative z-10 container mx-auto px-6 text-center">
+            <div class="inline-block bg-[#fcfc03] text-black px-4 py-1 mb-4 font-bold tracking-widest uppercase pop-shadow">
+                2026-10-22 | 社会病理研究
+            </div>
+            <h1 class="display-font text-5xl md:text-8xl font-black leading-tight mb-6 text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+                扔掉一角钱，<br/>是高收入社会<br/>的理性算盘？
+            </h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-12 gap-8">
+        
+        <!-- Sidebar Navigation / Metadata -->
+        <aside class="md:col-span-3 space-y-6">
+            <div class="bg-[#7c3aed] p-6 pop-shadow">
+                <h3 class="display-font font-black text-xl mb-4">研究核心</h3>
+                <p class="text-sm leading-relaxed">从时间机会成本切入，重新审视阶层时间价值与交易摩擦成本。</p>
+            </div>
+            <div class="border-2 border-white p-6">
+                <h4 class="font-bold mb-2">关键字</h4>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-white text-black px-2 py-1 text-xs font-bold">#经济学</span>
+                    <span class="bg-white text-black px-2 py-1 text-xs font-bold">#阶层差异</span>
+                    <span class="bg-white text-black px-2 py-1 text-xs font-bold">#机会成本</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Article Body -->
+        <article class="md:col-span-9 space-y-12">
+            
+            <section class="prose prose-lg prose-invert max-w-none">
+                <h2 class="display-font text-4xl font-black mb-8 border-l-8 border-[#fcfc03] pl-6">01. 一角钱的“诅咒”：从亢兰工业区的长队说起</h2>
+                <p class="text-xl">在新加坡这个以秒计算GDP的精密机器里，最近出现了一种极具张力的荒诞景观。在亢兰工业区（Woodlands Recreation Centre）的饮料瓶退费机前，每晚都会上演一场关于“一角钱”的生存拉锯战。</p>
+                <div class="my-12">
+                    <img src='https://opal.google/board/blobs/a8d4ecf0-558f-4067-84d6-7c6cf2c23d2d' alt='Industrial Scene' class="w-full h-[400px] object-cover neon-border pop-shadow" />
+                </div>
+                <p>我们必须承认一个冷峻的事实：在人均收入达到全球顶尖水平的社会，试图通过物理劳作找回那一角钱的押金，本身就是一种对阶层属性的误读。</p>
+            </section>
+
+            <section class="bg-white p-8 md:p-12 text-black pop-shadow">
+                <h2 class="display-font text-3xl font-black mb-6 uppercase">02. “道德洗涤”的隐形成本</h2>
+                <p class="text-lg mb-6 leading-relaxed">你的厨房或阳台，其实是你花了几十万甚至上百万新币买下的“高端仓储空间”。当你决定为了那一角钱而保留一个空瓶时，你实际上是在用每平方英尺几千新币的租金，去为一个价值一角钱的垃圾提供临时住所。</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+                    <div class="bg-black text-white p-6">
+                        <span class="block text-4xl font-black text-[#fcfc03]">50瓶</span>
+                        <span class="text-xs">空间占用成本 > 退款价值</span>
+                    </div>
+                    <div class="bg-black text-white p-6">
+                        <span class="block text-4xl font-black text-[#db2777]">30分钟</span>
+                        <span class="text-xs">排队导致的隐形亏损</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="prose prose-lg prose-invert max-w-none">
+                <h2 class="display-font text-4xl font-black mb-6">03. 降格者的自白：排队半小时的智性痛感</h2>
+                <p>对于时薪在3至5新币左右的群体来说，排队30分钟赚取几块钱，是一个极其理性的经济行为。但对于一个潜在时薪超过30新币的中产阶层来说，站在这里的每一分钟，都是在亏损。</p>
+                
+                <blockquote class="border-l-4 border-[#7c3aed] pl-8 py-4 my-8 bg-black/50 text-2xl italic font-bold">
+                    “如果你排队半小时，只为了退掉10个瓶子，那么你对自己生命的估值就是每小时2新币。”
+                </blockquote>
+            </section>
+
+            <section class="bg-[#fcfc03] p-8 text-black">
+                <h2 class="display-font text-3xl font-black mb-6 uppercase">06. 回调与闭环：理性的终点是“果断放弃”</h2>
+                <p class="mb-4">高收入社会最理性的“经济算盘”是：承认你的时间比塑料贵，承认你的空间比押金贵，承认你的情绪稳定性比那点微不足道的返现更重要。</p>
+                <p class="font-bold underline cursor-pointer hover:text-[#7c3aed]">了解更多关于阶层时间价值的深度分析 →</p>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Surreal Footer -->
+    <footer class="mt-20 border-t-2 border-white py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-6xl font-black opacity-20 hover:opacity-100 transition-opacity">
+                // DATA.LOG
+            </div>
+            <div class="text-right">
+                <div class="w-24 h-24 bg-white flex items-center justify-center mb-2">
+                    <span class="text-[10px] text-black text-center font-bold">扫描识别<br/>阶层逻辑</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
