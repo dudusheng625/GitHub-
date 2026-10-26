@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深度研究 | 零工经济的博弈</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepNavy: '#1E293B',
+                        glassWhite: 'rgba(255, 255, 255, 0.1)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #1E293B;
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .orb {
+            position: fixed;
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #2DD4BF, #F472B6, #FBBF24);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate-800">
+
+    <!-- Background Orbs -->
+    <div class="orb w-96 h-96 bg-teal-500 top-[-10%] left-[-10%] animate-pulse"></div>
+    <div class="orb w-96 h-96 bg-pink-500 bottom-[-10%] right-[-10%] animate-pulse delay-1000"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        
+        <!-- Hero Section -->
+        <header class="glass-card rounded-3xl p-8 md:p-12 mb-12 border-t border-l border-white/20">
+            <div class="flex flex-col gap-6">
+                <span class="inline-block px-4 py-1 rounded-full bg-white/10 text-teal-300 border border-white/20 w-fit text-sm font-semibold">
+                    深度观察：零工经济系列
+                </span>
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight text-white">
+                    《底薪1800还给交公积金，送餐员却不买账：大家以为平台在发福利，其实是老骑手看懂了“自由税”》
+                </h1>
+                <div class="flex items-center gap-4 text-slate-300 text-sm">
+                    <span>发布日期：2026-10-26</span>
+                    <span class="w-1 h-1 bg-white rounded-full"></span>
+                    <span>深度分析</span>
+                </div>
+                <div class="mt-4 overflow-hidden rounded-2xl shadow-2xl">
+                    <img src='https://opal.google/board/blobs/35b04792-b40a-4692-af74-d1475492cb71' alt='Hero Image' class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <article class="space-y-8">
+            
+            <!-- Introduction -->
+            <section class="glass-card rounded-2xl p-6 md:p-10">
+                <h2 class="text-2xl font-bold mb-6 text-white border-l-4 border-teal-400 pl-4">慈悲为怀还是算盘打响？</h2>
+                <p class="text-slate-200 leading-loose text-lg">
+                    最近，本地那个粉红色的外卖大厂Foodpanda又在报纸上刷了一波存在感。打开报纸，赫然映入眼帘的是几个大字：“底薪1800元，还交公积金”。乍一看，这简直是网约配送界的“及时雨”，是资本巨头终于良心发现。<br><br>
+                    然而，在这座岛屿上生活久了的人都知道，凡是听起来太完美的deal，往往在看不见的角落里藏着一根带钩的刺。老骑手们扫一眼招募简章，冷笑一声，就算出了这本账里的猫腻。
+                </p>
+                <div class="my-8">
+                    <img src='https://opal.google/board/blobs/e7460070-1e77-45a4-9d23-6382f737e604' alt='Analysis Image' class="w-full rounded-xl shadow-lg border border-white/10">
+                </div>
+            </section>
+
+            <!-- Analysis Points -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-xl font-bold text-teal-300 mb-4">消失的800元</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        根据资深骑手的算法，完成同样的320单，从独立承包商转为全职计划，收入直接缩水。这消失的800元，是平台以“福利”为名，对骑手议价权的强行收编。
+                    </p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <h3 class="text-xl font-bold text-pink-300 mb-4">被阉割的自由</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        全职计划要求的44小时工作制，将曾经的“城市游侠”变成了计件囚徒。这种“稳定”，实质上是平台买断了骑手随性生活的权利。
+                    </p>
+                </div>
+            </section>
+
+            <!-- Blockquote Section -->
+            <section class="glass-card rounded-2xl p-8 border-l-8 border-yellow-400 bg-white/5">
+                <blockquote class="text-xl italic text-slate-100 font-light">
+                    "所谓的底薪，本质上是平台给自己买了一份保险——用更低的单价，锁定了更稳定的劳动力。"
+                </blockquote>
+                <p class="mt-4 text-yellow-500 font-semibold">— 本文核心洞察</p>
+            </section>
+
+            <!-- Conclusion -->
+            <section class="glass-card rounded-2xl p-8">
+                <h2 class="text-2xl font-bold mb-6 text-white">结语：被包装成礼物的枷锁</h2>
+                <p class="text-slate-200 leading-loose text-lg">
+                    新加坡的街头不需要温室里的花朵。当平台开始谈论福利和保障时，每一个在路上奔波的人都该警惕：他们到底是想保护你的未来，还是想廉价买断你的现在？<br><br>
+                    老骑手们的沉默和拒绝，才是对这种虚伪福利最响亮的回击。别把大家都当成不懂数学的傻瓜，那一层“自由税”，虽然看不见，但骑手们摸得着，也痛在心里。
+                </p>
+            </section>
+
+        </article>
+
+    </main>
+
+</body>
+</html>
