@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深度研究：繁荣的幻觉与消失的中产</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bloodOrange: '#FF4500',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Outfit:wght@400;800&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .orange-line { border-left: 4px solid #FF4500; }
+        .hero-title { letter-spacing: -0.05em; line-height: 0.9; }
+    </style>
+</head>
+<body class="bg-white text-neutral-950 antialiased selection:bg-orange-600 selection:text-white">
+
+    <main class="max-w-7xl mx-auto px-6 py-12 md:py-24">
+        <!-- Header Section -->
+        <header class="mb-24">
+            <div class="flex flex-col md:flex-row justify-between items-start mb-12">
+                <div class="max-w-3xl">
+                    <h1 class="hero-title text-5xl md:text-8xl font-extrabold mb-8 uppercase">
+                        全国就业人数连涨五年，<br/>
+                        <span class="text-orange-600">为什么被裁员的反而变多了？</span>
+                    </h1>
+                    <div class="flex items-center gap-6 text-sm font-medium uppercase tracking-widest mt-8">
+                        <span class="flex items-center gap-2"><span class="w-2 h-2 bg-orange-600 rounded-full"></span>研究专题</span>
+                        <span class="text-neutral-500">发布日期：2026-10-31</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative w-full h-[60vh] overflow-hidden bg-neutral-100">
+                <img src="https://opal.google/board/blobs/ffe162f3-6f57-4f76-9e2c-0a6fb5e961d9" alt="Header Visual" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <article class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Sidebar / Asymmetric Info -->
+            <aside class="lg:col-span-3 space-y-12">
+                <div class="sticky top-12">
+                    <h3 class="text-xs font-bold uppercase tracking-tighter mb-4 text-orange-600">核心洞察</h3>
+                    <p class="text-xl font-light leading-snug">企业正在进行一场职场“以旧换新”，高薪的“大脑”被切掉，换成了更多便宜的“触手”。</p>
+                    <div class="w-full h-px bg-neutral-200 my-8"></div>
+                    <img src="https://opal.google/board/blobs/062449e7-cf19-48c0-bbe7-ab653fc92a95" alt="Side Visual" class="w-full aspect-square object-cover">
+                </div>
+            </aside>
+
+            <!-- Text Content -->
+            <section class="lg:col-span-9 text-lg leading-relaxed text-neutral-800 space-y-12">
+                
+                <div class="prose max-w-none">
+                    <h2 class="text-4xl font-bold mb-6 text-black">繁荣的幻觉与消失的中产</h2>
+                    <p>在这个大数据比真话还多的年代，官方报表就像是一张涂了厚厚奶油的松饼。最近公布的数据显示，全国总就业人数已经连续二十个季度攀升，仿佛职场大门常打开，遍地都是机会。</p>
+                    <p>可是，当你坐在长凳上观察行色匆匆的人群时，你会发现这种“繁荣”只存在于Excel表格里。在同一份报告的阴影处，单季裁员4800人的数据正冷冷地盯着你——那是四年来的新高。</p>
+                </div>
+
+                <blockquote class="orange-line pl-8 py-2 text-2xl font-medium italic text-neutral-600">
+                    “外面的人排队想进来，里面的人却像被修剪的枯枝一样成捆成捆地往外扔。”
+                </blockquote>
+
+                <div class="bento-grid">
+                    <div class="bg-neutral-50 p-8 border-b-2 border-orange-600">
+                        <h3 class="text-2xl font-bold mb-4">一、统计学的“魔术”</h3>
+                        <p class="text-base">企业在大搞“大换血”，而不是大扩张。你看到的就业增长，大多是基层岗位或外包合同。高薪中层被砍掉，换成了廉价劳动力。</p>
+                    </div>
+                    <div class="bg-neutral-50 p-8 border-b-2 border-orange-600">
+                        <h3 class="text-2xl font-bold mb-4">二、4800人的尖叫</h3>
+                        <p class="text-base">这4800人里，绝大部分是曾经引以为傲的白领和管理层。经验不再是资产，而是沉重的“昂贵”标签。</p>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-bold">三、结构的错配：缺的是“干活的”，不是“管人的”</h3>
+                    <p>市场确实缺人，缺的是快递员、熟练工、基层销售。而在过去的二十年里，我们培养了太多的“管理者”。这种结构性错配，让那些习惯了在会议室指点江山的中年人陷入了绝境。</p>
+                </div>
+
+                <div class="bg-neutral-950 text-white p-12">
+                    <h3 class="text-3xl font-bold mb-6 text-orange-600">薪资断层：中产阶级的降级</h3>
+                    <p class="text-neutral-300">当中年人被裁之后，他们很难在市场上找到同等薪资的职位。为了生存，这些曾经的中产开始向下兼容，接受更低的薪水。这在宏观上表现为“就业活跃”，在微观上，这是一场文明的倒退。</p>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-orange-600">总结：别让数据治愈了你的幻觉</h3>
+                    <p>职场从来不是慈善机构。当你看到就业人数连涨五年时，请思考：有多少岗位能让人有尊严地生活？</p>
+                    <p>如果你不能证明自己比年轻人更便宜，或者比机器更全能，那么你手中的那份合约，可能比廉价航空机票更容易作废。<strong>清醒，才是这个数字乱舞年代里，唯一的自我救赎。</strong></p>
+                </div>
+
+            </section>
+        </article>
+    </main>
+
+    <div class="h-24"></div> <!-- Spacer -->
+
+</body>
+</html>
