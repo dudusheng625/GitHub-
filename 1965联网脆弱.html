@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>连网即脆弱：为何保鲜食品最有效的防线，反而是不连网的机械温控器？</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blackboard: '#1A2E22',
+                        chalkWhite: '#F5F5F5',
+                        sunnyYellow: '#FFF176',
+                        skyBlue: '#81D4FA',
+                    },
+                    fontFamily: {
+                        handwriting: ['"Ma Shan Zheng"', 'cursive'],
+                        body: ['"Noto Serif SC"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #1A2E22;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+            color: #F5F5F5;
+            cursor: crosshair;
+        }
+        .chalk-border {
+            border: 2px solid #F5F5F5;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            padding: 2rem;
+        }
+        .chalk-text { text-shadow: 1px 1px 2px rgba(255,255,255,0.3); }
+        .chalk-glow:hover { text-shadow: 0 0 8px #FFF176; transition: all 0.3s ease; }
+        .chalk-image { filter: brightness(0.9) sepia(0.2) saturate(0.5) contrast(1.2); border: 5px solid #F5F5F5; border-radius: 10px; }
+        .double-underline { border-bottom: 3px double #FFF176; }
+        .side-note { background: rgba(255, 255, 255, 0.05); border-left: 5px solid #FFF176; padding: 1rem; margin: 1.5rem 0; }
+    </style>
+</head>
+<body class="font-body selection:bg-skyBlue selection:text-blackboard">
+
+    <!-- Hero Section -->
+    <header class="relative w-full h-[60vh] flex flex-col items-center justify-center p-8 text-center border-b-4 border-dashed border-white/20">
+        <img src='https://opal.google/board/blobs/23a4a38e-c127-490a-bbe4-890927e4894d' alt='Chalkboard Header' class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay" />
+        <h1 class="relative font-handwriting text-5xl md:text-7xl mb-6 chalk-text z-10 leading-tight">
+            连网即脆弱：<br>为何保鲜食品最有效的防线，<br>反而是不连网的机械温控器？
+        </h1>
+        <p class="absolute bottom-4 right-8 font-handwriting text-xl text-white/70">发布日期：2026-11-03</p>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 py-12">
+        
+        <!-- Content Body -->
+        <article class="prose prose-invert prose-lg max-w-none">
+            
+            <section class="mb-12">
+                <p class="text-xl italic mb-8">**连网即脆弱：当你的牛排在冰箱里“中暑”，我们该怀念那颗机械旋钮了**</p>
+                
+                <p>有些事情，我真的是看不懂。</p>
+                <p>前两天翻开《新明日报》，看到一条让人哭笑不得的消息：欧洲那边，瑞典、爱尔兰、比利时，好几个国家的超市冷柜全线崩溃。不是因为停电，也不是因为压缩机坏了，而是因为被黑客“绑架”了。</p>
+                
+                <img src='https://opal.google/board/blobs/08589947-c882-4e22-b501-1ea73085f245' alt='Industrial Fridge' class="chalk-image my-8 w-full shadow-2xl" />
+
+                <p>这种事听起来像是个冷笑话，但如果你是那间超市的老板，或者是正打算买晚餐的倒霉顾客，你恐怕笑不出来。</p>
+            </section>
+
+            <div class="side-note">
+                <h2 class="text-2xl font-bold mb-4 text-sunnyYellow">一、 那个“什么都要上网”的怪圈</h2>
+                <p>现在的工程师和产品经理，好像得了一种“连网强迫症”。在他们眼里，只要没连上Wi-Fi，没个App能远程监控，就觉得是古董。</p>
+            </div>
+
+            <section class="space-y-6">
+                <h2 class="text-3xl font-handwriting double-underline inline-block mb-4">二、 逻辑的陷阱：当安全变成了“软件问题”</h2>
+                <p>工业设备的逻辑本该是“稳如泰山”。一个冷柜的核心任务是什么？是保持低温。这个任务应该是由物理定律决定的，而不应该是由几行代码决定的。</p>
+            </section>
+
+            <section class="chalk-border my-10">
+                <h2 class="text-3xl font-handwriting mb-6 text-skyBlue">三、 机械温控器：那个被遗忘的“硬汉”</h2>
+                <p>你们还记得以前的老冰箱吗？后面或者侧面有个旋钮，咔哒咔哒地转。这就是物理。物理不需要账号密码，物理不需要防火墙。</p>
+                <p class="mt-4 font-bold text-sunnyYellow">“物理硬件极限保护”：就是给机器装一个“硬刹车”。</p>
+            </section>
+
+            <section class="space-y-6">
+                <h2 class="text-3xl font-handwriting mb-4">四、 盲目崇拜技术的“新加坡式焦虑”</h2>
+                <p>在新加坡，我们对“Smart”这个词有一种近乎偏执的狂热。但快，并不一定意味着稳。</p>
+                <p>我们现在的工业架构，越来越像是一座建立在沙滩上的摩天大楼。地基是脆弱的二进制代码。</p>
+            </section>
+
+            <section class="bg-blackboard/50 p-6 border-2 border-white/20 rounded-lg my-10">
+                <h2 class="text-2xl font-handwriting text-sunnyYellow mb-4">五、 工业安全的本质：回归常识</h2>
+                <p>我们要明白一个道理：不是所有的连接都叫进步，有些连接其实是“招灾”。</p>
+            </section>
+
+            <section class="text-center pt-10">
+                <h2 class="text-3xl font-handwriting mb-6 chalk-glow">六、 结语：别让聪明反被聪明误</h2>
+                <p>技术应该是为人类服务的，而不是为黑客提供靶场的。有些东西，还是“笨”一点比较安全。</p>
+            </section>
+        </article>
+
+        <!-- Footer -->
+        <footer class="mt-20 border-t-2 border-white/20 pt-10 text-center">
+            <p class="font-handwriting text-3xl rotate-[-2deg]">Class Dismissed. — 课已上完，下课。</p>
+        </footer>
+    </main>
+
+    <script>
+        // Micro-interactions: Chalk Glow on links
+        document.querySelectorAll('a').forEach(link => {
+            link.classList.add('chalk-glow', 'text-skyBlue', 'transition-all', 'duration-300');
+        });
+    </script>
+</body>
+</html>
