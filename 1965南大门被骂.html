@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深度研究 | 消费异化与心理代偿</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepNavy: '#1E293B',
+                        glassWhite: 'rgba(255, 255, 255, 0.1)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans SC', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f1f5f9;
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .orb {
+            position: fixed;
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.38;
+            pointer-events: none;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #2DD4BF, #F472B6, #FBBF24);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        @media print {
+            body { background: #0f172a !important; color: #fff !important; }
+            .orb { display: none; }
+            .glass-card { break-inside: avoid; border: 1px solid rgba(255,255,255,0.2); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate-100 selection:bg-teal-500 selection:text-white">
+
+    <!-- Background Orbs -->
+    <div class="orb w-96 h-96 bg-teal-500 top-[-10%] left-[-10%] animate-pulse"></div>
+    <div class="orb w-96 h-96 bg-pink-500 bottom-[-10%] right-[-10%] animate-pulse delay-1000"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        
+        <!-- Hero Section (全景概念图展台) -->
+        <header class="glass-card rounded-3xl p-8 md:p-12 mb-12 border-t border-l border-white/20">
+            <div class="flex flex-col gap-6">
+                <span class="inline-block px-4 py-1 rounded-full bg-white/10 text-teal-300 border border-white/20 w-fit text-sm font-semibold tracking-wide">
+                    深度观察：平价消费与社会病理系列
+                </span>
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight text-white">
+                    《被骂才算买到货：当“受虐体验”成为平价消费的遮羞布》
+                </h1>
+                <div class="flex items-center gap-4 text-slate-300 text-sm">
+                    <span>观察归档：2026-11-07</span>
+                    <span class="w-1 h-1 bg-white rounded-full"></span>
+                    <span>南大门市场实证拆解</span>
+                    <span class="w-1 h-1 bg-white rounded-full"></span>
+                    <span class="text-teal-400">深度研究</span>
+                </div>
+                <div class="mt-4 overflow-hidden rounded-2xl shadow-2xl border border-white/10 group cursor-pointer" id="hero-container" title="双击或拖拽本地图片可即时替换主图">
+                    <img id="hero-img" src="d949d534-41d7-41b2-abd7-fd42705b36ec_2.jpg" alt="首尔南大门市场毒舌围巾摊全景概念图" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 max-h-[520px]">
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between text-xs text-slate-400 px-1 gap-2 font-mono">
+                    <span class="text-teal-300">EXHIBIT A // 价格击穿地板，尊严当街折扣的全景概念展台</span>
+                    <span class="text-slate-500 italic">提示：双击图片或直接拖拽本地文件可持久化替换</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <article class="space-y-8">
+            
+            <!-- 模块一：引言与现场实证（身份降格起点） -->
+            <section class="glass-card rounded-2xl p-6 md:p-10">
+                <h2 class="text-2xl font-bold mb-6 text-white border-l-4 border-teal-400 pl-4">
+                    花钱买耳光：廉价市集的精神狂欢
+                </h2>
+                <div class="text-slate-200 leading-loose text-base md:text-lg space-y-4">
+                    <p>
+                        在牛车水杂货摊前挑过五新元衬衫的普通人，大抵都懂一种隐秘的心理防线：你深知线头会在下水后炸裂，聚酯纤维闷出的汗味堪比暴晒下的沥青，但只要店员没有投来鄙夷的目光，你就能把这笔交易包装成精打细算的持家美德。我们本能地用卑微的自尊，小心翼翼地缝补着干瘪钱包带来的体面裂缝。
+                    </p>
+                    <p>
+                        然而首尔南大门市场的“汉阳社”围巾摊，却把这层遮羞布扯得粉碎。摊主凭借劈头盖脸的“毒舌”叫卖爆红网络，甚至挤爆巷道、一度被迫停业。面对蜂拥而至的顾客，他既不端茶也不堆笑，而是当面羞辱：“围一条1500韩元（约1.5新元）的东西，难道就会变漂亮吗？反正不好看，买去送人吧！”奇诡的是，顾客非但不怒，反而嬉皮笑脸地排起长队，争先恐后把钞票塞过去，生怕自己落下了这场“花钱讨骂”的滑稽洗礼。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 模块二：双栏对决剖析 + 第三层深度拆解（逻辑颗粒化） -->
+            <div class="space-y-6">
+                <!-- 第一层 & 第二层：双栏并列毛玻璃卡 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="glass-card rounded-2xl p-6 md:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-teal-400 mb-2 tracking-widest uppercase">Layer 01 // 预期错位</div>
+                            <h3 class="text-xl font-bold text-teal-300 mb-4">前置免责：用人身贬损置换品控责任</h3>
+                            <p class="text-slate-300 leading-relaxed text-sm md:text-base">
+                                摊主的羞辱并非即兴发泄，而是一套极其精明的防御机制。在传统商业伦理中，买卖双方维系着“哪怕便宜也得堪用”的默契。当老板公然宣称“反正难看、买去送人”时，他实际上在交易发生的前一秒，单方面撕毁了品质契约。通过把劣质化为不可辩驳的事实，他剥夺了买家事后追责、退换或抱怨的全部道德合法性。
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/10 text-xs text-teal-200/70 font-mono">
+                            账面抵消：1.5新元买到的不是面料，是豁免权
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 md:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-mono text-pink-400 mb-2 tracking-widest uppercase">Layer 02 // 心理代偿</div>
+                            <h3 class="text-xl font-bold text-pink-300 mb-4">自嘲降维：从“穷酸买家”退避为“群嘲玩家”</h3>
+                            <p class="text-slate-300 leading-relaxed text-sm md:text-base">
+                                承认自己只能消费1500韩元的地摊货是痛苦的，那意味着在阶层镜像前直面窘迫。但如果买家把这一过程演化为一出受虐滑稽戏，心理机制便发生了根本逆转。排队挨骂的狂热，本质上是一场集体防御性认同：只要我笑得比骂声还大声，我就不再是被经济下行围困的廉价买家，而是深谙互联网反向营销、主动参与街头解构的超然看客。
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/10 text-xs text-pink-200/70 font-mono">
+                            身份偷换：用受虐表演掩饰购买力萎缩
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第三层：全宽深度拆解毛玻璃卡 -->
+                <div class="glass-card rounded-2xl p-6 md:p-8 border-t border-white/20">
+                    <div class="text-xs font-mono text-amber-400 mb-2 tracking-widest uppercase">Layer 03 // 制度本质</div>
+                    <h3 class="text-xl font-bold text-amber-300 mb-4">“送人哲学”的恶毒闭环：廉价负资产的社会转嫁</h3>
+                    <p class="text-slate-200 leading-relaxed text-base">
+                        最耐人寻味的细节在于那句“买去送人吧”。这不仅是一句市井调侃，更是消费异化的终极注脚.摊主心知肚明，买家绝不敢把这块化纤抹布贴上自己的脖颈去冒充体面，于是他指明了一条兼具道德转嫁与黑色幽默的出路——将其当作社交垃圾排泄给第三方。一条毫无审美价值的1500韩元围巾，通过在南大门摊位前盖上“被网红摊主骂过”的精神印戳，摇身一变成了带着反讽色彩的社交礼品。尊严的彻底贬值在此处达成了制度化的商业闭环：买家付出了自尊，带走了廉价的塑料感，却把难堪的审美惩罚留给了不在场的收礼人。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Exhibit B 现场实证四格漫画展台（第二张插图独立呈现） -->
+            <section class="glass-card rounded-2xl p-6 md:p-10 border-l-4 border-teal-400">
+                <div class="text-xs font-mono text-teal-400 mb-2 tracking-widest uppercase">Exhibit B // 现场实证四格漫画展台</div>
+                <h2 class="text-2xl font-bold mb-6 text-white">漫画解构：从猎奇引流到自尊代偿的全景推演</h2>
+                <div class="bg-slate-900/60 p-4 rounded-xl border border-white/15 shadow-lg" id="exhibit-container" title="双击或拖拽本地图片可替换漫画插图">
+                    <div class="overflow-hidden rounded-lg bg-black/40 flex items-center justify-center">
+                        <img id="exhibit-img" src="d543f220-86e0-471a-8e26-2870dc25156e_2.jpg" alt="现场实证四格漫画：猎奇引流、心理防御、荒谬推演与自尊代偿" class="w-full h-auto max-h-[800px] object-contain mx-auto rounded-lg hover:brightness-105 transition-all duration-300">
+                    </div>
+                    <div class="mt-3 flex flex-col md:flex-row md:items-center justify-between text-xs text-slate-400 px-2 gap-2">
+                        <span class="font-mono text-teal-300 tracking-wider">四格解构：猎奇引流 ➔ 心理防御 ➔ 荒谬推演 ➔ 自尊代偿</span>
+                        <span class="text-slate-500 italic">提示：双击图片或直接拖拽本地文件可持久化替换实证素材</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 模块三：What-if 归谬推演实验室 -->
+            <section class="glass-card rounded-2xl p-6 md:p-10 border-l-4 border-pink-400">
+                <div class="text-xs font-mono text-pink-400 mb-2 tracking-widest uppercase">Absurdity Lab // 逻辑外推</div>
+                <h2 class="text-2xl font-bold mb-4 text-white">What-if 归谬：如果“讨骂经济学”接管社会运转</h2>
+                <div class="text-slate-200 leading-loose text-base md:text-lg space-y-4">
+                    <p>
+                        不妨将这套“因为价格低廉，所以必须交出尊严换取免责”的逻辑推向极致：
+                    </p>
+                    <p class="pl-4 border-l-2 border-white/20 italic text-slate-300">
+                        如果牛车水熟食中心的小贩把馊了半截的鸡肉剁进饭里，指着食客鼻子吼道：“三块半新元难道还想吃出五星级胶原蛋白？吃完拉肚子就当排毒吧！”如果组屋电梯每个月卡壳三次，建屋局在公告栏上写明：“只交这点杂费还指望什么磁悬浮体验？能把你放出来就是功德。”
+                    </p>
+                    <p>
+                        一旦消费降级被包装成狂欢式的受虐真人秀，所有针对供给端品质缺位的追问都会被粗暴化解。公众不再要求行业提供兼具尊严与质量的平价供给，反而将自身的屈从视作通晓世故的幽默。当辱骂取代了质检，社会的底线便在阵阵哄笑中坍塌为废墟。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 模块四：核心洞察引语卡 -->
+            <section class="glass-card rounded-2xl p-8 border-l-8 border-yellow-400 bg-white/5">
+                <blockquote class="text-xl md:text-2xl italic text-slate-100 font-light leading-relaxed">
+                    “所谓的反向营销，不过是贫瘠现实里的一剂精神麻药——当廉价商品无法提供体面，消费者便主动花钱当小丑，好让自己的窘迫显得像是一场自愿的嬉戏。”
+                </blockquote>
+                <p class="mt-4 text-yellow-400 font-semibold tracking-wide">— 本文核心洞察</p>
+            </section>
+
+            <!-- 模块五：结语与结构缝合（Callback 闭环） -->
+            <section class="glass-card rounded-2xl p-8 md:p-10">
+                <h2 class="text-2xl font-bold mb-6 text-white">结语：别在1500韩元的唾沫里寻找救赎</h2>
+                <div class="text-slate-200 leading-loose text-base md:text-lg space-y-4">
+                    <p>
+                        重新凝视展台上的全景概念图与四格漫画：南大门市场被挤爆的巷道、高声叫卖的毒舌摊主、以及漫画中自嘲解构的年轻男女。这绝非什么商业营销的奇迹，而是一场赤裸裸的社会病理学切片。
+                    </p>
+                    <p>
+                        买家们攥在手里的，不是一条足以御寒的围巾，而是被市场机制彻底核销后的自尊凭证。他们欢天喜地地掏出1500韩元，买下一声刺耳的嘲讽，再自我安慰这叫“情绪价值”。但别忘了，当那个叫“买去送人”的道具转手送出时，剥离了网红滤镜的化纤围巾，依然只是散发着廉价气味的垃圾。
+                    </p>
+                    <p>
+                        南大门摊位前的笑声终会随着人潮散去，但消费下行时代留下的创口却不会愈合。廉价买不来尊严，而自甘下贱的喝彩，只会让粗制滥造的商业世界更加肆无忌惮地嘲笑每一个两手空空的普通人。
+                    </p>
+                </div>
+            </section>
+
+        </article>
+
+        <!-- Footer -->
+        <footer class="mt-16 text-center text-xs text-slate-500 py-6 border-t border-white/10">
+            <p>DARK GLASSMORPHISM & AMBIENT NEON ORB EDITORIAL SYSTEM</p>
+            <p class="mt-1 text-slate-600">建议将两张插图归档至云端 Research_Clippings 文件夹备查</p>
+        </footer>
+
+    </main>
+
+    <!-- Client-side Image Replacement & Persistence -->
+    <script>
+        function setupInteractiveImage(containerId, imgId, storageKey) {
+            const container = document.getElementById(containerId);
+            const img = document.getElementById(imgId);
+            if (!container || !img) return;
+
+            // Load saved image from localStorage
+            const saved = localStorage.getItem(storageKey);
+            if (saved) {
+                img.src = saved;
+            }
+
+            // Hidden file input
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.style.display = 'none';
+            document.body.appendChild(input);
+
+            // Double click to trigger file selection
+            container.addEventListener('dblclick', () => {
+                input.click();
+            });
+
+            input.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                        img.src = event.target.result;
+                        localStorage.setItem(storageKey, event.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Drag and drop handling
+            container.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                container.classList.add('ring-2', 'ring-teal-400');
+            });
+
+            container.addEventListener('dragleave', (e) => {
+                e.preventDefault();
+                container.classList.remove('ring-2', 'ring-teal-400');
+            });
+
+            container.addEventListener('drop', (e) => {
+                e.preventDefault();
+                container.classList.remove('ring-2', 'ring-teal-400');
+                if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                    const file = e.dataTransfer.files[0];
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                        img.src = event.target.result;
+                        localStorage.setItem(storageKey, event.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setupInteractiveImage('hero-container', 'hero-img', 'editorial_hero_img_key');
+            setupInteractiveImage('exhibit-container', 'exhibit-img', 'editorial_exhibit_img_key');
+        });
+    </script>
+</body>
+</html>
