@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老兵至死沉默，往往不是因为谦逊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Outfit:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap');
+        :root {
+            --bg-color: #F4EDE8;
+            --text-color: #2D2D2D;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+        }
+        .serif-font { font-family: 'Noto Serif SC', serif; }
+        .mono-font { font-family: 'Space Mono', monospace; }
+        .crop-marks::before, .crop-marks::after, .crop-marks-bottom::before, .crop-marks-bottom::after {
+            content: "";
+            position: fixed;
+            width: 30px;
+            height: 2px;
+            background: #2D2D2D;
+            z-index: 50;
+            pointer-events: none;
+        }
+        .crop-marks::before { top: 20px; left: 20px; }
+        .crop-marks::after { top: 20px; left: 45px; transform: rotate(90deg); transform-origin: left; }
+        .crop-marks-bottom::before { bottom: 20px; right: 20px; }
+        .crop-marks-bottom::after { bottom: 20px; right: 45px; transform: rotate(90deg); transform-origin: right; }
+        .paper-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+        }
+        .paper-card:hover {
+            transform: rotate(-0.8deg) scale(1.01);
+            border-color: #2D2D2D;
+        }
+        .bubble {
+            border-radius: 50% 50% 50% 10% / 50% 50% 10% 50%;
+            border: 1px solid #2D2D2D;
+        }
+        .dropzone-active {
+            border-color: #2D2D2D !important;
+            background-color: rgba(255, 255, 255, 0.85) !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-pink-200">
+    <div class="crop-marks"></div>
+    <div class="crop-marks-bottom"></div>
+
+    <input type="file" id="sharedFileInput" accept="image/*" class="hidden" />
+
+    <main class="max-w-6xl mx-auto px-6 py-16">
+        <!-- 报头与档案编号 -->
+        <header class="relative flex flex-col items-center justify-center mb-12">
+            <div class="w-full flex justify-between items-center mb-8 pb-4 border-b border-black/10">
+                <div class="bubble flex w-36 h-36 items-center justify-center rotate-6 serif-font bg-white/40 shadow-sm p-3">
+                    <p class="text-xs text-center leading-relaxed font-semibold">活着回到南洋<br>先学会闭嘴</p>
+                </div>
+                <div class="text-right mono-font text-xs text-gray-500 space-y-1">
+                    <p class="font-bold text-gray-700">ARCHIVE DOSSIER: SM-20261109-721</p>
+                    <p>CLASSIFICATION: POST-WAR SURVIVAL / SYSTEMIC AMNESIA</p>
+                    <p>PUBLISHED: 2026-11-09</p>
+                </div>
+            </div>
+
+            <h1 class="serif-font text-3xl md:text-5xl text-center leading-tight font-bold px-4 max-w-4xl">
+                老兵至死沉默，往往不是因为谦逊
+            </h1>
+            
+            <div class="mt-6 bg-white/90 px-4 py-1.5 text-xs tracking-wider border border-black/10 mono-font shadow-sm">
+                <span>CASE EVALUATION: 滇缅归人的冷战惊弓之鸟与制度性失忆</span>
+            </div>
+        </header>
+
+        <!-- 双轨并列实证展台 (双图同时呈现) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- 展台一：四格纪实漫画 -->
+            <div class="space-y-3">
+                <div class="flex items-center justify-between text-xs mono-font text-gray-600 px-1">
+                    <span class="font-bold text-black">EXHIBIT A: 四格纪实分镜</span>
+                    <span>1939 - 2026 时序推演</span>
+                </div>
+                <div id="zoneA" class="relative z-10 w-full min-h-[420px] rounded-2xl overflow-hidden bg-white/40 border-2 border-dashed border-black/20 cursor-pointer group transition-all duration-300 flex items-center justify-center shadow-lg">
+                    <img id="imgA" src="" alt="四格纪实漫画展台" class="w-full h-auto object-cover hidden" />
+                    <div id="promptA" class="flex flex-col items-center justify-center py-24 px-6 text-center">
+                        <svg class="w-12 h-12 text-gray-400 mb-3 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <p class="text-sm font-semibold text-gray-700">点击此处载入【四格纪实漫画】</p>
+                        <p class="text-xs text-gray-400 mt-1 mono-font">支持拖拽载入，自动缓存不破图</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 展台二：新明日报剪报 -->
+            <div class="space-y-3">
+                <div class="flex items-center justify-between text-xs mono-font text-gray-600 px-1">
+                    <span class="font-bold text-black">EXHIBIT B: 现场报章头条实证</span>
+                    <span>《新明日报》报道与寻根线索</span>
+                </div>
+                <div id="zoneB" class="relative z-10 w-full min-h-[420px] rounded-2xl overflow-hidden bg-white/40 border-2 border-dashed border-black/20 cursor-pointer group transition-all duration-300 flex items-center justify-center shadow-lg">
+                    <img id="imgB" src="" alt="报章头条剪报展台" class="w-full h-auto object-cover hidden" />
+                    <div id="promptB" class="flex flex-col items-center justify-center py-24 px-6 text-center">
+                        <svg class="w-12 h-12 text-gray-400 mb-3 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <p class="text-sm font-semibold text-gray-700">点击此处载入【新明日报剪报】</p>
+                        <p class="text-xs text-gray-400 mt-1 mono-font">支持拖拽载入，自动缓存不破图</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 深度长文主体 -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <!-- 侧栏洞察 -->
+            <aside class="md:col-span-4 space-y-6">
+                <div class="bg-white/85 p-6 border border-black/10 shadow-sm rounded-lg">
+                    <p class="text-xs uppercase tracking-widest mb-3 font-semibold text-gray-500 mono-font">编审旁注</p>
+                    <p class="serif-font italic text-gray-800 text-sm leading-relaxed">
+                        “后人总喜欢将沉默浪漫化为崇高的‘深藏功名’。但在现实的政权更迭与冷战绞杀中，沉默仅仅是底层技术劳工为了让后代能安稳领到一张身份证，所必须支付的心理保护费。”
+                    </p>
+                </div>
+
+                <div class="bg-white/50 p-5 border-l-2 border-black/40 text-xs text-gray-600 leading-relaxed mono-font space-y-2">
+                    <p class="font-bold text-black border-b border-black/10 pb-1">TIMELINE DECONSTRUCTION</p>
+                    <p>> 1939：瞒报出海，投身滇缅绝壁运途</p>
+                    <p>> 1948：紧急状态，英属政治部查抄高压</p>
+                    <p>> 1957：独立入籍，换取蓝身份证的记忆切割</p>
+                    <p>> 2026：异国展墙，后人动用退休金迟来寻根</p>
+                </div>
+            </aside>
+
+            <!-- 主文章流 -->
+            <article class="md:col-span-8 space-y-16">
+                <section class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold italic mono-font">01</span>
+                        <h2 class="serif-font text-2xl md:text-3xl font-bold">剥除神话：被过度浪漫化的“功成不居”</h2>
+                    </div>
+                    <p class="leading-relaxed text-base md:text-lg text-justify text-gray-800">
+                        一名马来西亚华裔女子在昆明街头旅游时，偶然在一面南侨机工历史文化墙的黑白旧照里认出了已故外公邝金源[cite: 1, 4]。在此之前，家中晚辈只知道这位在吉打州亚罗士打默默开车的普通老者终日寡言[cite: 1, 4]，却无人知晓他曾在1939年瞒着家人北上[cite: 1, 4]，在滇缅公路的悬崖与炮火间把方向盘握得骨节发白[cite: 1, 4]。新闻发酵后，舆论迅速套上了熟悉的温情滤镜：赞叹血脉感应的奇遇[cite: 1, 4]，并将老人终其一生的缄默，归结为传统语境中“看淡名利”、“英雄不提当年勇”的高风亮节。
+                    </p>
+                    <p class="leading-relaxed text-base md:text-lg text-justify text-gray-800">
+                        这种道德拔高，本质上是后人对真实政治生存史的一种轻挑回避。一个在热带疟疾肆虐、日军零式战机俯冲扫射、两边是万丈深渊的烂泥路上幸存下来的技术劳工，战后回到南洋对自己的枕边人与亲生骨肉绝口不提往事，绝不是因为他觉得这段经历微不足道，而是因为“提及”本身，在二十世纪中叶的马来半岛是一道足以让全家万劫不复的催命符。
+                    </p>
+                </section>
+
+                <section class="space-y-8">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold italic mono-font">02</span>
+                        <h2 class="serif-font text-2xl md:text-3xl font-bold">三道绞索：南洋归人的生存算法</h2>
+                    </div>
+                    
+                    <div class="paper-card p-6 md:p-8 rounded-xl space-y-3">
+                        <h3 class="font-bold text-lg serif-font">冷战铁幕与“紧急状态”的政治猎巫</h3>
+                        <p class="text-sm md:text-base leading-relaxed text-gray-700 text-justify">
+                            1946年机工复员南返[cite: 1, 4]，他们迎来的不是养老福利与鲜花夹道，而是骤然降临的冷战严冬。1948年英殖民政府宣布全马进入“紧急状态”（State of Emergency），设立铁丝网高筑的“新村”，政治部（Special Branch）的眼线遍布每一个街角。在殖民当局眼里，一个曾返回中国大陆、受过准军事化运输训练、深通机械与山林驾驶的年轻华人男性，本身就是潜在的治安威胁。床底铁盒里的一张老照片、一枚泛黄的徽章，在突击抄家时就是直接送进拘留营甚至遣返出境的铁证。在枪口之下，主动抹除记忆是唯一的生物防御本能。
+                        </p>
+                    </div>
+
+                    <div class="paper-card p-6 md:p-8 rounded-xl space-y-3">
+                        <h3 class="font-bold text-lg serif-font">从“客居侨民”到“本土国民”的公民权置换</h3>
+                        <p class="text-sm md:text-base leading-relaxed text-gray-700 text-justify">
+                            1957年马来亚联合邦独立，南洋华人面临着一场极其苛刻的身份大转折——必须在极短时间内斩断与原乡祖国的政治脐带，证明自己对这片土地的“绝对效忠”。为了替子孙后代合法换取一张免遭驱逐的蓝色身份证（MyKad），所有与过往跨国军事动员相关的痕迹都必须被彻底掩埋。老兵们清醒地明白，任何对当年“卫国抗日”的公开宣讲，都会被本土化政权解读为居心叵测的双重效忠。要想在亚罗士打的胶林和修车铺里让孩子有书读、有工做，父亲就必须退化为一个毫无过去、面目模糊的沉默车夫。
+                        </p>
+                    </div>
+
+                    <div class="paper-card p-6 md:p-8 rounded-xl space-y-3">
+                        <h3 class="font-bold text-lg serif-font">未被命名的战时创伤与苦力社会的残酷脱水</h3>
+                        <p class="text-sm md:text-base leading-relaxed text-gray-700 text-justify">
+                            滇缅公路被称为一公里一具枯骨的血路。亲眼目睹同伴连人带车坠落澜沧江、看着战友发高烧在副驾断气，这种极度强烈的战后创伤应激（PTSD），在那个手停口就停的南洋苦力底层社会里，没有任何心理学概念的承接，更没有老兵抚恤系统的抚慰。生活只剩下每天清晨拉动发动机摇柄的油污与柴米油盐的硬开支。将回忆焊死在心底，不向儿女倾倒不可言说的血腥恐惧，是底层劳动者唯一能拿出的温柔与自保。
+                        </p>
+                    </div>
+                </section>
+
+                <section class="border-t border-black/15 pt-10 space-y-6">
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold italic mono-font">03</span>
+                        <h2 class="serif-font text-2xl md:text-3xl font-bold">反事实归谬：如果当年他们“不谦逊”？</h2>
+                    </div>
+                    <p class="leading-relaxed text-base md:text-lg text-justify text-gray-800">
+                        不妨做一次冰冷的逻辑外推：如果当年的机工老兵们拒绝沉默，而是像今天人们所期盼的那样，将抗战勋章佩在胸前、四处宣讲滇缅功绩，局势会走向何处？
+                    </p>
+                    <p class="leading-relaxed text-base md:text-lg text-justify text-gray-800">
+                        在五六十年代东南亚激烈的政治风暴与反共大排查中，他们换来的绝非荣誉，而是被剥夺公民资格、全家列入监控黑名单，甚至在动荡之夜被押送出境。如果他们没有在漫长的数十年里守口如瓶，今天坐在冷气旅游大巴上、有余力动用退休积蓄跨海去昆明与台山寻根的后代[cite: 1, 4]，根本就不会存在——他们的家族早已在半个世纪前的动荡中支离破碎、漂泊无着。
+                    </p>
+                    
+                    <div class="bg-black/5 p-6 md:p-8 italic serif-font text-base md:text-lg border-l-4 border-black rounded-r-lg">
+                        “所谓英雄的沉默，从来不是脱离尘俗的谦逊，而是草民在时代碾轮滚滚而来之前，凭借本能咬碎牙齿、吞下真相，为后代换取生存夹缝的最后一次精确避险。”
+                    </div>
+
+                    <p class="leading-relaxed text-base md:text-lg text-justify text-gray-800">
+                        如今，当异国展馆的射灯打在黑白底片上[cite: 1, 4]，当文化墙将他们重新擦拭并加冕为跨国英雄[cite: 1, 4]，那张二十余岁英气风发的青年脸庞终于得以面世[cite: 1, 4]。然而，展馆玻璃内的光鲜大义，与那个在南洋乡下一辈子谨小慎微、直到临终都不敢向女儿吐露半句真实经历的佝偻老者之间，横亘着的正是整整两代人不可言说的生存惊恐。
+                    </p>
+                </section>
+            </article>
+        </div>
+
+        <footer class="mt-24 pt-12 border-t border-black/10 text-center space-y-4">
+            <p class="text-sm text-gray-600 serif-font">当国家需要热血时，他们被动员为先锋；当他们需要活命时，唯有遗忘能换来后代的户籍与安宁。</p>
+            <div class="flex justify-center gap-2 pt-2">
+                <span class="w-2 h-2 rounded-full bg-black"></span>
+                <span class="w-2 h-2 rounded-full bg-black/30"></span>
+                <span class="w-2 h-2 rounded-full bg-black/30"></span>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const fileInput = document.getElementById('sharedFileInput');
+        let activeTarget = null;
+
+        function registerDropzone(zoneId, imgId, promptId, storageKey) {
+            const zone = document.getElementById(zoneId);
+            const img = document.getElementById(imgId);
+            const prompt = document.getElementById(promptId);
+
+            const cachedImage = localStorage.getItem(storageKey);
+            if (cachedImage) {
+                img.src = cachedImage;
+                img.classList.remove('hidden');
+                if (prompt) prompt.classList.add('hidden');
+            }
+
+            zone.addEventListener('click', () => {
+                activeTarget = { img, prompt, storageKey };
+                fileInput.click();
+            });
+
+            zone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                zone.classList.add('dropzone-active');
+            });
+
+            zone.addEventListener('dragleave', () => {
+                zone.classList.remove('dropzone-active');
+            });
+
+            zone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                zone.classList.remove('dropzone-active');
+                if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                    handleImageFile(e.dataTransfer.files[0], img, prompt, storageKey);
+                }
+            });
+        }
+
+        function handleImageFile(file, imgElement, promptElement, storageKey) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const base64Data = e.target.result;
+                imgElement.src = base64Data;
+                imgElement.classList.remove('hidden');
+                if (promptElement) promptElement.classList.add('hidden');
+                try {
+                    localStorage.setItem(storageKey, base64Data);
+                } catch (err) {
+                    console.warn('图片数据量较大，已在当前页面即时渲染。');
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files && e.target.files[0] && activeTarget) {
+                handleImageFile(e.target.files[0], activeTarget.img, activeTarget.prompt, activeTarget.storageKey);
+            }
+        });
+
+        // 分别注册左展台（漫画）与右展台（剪报）
+        registerDropzone('zoneA', 'imgA', 'promptA', 'archive_comic_img_v2');
+        registerDropzone('zoneB', 'imgB', 'promptB', 'archive_news_img_v2');
+    </script>
+</body>
+</html>
