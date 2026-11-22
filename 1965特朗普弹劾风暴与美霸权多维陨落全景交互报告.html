@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="artifact-type" content="narrative">
+  <meta name="design-style" content="nocturne">
+  <title>2026 终局推演：从“蓝色横扫”到美利坚霸权的系统性陨落</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/lucide@1.43.0/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      color-scheme: dark;
+
+      /* 1. Nocturne style tokens */
+      --background: #0a101d;
+      --surface-container-low: #0e1626;
+      --surface-container: #111b2e;
+      --surface-container-high: #17243c;
+
+      --on-surface: #f2ece1;
+      --on-surface-variant: #9ba8bf;
+
+      --outline: #384d73;
+      --outline-variant: #21304d;
+
+      --primary: #dfaa5b;
+      --on-primary: #0a101d;
+      --primary-container: #2b261c;
+      --on-primary-container: #f5dcb0;
+      --secondary: #687a99;
+      --tertiary: #7cc4e8;
+      --error: #f27474;
+      --on-error: #1a0606;
+
+      --data-1: #dfaa5b;
+      --data-2: #7cc4e8;
+      --data-3: #52d19c;
+      --data-4: #e07a5f;
+      --data-context: #4a5d80;
+
+      --font-headline: 'Noto Serif SC', 'EB Garamond', serif;
+      --font-body: 'Noto Sans SC', 'Plus Jakarta Sans', sans-serif;
+      --font-label: 'JetBrains Mono', 'Noto Sans SC', monospace;
+
+      --rounded: 0.25rem;
+      --rounded-lg: 0.375rem;
+      --rounded-full: 9999px;
+
+      --hairline: 1px solid var(--outline-variant);
+      --hairline-strong: 1px solid var(--outline);
+      --panel-highlight: inset 0 1px 0 rgba(242, 236, 225, 0.05);
+      --brass-glow: radial-gradient(circle at 88% 12%, rgba(223, 170, 91, 0.08), transparent 45%);
+      --heading-tracking: -0.015em;
+      --label-tracking: 0.06em;
+      --sky-tint: color-mix(in srgb, var(--tertiary) 12%, transparent);
+      --brass-tint: color-mix(in srgb, var(--primary) 14%, transparent);
+      --error-tint: color-mix(in srgb, var(--error) 12%, transparent);
+      --positive-tint: color-mix(in srgb, var(--positive) 12%, transparent);
+      --sky-border: color-mix(in srgb, var(--tertiary) 35%, transparent);
+      --brass-border: color-mix(in srgb, var(--primary) 38%, transparent);
+      --error-border: color-mix(in srgb, var(--error) 40%, transparent);
+      --positive-border: color-mix(in srgb, var(--positive) 40%, transparent);
+
+      /* 3. Shared tokens */
+      --positive: #52d19c;
+      --warning: #e07a5f;
+      --focus: #dfaa5b;
+
+      --display-size: clamp(2.15rem, 1.4rem + 2.6vw, 3.65rem);
+      --headline-size: clamp(1.5rem, 1.15rem + 1.3vw, 2.25rem);
+      --subhead-size: clamp(1.125rem, 1.02rem + 0.45vw, 1.375rem);
+      --body-size: clamp(0.97rem, 0.94rem + 0.16vw, 1.0625rem);
+      --label-size: 0.75rem;
+
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2.5rem;
+      --space-2xl: 4rem;
+      --space-3xl: 6rem;
+
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+      --dur-micro: 120ms;
+      --dur-short: 220ms;
+      --dur-long: 420ms;
+    }
+
+    /* Base reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      overflow-x: clip;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      line-height: 1.62;
+      -webkit-font-smoothing: antialiased;
+    }
+    header { position: static !important; }
+    button, input, select, textarea { font-family: inherit; }
+
+    :focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .page-shell {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 var(--space-lg) var(--space-3xl);
+    }
+    .page-shell * { min-width: 0; }
+
+    /* Hero header with celestial brass radial wash */
+    .hero-header {
+      background-color: var(--background);
+      background-image: var(--brass-glow);
+      border-bottom: var(--hairline);
+      padding: var(--space-2xl) var(--space-lg) var(--space-xl);
+    }
+    .hero-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .coord-label {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      letter-spacing: var(--label-tracking);
+      text-transform: uppercase;
+      color: var(--tertiary);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .title {
+      font-family: var(--font-headline);
+      font-weight: 500;
+      font-size: var(--display-size);
+      letter-spacing: var(--heading-tracking);
+      line-height: 1.15;
+      color: var(--on-surface);
+      margin: var(--space-md) 0 var(--space-sm);
+    }
+    .title .brass-accent {
+      color: var(--primary);
+      font-style: italic;
+    }
+    .deck-brass {
+      font-family: var(--font-body);
+      font-size: var(--subhead-size);
+      color: var(--primary);
+      max-width: 72ch;
+      margin: 0 0 var(--space-lg);
+      line-height: 1.5;
+    }
+    .hero-lede {
+      color: var(--on-surface-variant);
+      max-width: 74ch;
+      margin: 0 0 var(--space-xl);
+      font-size: var(--body-size);
+    }
+
+    /* Executive KPI Strip */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+      gap: var(--space-md);
+    }
+    .panel {
+      background: var(--surface-container);
+      border: var(--hairline);
+      box-shadow: var(--panel-highlight);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+    }
+    .panel-low {
+      background: var(--surface-container-low);
+      border: var(--hairline);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+    }
+    .observation-well {
+      background: var(--background);
+      border: var(--hairline);
+      border-radius: var(--rounded);
+      padding: var(--space-md);
+    }
+
+    .kpi-card {
+      background: var(--surface-container);
+      border: var(--hairline);
+      box-shadow: var(--panel-highlight);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .kpi-label {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--tertiary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .kpi-value {
+      font-family: 'EB Garamond', 'Noto Serif SC', serif;
+      font-weight: 500;
+      font-size: clamp(1.85rem, 1.5rem + 1vw, 2.5rem);
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+      color: var(--on-surface);
+    }
+    .kpi-value.brass { color: var(--primary); }
+    .kpi-value.danger { color: var(--error); }
+    .kpi-note {
+      font-size: 0.84rem;
+      color: var(--on-surface-variant);
+      line-height: 1.45;
+    }
+
+    /* Navigation bar */
+    .dossier-nav {
+      background: var(--surface-container-low);
+      border-bottom: var(--hairline);
+      padding: var(--space-sm) var(--space-lg);
+    }
+    .dossier-nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      min-height: 44px;
+      padding: 0 var(--space-md);
+      border-radius: var(--rounded);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--on-surface-variant);
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+    }
+    .nav-link:hover {
+      background: var(--surface-container-high);
+      color: var(--on-surface);
+      border-color: var(--outline-variant);
+    }
+    .nav-link .mono-idx {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--primary);
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    /* Badges and buttons */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      background: var(--sky-tint);
+      color: var(--tertiary);
+      border: 1px solid var(--sky-border);
+      border-radius: var(--rounded);
+      padding: 0.1875rem 0.5rem;
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      line-height: 1.4;
+    }
+    .badge.brass {
+      background: var(--brass-tint);
+      color: var(--primary);
+      border-color: var(--brass-border);
+    }
+    .badge.danger {
+      background: var(--error-tint);
+      color: var(--error);
+      border-color: var(--error-border);
+    }
+    .badge.positive {
+      background: var(--positive-tint);
+      color: var(--positive);
+      border-color: var(--positive-border);
+    }
+
+    .btn-primary, .btn-secondary, .chip-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-xs);
+      min-height: 44px;
+      padding: 0 var(--space-md);
+      border-radius: var(--rounded);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--on-primary);
+      border: 1px solid var(--primary);
+    }
+    .btn-primary:hover {
+      background: var(--on-primary-container);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--on-surface);
+      border: var(--hairline-strong);
+    }
+    .btn-secondary:hover {
+      background: var(--surface-container-high);
+    }
+    .chip-btn {
+      background: var(--surface-container-low);
+      color: var(--on-surface-variant);
+      border: var(--hairline);
+    }
+    .chip-btn:hover {
+      background: var(--surface-container-high);
+      color: var(--on-surface);
+    }
+    .chip-btn.active {
+      background: var(--brass-tint);
+      color: var(--primary);
+      box-shadow: inset 0 0 0 1px var(--primary);
+    }
+
+    /* Sections */
+    .dossier-section {
+      padding-top: var(--space-2xl);
+      border-top: var(--hairline);
+      margin-top: var(--space-2xl);
+    }
+    .dossier-section:first-of-type {
+      border-top: none;
+      margin-top: var(--space-xl);
+      padding-top: var(--space-md);
+    }
+    .section-header {
+      margin-bottom: var(--space-xl);
+    }
+    .section-epoch {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      letter-spacing: var(--label-tracking);
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: var(--space-xs);
+    }
+    .section-title {
+      font-family: var(--font-headline);
+      font-weight: 500;
+      font-size: var(--headline-size);
+      letter-spacing: var(--heading-tracking);
+      line-height: 1.2;
+      color: var(--on-surface);
+      margin: 0 0 var(--space-sm);
+    }
+    .section-subtitle {
+      color: var(--on-surface-variant);
+      max-width: 72ch;
+      margin: 0;
+    }
+
+    /* Asymmetric Layouts */
+    .split-7-5 {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: var(--space-lg);
+      align-items: start;
+    }
+    .split-5-7 {
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      gap: var(--space-lg);
+      align-items: start;
+    }
+    .split-6-6 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-lg);
+      align-items: start;
+    }
+    .card-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      gap: var(--space-md);
+    }
+    .card-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+      gap: var(--space-md);
+    }
+
+    /* Headings inside panels */
+    .panel-kicker {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--tertiary);
+      margin-bottom: var(--space-xs);
+    }
+    .panel-title {
+      font-family: var(--font-headline);
+      font-weight: 500;
+      font-size: var(--subhead-size);
+      color: var(--on-surface);
+      margin: 0 0 var(--space-sm);
+      line-height: 1.3;
+    }
+    .prose-block {
+      color: var(--on-surface-variant);
+      margin: 0 0 var(--space-md);
+      max-width: 65ch;
+    }
+    .prose-block strong {
+      color: var(--on-surface);
+      font-weight: 600;
+    }
+
+    /* Chart containers */
+    .chart-box {
+      position: relative;
+      height: 320px;
+      min-height: 280px;
+      width: 100%;
+    }
+    .chart-box-sm {
+      position: relative;
+      height: 260px;
+      min-height: 240px;
+      width: 100%;
+    }
+    .chart-caption {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--on-surface-variant);
+      margin-top: var(--space-sm);
+      padding-top: var(--space-sm);
+      border-top: var(--hairline);
+    }
+
+    /* Seat Bar Meter */
+    .chamber-bar-track {
+      height: 36px;
+      border-radius: var(--rounded);
+      overflow: hidden;
+      display: flex;
+      background: var(--background);
+      border: var(--hairline);
+      position: relative;
+      margin: var(--space-md) 0;
+    }
+    .chamber-seg-dem {
+      background: var(--tertiary);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: var(--space-md);
+      color: var(--on-primary);
+      font-family: var(--font-label);
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: width var(--dur-long) var(--ease-out);
+    }
+    .chamber-seg-gop {
+      background: var(--data-4);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: var(--space-md);
+      color: var(--on-primary);
+      font-family: var(--font-label);
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: width var(--dur-long) var(--ease-out);
+    }
+    .threshold-marker {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--primary);
+      z-index: 2;
+    }
+
+    /* Seat Grid Dots */
+    .seat-dots-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: var(--space-md) 0;
+    }
+    .seat-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      background: var(--data-context);
+    }
+    .seat-dot.dem { background: var(--tertiary); }
+    .seat-dot.flip {
+      background: var(--primary);
+      box-shadow: 0 0 0 1px var(--on-surface);
+    }
+    .seat-dot.gop { background: var(--data-4); }
+
+    /* Interactive Evidence Cards */
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+    .evidence-tab {
+      text-align: left;
+      background: var(--surface-container-low);
+      border: var(--hairline);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-md);
+      cursor: pointer;
+      color: var(--on-surface);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      min-height: 44px;
+      transition: background-color var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
+    }
+    .evidence-tab:hover {
+      background: var(--surface-container-high);
+    }
+    .evidence-tab.active {
+      background: var(--surface-container-high);
+      box-shadow: inset 0 2px 0 0 var(--primary);
+    }
+    .evidence-tab-num {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--primary);
+    }
+    .evidence-tab-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1.35;
+    }
+
+    /* Slider & Sandbox Controls */
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-md);
+    }
+    .control-label {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--tertiary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .range-input {
+      width: 100%;
+      accent-color: var(--primary);
+      min-height: 44px;
+      cursor: pointer;
+    }
+    .number-input {
+      background: var(--background);
+      color: var(--on-surface);
+      border: var(--hairline-strong);
+      border-radius: var(--rounded);
+      padding: var(--space-sm) var(--space-md);
+      min-height: 44px;
+      font-family: var(--font-label);
+      font-size: 0.95rem;
+      width: 100px;
+    }
+
+    /* Tables */
+    .dossier-table-wrap {
+      overflow-x: auto;
+      border-top: var(--hairline);
+    }
+    .dossier-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .dossier-table th {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--tertiary);
+      text-align: left;
+      padding: var(--space-sm) var(--space-md);
+      border-bottom: var(--hairline-strong);
+      white-space: nowrap;
+    }
+    .dossier-table td {
+      padding: var(--space-sm) var(--space-md);
+      border-bottom: var(--hairline);
+      color: var(--on-surface-variant);
+      vertical-align: top;
+    }
+    .dossier-table td.num, .dossier-table th.num {
+      text-align: right;
+      font-family: var(--font-label);
+      font-variant-numeric: tabular-nums;
+      color: var(--on-surface);
+    }
+    .dossier-table td strong {
+      color: var(--on-surface);
+    }
+
+    /* Dimension Block Header */
+    .dimension-banner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      padding-bottom: var(--space-sm);
+      margin-bottom: var(--space-lg);
+      border-bottom: var(--hairline-strong);
+    }
+    .dimension-title {
+      font-family: var(--font-headline);
+      font-weight: 500;
+      font-size: 1.45rem;
+      color: var(--on-surface);
+      margin: 0;
+    }
+    .dimension-code {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--primary);
+      letter-spacing: var(--label-tracking);
+      text-transform: uppercase;
+    }
+    .dimension-block {
+      margin-bottom: var(--space-2xl);
+    }
+
+    /* Timeline */
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr) auto;
+      gap: var(--space-md);
+      align-items: start;
+      background: var(--surface-container);
+      border: var(--hairline);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-md) var(--space-lg);
+      transition: background-color var(--dur-micro) var(--ease-out);
+    }
+    .timeline-item.bookmarked {
+      box-shadow: inset 3px 0 0 0 var(--primary);
+      background: var(--surface-container-high);
+    }
+    .timeline-date {
+      font-family: var(--font-label);
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .timeline-body h4 {
+      margin: 0 0 var(--space-xs);
+      font-family: var(--font-headline);
+      font-weight: 500;
+      font-size: 1.08rem;
+      color: var(--on-surface);
+    }
+    .timeline-body p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--on-surface-variant);
+    }
+
+    /* List styling */
+    .clean-list {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: var(--on-surface-variant);
+    }
+    .clean-list li {
+      margin-bottom: var(--space-sm);
+    }
+    .clean-list li strong {
+      color: var(--on-surface);
+    }
+
+    /* Status toast inline */
+    .inline-status {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--positive);
+      min-height: 1.4em;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 960px) {
+      .split-7-5, .split-5-7, .split-6-6 {
+        grid-template-columns: 1fr;
+      }
+      .evidence-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      .hero-header {
+        padding: var(--space-xl) var(--space-md) var(--space-lg);
+      }
+      .page-shell {
+        padding: 0 var(--space-md) var(--space-2xl);
+      }
+      .dossier-nav {
+        padding: var(--space-sm) var(--space-md);
+      }
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+      }
+      .nav-link {
+        padding: 0 var(--space-sm);
+        font-size: 0.8125rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero-header">
+    <div class="hero-inner">
+      <div class="coord-label">
+        <span class="badge brass">STRATEGIC AUDIT // 2026.11.21</span>
+        <span>POST-MIDTERM &amp; SHENZHEN TRILATERAL EDITION</span>
+      </div>
+      <h1 class="title">2026 终局推演：从“蓝色横扫”到<span class="brass-accent">美利坚霸权</span>的系统性陨落</h1>
+      <p class="deck-brass">结合 2026 年 11 月 3 日中期选举官方终局、众院传票弹劾攻防与 11 月 19 日深圳中美俄三边峰会的跨维度情报整合</p>
+      <p class="hero-lede">
+        2026 年 11 月成为当代国际秩序的历史性拐点。对伊“史诗狂怒”行动打空美军防空弹药底牌、关税违宪裁决叠加能源通胀彻底击穿共和党选民防线；民主党不仅在众议院夺得 258 席绝对多数，更在参议院翻盘得克萨斯与俄亥俄并拿下 56 席。随着白宫陷入“终极跛脚鸭”与传票围剿，美国国债突破 40 万亿美元且军工补库断层锁死至 2031 年，华盛顿在 11 月 19 日深圳峰会上事实上被迫接受多极势力范围的重塑。
+      </p>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label"><span>HOUSE // 众议院终局</span><span class="badge">218 过半门槛</span></div>
+          <div class="kpi-value brass">258 <span style="font-size: 1.25rem; color: var(--on-surface-variant);">vs 177</span></div>
+          <div class="kpi-note">民主党净胜 81 席锁定绝对多数，监督与司法委员会传票权全面激活。</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>SENATE // 参议院翻盘</span><span class="badge positive">TX · OH 易手</span></div>
+          <div class="kpi-value">56 <span style="font-size: 1.25rem; color: var(--on-surface-variant);">vs 44</span></div>
+          <div class="kpi-note">民主党借民生怒火翻盘得克萨斯与俄亥俄，距离弹劾定罪 67 票仅差 11 席。</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>DEBT // 美债与付息拐点</span><span class="badge danger">5.34% 长债收益率</span></div>
+          <div class="kpi-value danger">$40.05T</div>
+          <div class="kpi-note">年利息支出达 1.2 万亿美元并超越国防预算；中日大幅减持美债，平行网络分流加速。</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>DIB // 军工补库断层</span><span class="badge brass">LOCKED TO 2031</span></div>
+          <div class="kpi-value">80% <span style="font-size: 1.15rem; color: var(--on-surface-variant);">萨德耗尽</span></div>
+          <div class="kpi-note">爱国者与萨德交付周期长达 42–53 个月，西太平洋第一岛链出现 5 年常规防务空门。</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="dossier-nav" aria-label="战略研判导航">
+    <div class="dossier-nav-inner">
+      <div class="nav-links">
+        <a class="nav-link" href="#sec-midterms"><span class="mono-idx">01</span>中选终局与基本盘崩盘</a>
+        <a class="nav-link" href="#sec-impeachment"><span class="mono-idx">02</span>弹劾沙盘与退场攻防</a>
+        <a class="nav-link" href="#sec-hegemony"><span class="mono-idx">03</span>霸权四维系统性陨落</a>
+        <a class="nav-link" href="#sec-timeline"><span class="mono-idx">04</span>全景转折时间轴</a>
+        <a class="nav-link" href="#sec-sources"><span class="mono-idx">05</span>来源与方法论</a>
+      </div>
+      <div class="nav-actions">
+        <span class="badge brass" id="bookmark-counter">已标记里程碑：0</span>
+        <button type="button" class="btn-secondary" id="export-brief-btn" onclick="exportDossierBrief()">
+          <i data-lucide="download" style="width:16px;height:16px;" aria-hidden="true"></i>
+          导出研判简报
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-shell">
+    <!-- SECTION 01: MIDTERM ENDGAME -->
+    <section id="sec-midterms" class="dossier-section">
+      <div class="section-header">
+        <div class="section-epoch">SECTION 01 // 2026.11.03 ELECTORAL EARTHQUAKE</div>
+        <h2 class="section-title">“蓝色横扫”确立终极跛脚鸭：油价、通胀与基本盘的全面反噬</h2>
+        <p class="section-subtitle">
+          原本被共和党寄望于通过得州重划选区守住的国会防线，在 2026 年 11 月 3 日的选民公投中彻底坍塌。76% 选民对生活成本的切肤之痛与“战争疲劳”，直接转化为参众两院的系统性翻盘。
+        </p>
+      </div>
+
+      <div class="split-7-5">
+        <div class="panel">
+          <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:var(--space-sm); margin-bottom:var(--space-md);">
+            <div>
+              <div class="panel-kicker">CONGRESSIONAL REALIGNMENT // 两院席位交互检视</div>
+              <h3 class="panel-title" id="chamber-heading">第 120 届国会众议院最终席位格局（435 席）</h3>
+            </div>
+            <div style="display:flex; gap:var(--space-xs);">
+              <button type="button" class="chip-btn active" id="btn-house" onclick="switchChamber('house')">众议院 258:177</button>
+              <button type="button" class="chip-btn" id="btn-senate" onclick="switchChamber('senate')">参议院 56:44</button>
+            </div>
+          </div>
+
+          <div class="chamber-bar-track" aria-label="国会席位比例条">
+            <div class="chamber-seg-dem" id="chamber-dem-bar" style="width: 59.3%;">民主党 258 席</div>
+            <div class="chamber-seg-gop" id="chamber-gop-bar" style="width: 40.7%;">共和党 177 席</div>
+            <div class="threshold-marker" id="chamber-threshold" style="left: 50.1%;" title="过半门槛"></div>
+          </div>
+
+          <div class="observation-well">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--space-sm); margin-bottom:var(--space-xs);">
+              <span class="coord-label" id="chamber-meta-label">多数门槛：218 席 // 民主党净胜：+81 席</span>
+              <span class="badge positive" id="chamber-badge">绝对多数控制权</span>
+            </div>
+            <div class="seat-dots-grid" id="chamber-dots" aria-hidden="true"></div>
+            <p class="prose-block" id="chamber-analysis" style="margin-bottom:0; font-size:0.92rem;">
+              <strong>众院彻底易手：</strong> 选前 Emerson College 全美通用选票民调已显示民主党领先 8–10 个百分点（52% vs 42%），Polymarket 与 Kalshi 隐含翻盘概率高达 81%–92.6%。Cook Political Report 追踪的 22 个关键摇摆席位中有 15–16 席由共和党把守且高度暴露，最终民主党一举夺下 <strong>258 席</strong> 压倒性多数，令共和党试图靠得克萨斯州重划选区新增 5 席的算盘化为泡影。
+            </p>
+          </div>
+
+          <div class="card-grid-2" style="margin-top:var(--space-md);">
+            <div class="panel-low" style="padding:var(--space-md);">
+              <div class="panel-kicker">KEY SENATE FLIPS // 历史性州级崩盘</div>
+              <p class="prose-block" style="margin:0; font-size:0.88rem;">
+                2026 年初华盛顿普遍评估共和党待改选参院席位多为“安全席位”，但<strong>得克萨斯州</strong>与<strong>俄亥俄州</strong>的翻盘击碎了这一预期，民主党以 <strong>56 席</strong> 建立强硬参院多数，使特朗普剩余两年任期完全丧失立法保护伞。
+              </p>
+            </div>
+            <div class="panel-low" style="padding:var(--space-md);">
+              <div class="panel-kicker">MAGA FACTION FRACTURE // 阵营内部裂痕</div>
+              <p class="prose-block" style="margin:0; font-size:0.88rem;">
+                特朗普总体支持率跌入 <strong>33%–38%</strong> 历史低谷（不满意度达 <strong>62%–63%</strong>）。MAGA 核心群因生活成本未降、司法部隐瞒爱泼斯坦案档案、偏袒以色列以及与硅谷财团深度绑定而产生严重离心，女性选民大幅流失。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-kicker">ECONOMIC PAIN INDEX // 选民不满与战争疲劳定量审计</div>
+          <h3 class="panel-title">民生痛感直接摧毁执政合法性</h3>
+          <div class="chart-box">
+            <canvas id="chart-voter-anger" aria-label="美国选民对通胀、生活成本与战争支持率柱状图"></canvas>
+          </div>
+          <div class="chart-caption">
+            数据综合自 Emerson College、Cook Political Report 民调及通胀传导审计。受对伊战火阻断霍尔木兹海峡影响，原油飙升至 $100–$115/桶，全美汽油价格突破 $4.00/加仑，叠加全额关税使每个美国家庭年均增加 $1,500–$2,000 隐性负担。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: IMPEACHMENT SANDBOX & COUNTER-MOVES -->
+    <section id="sec-impeachment" class="dossier-section">
+      <div class="section-header">
+        <div class="section-epoch">SECTION 02 // CONSTITUTIONAL RECKONING &amp; SANDBOX</div>
+        <h2 class="section-title">第三次弹劾攻防演进：众院传票绞索与白宫“行政脱壳”推演</h2>
+        <p class="section-subtitle">
+          特朗普曾在党内闭门会议坦言：“如果我们输了中选，他们就会找个理由弹劾我。” 258 席的众院民主党人已手握绝对传票权，但杰弗里斯、加西亚与拉斯金正采取更为致命的“引而不发、固化证据”战略。
+        </p>
+      </div>
+
+      <!-- Four Evidentiary Fronts -->
+      <div style="margin-bottom:var(--space-xl);">
+        <div class="panel-kicker" style="margin-bottom:var(--space-sm);">SUBPOENA MATRIX // 点击切换四大核心调查证据链</div>
+        <div class="evidence-grid">
+          <button type="button" class="evidence-tab active" id="ev-tab-0" onclick="selectEvidence(0)">
+            <span class="evidence-tab-num">EVIDENCE 01</span>
+            <span class="evidence-tab-title">爱泼斯坦案隐藏档案与司法掩盖</span>
+          </button>
+          <button type="button" class="evidence-tab" id="ev-tab-1" onclick="selectEvidence(1)">
+            <span class="evidence-tab-num">EVIDENCE 02</span>
+            <span class="evidence-tab-title">“史诗狂怒”对伊单边战争违宪</span>
+          </button>
+          <button type="button" class="evidence-tab" id="ev-tab-2" onclick="selectEvidence(2)">
+            <span class="evidence-tab-num">EVIDENCE 03</span>
+            <span class="evidence-tab-title">IEEPA 关税越权与 1,750 亿退税</span>
+          </button>
+          <button type="button" class="evidence-tab" id="ev-tab-3" onclick="selectEvidence(3)">
+            <span class="evidence-tab-num">EVIDENCE 04</span>
+            <span class="evidence-tab-title">秘密资金池与联邦体制清洗</span>
+          </button>
+        </div>
+
+        <div class="panel" id="evidence-detail-panel">
+          <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:var(--space-sm); margin-bottom:var(--space-sm);">
+            <span class="badge brass" id="ev-committee">主管机构：众议院监督与问责委员会（罗伯特·加西亚等）</span>
+            <span class="badge danger" id="ev-severity">法律定性：妨碍司法与行政掩盖</span>
+          </div>
+          <h3 class="panel-title" id="ev-title">爱泼斯坦案“消失的 37 页”与司法部刻意压制证据链</h3>
+          <p class="prose-block" id="ev-desc" style="max-width:none;">
+            司法部（DOJ）与 FBI 被指在执行《爱泼斯坦档案透明法案》时非法扣留 37 页关键记录（含新解封的 16 页 2019 年四次 FBI 访谈摘要），涉及未公开的未成年人性侵指控备忘录。加西亚直斥其为“现代史上最大的政府掩盖事件”。叠加 E. Jean Carroll 案逾 8,800 万美元赔偿判决，众院监督委员会将通过强制传唤司法部高官公开听证，在道德与法治层面对白宫实施穿透式打击。
+          </p>
+        </div>
+      </div>
+
+      <!-- Impeachment Wargame Sandbox -->
+      <div class="split-6-6">
+        <div class="panel">
+          <div class="panel-kicker">IMPEACHMENT WARGAME // 弹劾定罪与退场推演沙盘</div>
+          <h3 class="panel-title">民主党“引而不发”策略与参院 67 票门槛推演</h3>
+
+          <div class="control-group">
+            <span class="control-label">选择国会民主党战略路径</span>
+            <div style="display:flex; flex-wrap:wrap; gap:var(--space-xs);">
+              <button type="button" class="chip-btn active" id="strat-btn-0" onclick="setStrategy(0)">引而不发 · 传票固化</button>
+              <button type="button" class="chip-btn" id="strat-btn-1" onclick="setStrategy(1)">全院弹劾 · 参院决战</button>
+              <button type="button" class="chip-btn" id="strat-btn-2" onclick="setStrategy(2)">水门式逼退 · 辞职换豁免</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="gop-defection-slider">
+              <span>模拟参议院共和党建制派倒戈人数（2028 选区切割压力）</span>
+              <span id="defection-readout" style="color:var(--primary); font-size:0.95rem;">6 席</span>
+            </label>
+            <div style="display:grid; grid-template-columns: minmax(0, 1fr) 96px; gap:var(--space-md); align-items:end;">
+              <input type="range" class="range-input" id="gop-defection-slider" min="0" max="18" value="6" oninput="syncDefectionFromSlider(this.value)">
+              <input type="number" class="number-input" id="gop-defection-number" min="0" max="18" value="6" aria-label="共和党倒戈人数输入" oninput="syncDefectionFromNumber(this.value)">
+            </div>
+          </div>
+
+          <div class="observation-well">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-xs);">
+              <span class="coord-label">定罪票数合成：56 (DEM) + <span id="defection-inline">6</span> (GOP 倒戈)</span>
+              <span id="conviction-badge" class="badge">62 / 67 票（距定罪差 5 票）</span>
+            </div>
+            <div class="chamber-bar-track" style="height:26px;">
+              <div class="chamber-seg-dem" id="convict-bar-dem" style="width:56%; font-size:0.75rem;">56 DEM</div>
+              <div id="convict-bar-gop" style="width:6%; background:var(--primary); height:100%; transition: width var(--dur-short) var(--ease-out);"></div>
+              <div class="threshold-marker" style="left:67%;" title="67票三分之二定罪线"></div>
+            </div>
+            <p class="prose-block" id="wargame-outcome" style="margin:var(--space-sm) 0 0; font-size:0.9rem;">
+              <strong>沙盘推演结论：</strong> 杰弗里斯、加西亚与拉斯金深刻意识到，若过早提交弹劾条款而未稳拿 11 名共和党参议员支持，可能反被特朗普包装为“政治迫害”。当前最致命的武器是<strong>“先传唤固化铁证、保留随时弹劾权利”</strong>——通过连续 12 个月的公开听证彻底压垮其剩余执政动能与 2028 年共和党接班信誉，随时视爱泼斯坦档案与退税丑闻发酵程度决定是否一击定罪。
+            </p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-kicker">EXECUTIVE COUNTER-OFFENSIVE // 白宫求生与“行政脱壳”三板斧</div>
+          <h3 class="panel-title">面对宪政围剿，特朗普的极端反扑与责任隔离</h3>
+          <ul class="clean-list" style="margin-top:var(--space-md);">
+            <li>
+              <strong>01. 战术脱壳：向副总统万斯（JD Vance）让渡棘手外交权责</strong><br>
+              为洗脱对伊战事失利与经济停滞的直接法律及历史污点，特朗普正加速将高风险外交事务（如对伊停火妥协谈判及降格协议签署）转移至副手万斯名下，利用副总统设立“行政隔离墙”以保全自身退场体面。
+            </li>
+            <li>
+              <strong>02. 极限行政令治国与滥用行政特权拖延诉讼</strong><br>
+              立法权全面锁死后，白宫将广泛援引“行政特权”（Executive Privilege）拒绝交出内部备忘录与司法部通讯记录，将传票官司一路拖至最高法院；同时在“唐罗主义”框架下于格陵兰岛或拉美制造新地缘冲突，借“国家安全紧急状态”强行转移国内弹劾焦点。
+            </li>
+            <li>
+              <strong>03. 宗教“殉道者”悲情动员与文化撕裂战</strong><br>
+              将国会合法传唤与第三次弹劾条款污名化为“深层政府对天选之人的迫害”，宣称自己是替 MAGA 底层民众承受打压的“上帝器皿”，通过攻击 DEI 与觉醒运动、唤醒“赤色幽灵”恐惧，把法理清算扭曲为正邪宗教决战。
+            </li>
+          </ul>
+          <div class="panel-low" style="margin-top:var(--space-md); padding:var(--space-md);">
+            <div class="panel-kicker">CRITICAL LEGAL HORIZON // 宪政僵局风险</div>
+            <p class="prose-block" style="margin:0; font-size:0.86rem;">
+              一旦白宫在最高法院做出不利裁决后仍拒绝配合美联储独立性审查与众院传票，2027 年的美国将坠入“行政独裁对抗立法清算”的深度宪政内耗战争。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: FOUR DIMENSIONS OF HEGEMONIC DECLINE -->
+    <section id="sec-hegemony" class="dossier-section">
+      <div class="section-header">
+        <div class="section-epoch">SECTION 03 // FOUR-DIMENSIONAL SYSTEMIC COLLAPSE</div>
+        <h2 class="section-title">美利坚霸权在四大维度的系统性陨落：硬实力、信用与秩序的同步宕机</h2>
+        <p class="section-subtitle">
+          2026 年的危机并非单一政策失误，而是金融主权、军工产能、地缘外交与科技生态四大底层支柱的“系统死机闭环”。每一维度都在加速削弱其余三个维度的防震余量。
+        </p>
+      </div>
+
+      <!-- 3.1 Economy & Finance -->
+      <div class="dimension-block">
+        <div class="dimension-banner">
+          <h3 class="dimension-title">维度一 · 经济与金融：40 万亿美债悬崖与平行金融轨道实战化</h3>
+          <span class="dimension-code">DIM-01 // FISCAL &amp; MONETARY ENTROPY</span>
+        </div>
+
+        <div class="split-7-5">
+          <div class="panel">
+            <div class="panel-kicker">DEBT &amp; INTEREST SHOCK // 主权债务与利息支出剪刀差</div>
+            <h4 class="panel-title">年付息 1.2 万亿美元反超国防预算，外国债权人持续撤离</h4>
+            <div class="chart-box-sm">
+              <canvas id="chart-debt-interest" aria-label="美国债务利息支出与并行清算规模对比图"></canvas>
+            </div>
+            <div class="chart-caption">
+              2026 年 8 月美国联邦国债正式突破 40.05 万亿美元（超 GDP 120%），30 年期长端美债收益率冲高至 5.34%（2007 年以来峰值）。桥水基金创始人瑞·达利欧预警：中国美债持仓降至 2008 年以来 18 年新低，日本连续 5 个月抛售以筹资应对高油价，美国实质性主权债务危机窗口期已缩窄至三年以内。
+            </div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:var(--space-md);">
+            <div class="panel">
+              <div class="panel-kicker">PARALLEL RAILS // 脱离 SWIFT 的实战金融生命线</div>
+              <h4 class="panel-title">CIPS 与 mBridge 完成规模化实战跨越</h4>
+              <ul class="clean-list" style="font-size:0.9rem;">
+                <li><strong>人民币跨境支付系统（CIPS）：</strong>已覆盖全球超百个国家，年结算规模突破 <strong>24 万亿美元</strong>，成为能源与大宗贸易的核心去美元主干道。</li>
+                <li><strong>多边央行数字货币桥（mBridge）：</strong>独立实现超 <strong>4,700 亿人民币</strong> 的跨境批发清算，基于分布式账本与本币直接结算，将跨境交易费用减半并彻底免疫 SWIFT 金融封锁。</li>
+              </ul>
+            </div>
+
+            <div class="panel-low">
+              <div class="panel-kicker">CLASS POLARIZATION // “免税钱放高利贷”寄生闭环</div>
+              <p class="prose-block" style="margin:0; font-size:0.88rem;">
+                经济学家理查德·沃尔夫指出，美国底层 50% 工薪家庭仅占有不足 1% 股票资产。特朗普减税政策沉淀在顶层富豪手中的免税资本，转手化为国债反向借贷给联邦政府，迫使普通纳税人每年支付超 <strong>1.2 万亿美元</strong> 的国债利息，加速了社会贫富对立与资本主义制度内爆。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.2 Military & Strategy -->
+      <div class="dimension-block">
+        <div class="dimension-banner">
+          <h3 class="dimension-title">维度二 · 军事与战略：弹药耗竭、5 年补库断层与印太防务空门</h3>
+          <span class="dimension-code">DIM-02 // MUNITIONS CLIFF &amp; DETERRENCE GAP</span>
+        </div>
+
+        <div class="panel" style="margin-bottom:var(--space-md);">
+          <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:var(--space-sm); margin-bottom:var(--space-md);">
+            <div>
+              <div class="panel-kicker">CSIS &amp; DOD IG AUDIT // “史诗狂怒”行动精导弹药消耗与补库周期</div>
+              <h4 class="panel-title" id="munitions-chart-title">美军四大核心防空与打击资产战备消耗深度（%）</h4>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:var(--space-xs);">
+              <button type="button" class="chip-btn active" id="mun-btn-pct" onclick="switchMunitionsMetric('pct')">库存消耗深度 (%)</button>
+              <button type="button" class="chip-btn" id="mun-btn-lead" onclick="switchMunitionsMetric('lead')">重建周期锁死 (月)</button>
+              <button type="button" class="chip-btn" id="mun-btn-cost" onclick="switchMunitionsMetric('cost')">单弹造价 ($M)</button>
+            </div>
+          </div>
+
+          <div class="split-7-5">
+            <div>
+              <div class="chart-box-sm">
+                <canvas id="chart-munitions" aria-label="美军关键精导弹药损耗与工业补库周期图表"></canvas>
+              </div>
+              <div class="chart-caption">
+                数据来源：CSIS 停火弹药评估报告及五角大楼监察长（DoD IG）联合审计。38 天对伊高强度空袭（2 月 28 日至 4 月 7 日巴基斯坦斡旋停火）直接暴露美国“新自由主义即时配送军工体系”毫无冗余产能的致命缺陷。
+              </div>
+            </div>
+
+            <div class="observation-well">
+              <div class="panel-kicker">ASYMMETRIC ATTRITION // 非对称成本交换与印太真空</div>
+              <ul class="clean-list" style="font-size:0.88rem; margin-top:var(--space-xs);">
+                <li><strong>108.6:1 至 190:1 成本黑洞：</strong>美军被迫以单价 390 万–1,550 万美元的爱国者与萨德拦截弹，阻击单价仅 2 万–5 万美元的伊朗 Shahed-136 无人机；开战前 100 小时弹药成本即高达 37 亿美元。</li>
+                <li><strong>补库锁死至 2030–2031 年：</strong>战斧年均采购仅 80–90 枚，爱国者与萨德交付周期分别长达 42 个月与 53 个月，且导引头稀土材料（中国控制全球 60%–70% 开采及 94% 钕磁铁）卡住供应链咽喉。</li>
+                <li><strong>西太平洋常规威慑破产：</strong>美军紧急将第 31 海军陆战远征分队及防空资产从东亚调往中东，并推迟日本 400 枚战斧及海湾盟友交付，导致台海、南海及第一岛链关岛/冲绳防御伞出现长达 5 年的“战略空门”；而伊朗地下 90% 发射井与 60%–75% 移动发射车依然完好。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dossier-table-wrap" style="margin-top:var(--space-lg);">
+            <table class="dossier-table">
+              <thead>
+                <tr>
+                  <th>核心武器系统</th>
+                  <th class="num">战前总库存</th>
+                  <th class="num">实战消耗量 / 占比</th>
+                  <th class="num">单枚采购成本</th>
+                  <th class="num">交付周期</th>
+                  <th>战略与印太影响评估</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>萨德拦截弹 (THAAD)</strong></td>
+                  <td class="num">360 枚</td>
+                  <td class="num">190–290 枚 (53%–80%)</td>
+                  <td class="num">$15.5M</td>
+                  <td class="num">53 个月</td>
+                  <td>高空反导底牌几近打空，关岛及日韩反导保护伞严重虚弱。</td>
+                </tr>
+                <tr>
+                  <td><strong>爱国者 (Patriot PAC-3)</strong></td>
+                  <td class="num">2,330 枚</td>
+                  <td class="num">1,060–1,430 枚 (45%–65%)</td>
+                  <td class="num">$3.9M</td>
+                  <td class="num">42 个月</td>
+                  <td>前线跌破千枚警戒线，迫使五角大楼冻结对乌、日及海湾盟友补给。</td>
+                </tr>
+                <tr>
+                  <td><strong>战斧巡航导弹 (Tomahawk)</strong></td>
+                  <td class="num">3,100 枚</td>
+                  <td class="num">1,000+ 枚 (约 32%)</td>
+                  <td class="num">$2.6M</td>
+                  <td class="num">47 个月</td>
+                  <td>远程防区外打击能力锐减，迫使 F-15E 冒险飞入防区内投弹并遭击落。</td>
+                </tr>
+                <tr>
+                  <td><strong>标准-3 (SM-3)</strong></td>
+                  <td class="num">410 枚</td>
+                  <td class="num">130–250 枚 (31%–61%)</td>
+                  <td class="num">$28.7M</td>
+                  <td class="num">64 个月</td>
+                  <td>海军宙斯盾舰队海基反导弹仓枯竭，库存恢复周期跨过 2031 年。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.3 Diplomacy & Retrenchment -->
+      <div class="dimension-block">
+        <div class="dimension-banner">
+          <h3 class="dimension-title">维度三 · 外交与地缘大收缩：深圳“新雅尔塔时刻”与“唐罗主义”破产</h3>
+          <span class="dimension-code">DIM-03 // SHENZHEN SUMMIT &amp; MULTIPOLAR SPHERES</span>
+        </div>
+
+        <div class="split-5-7">
+          <div class="panel">
+            <div class="panel-kicker">2026.11.19 // KYLIN VILLA, SHENZHEN</div>
+            <h4 class="panel-title">中美俄三边元首峰会：单极秩序落幕的视觉定格</h4>
+            <p class="prose-block" style="font-size:0.92rem;">
+              2026 年 11 月 19 日 APEC 期间，中国国家主席习近平在深圳麒麟山庄居于正中，美国总统特朗普与俄罗斯总统普京分坐两侧，举行历史性首次中美俄三边元首峰会。此次三方会谈时长达到两天前特朗普在马尼拉会晤澳、印、日“四方安全对话”（Quad）的<strong>整整两倍</strong>。
+            </p>
+            <div class="observation-well">
+              <div class="coord-label" style="margin-bottom:var(--space-xs);">《中美俄元首面向和平声明》四大核心要点</div>
+              <ul class="clean-list" style="font-size:0.86rem; margin-bottom:0;">
+                <li>推动联合国体系结构性改革，重新校准大国治理权重；</li>
+                <li>协同扩大精炼石油产品生产与全球供应，试图稳住中东危机引发的能源休克；</li>
+                <li>重申“国家同意原则与国家官员豁免权”，为大国交互划定底线；</li>
+                <li>启动三边削减核风险与防止核扩散对话机制。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card-grid-2">
+            <div class="panel">
+              <div class="panel-kicker">THE NEW YALTA // 华盛顿被迫接受多极势力范围</div>
+              <p class="prose-block" style="margin:0; font-size:0.88rem;">
+                CFR 专家与欧洲政界惊呼，深圳三边峰会标志着“新雅尔塔时刻”降临——华盛顿在印太与中东军事经济力量衰退后，事实上放弃了“世界警察”与基于规则的自由主义霸权，转而默认以中美俄为核心的多极势力范围分割，并准备将军事部署从第一岛链后撤至第二岛链与西半球。
+              </p>
+            </div>
+            <div class="panel">
+              <div class="panel-kicker">ALLIED ALIENATION // 欧洲出局与“唐罗主义”破产</div>
+              <p class="prose-block" style="margin:0; font-size:0.88rem;">
+                欧洲（欧盟、北约）被彻底排除在深圳决策桌外；G7 与五眼联盟内部离心，多国元首争相访华对冲风险。与此同时，特朗普以吞并格陵兰、将加拿大变为第 51 州、越境抓扣马杜罗为特征的“唐罗主义”（Donroe Doctrine）19 世纪新帝国主义扩张彻底破产，反而招致全球南方集结避险。
+              </p>
+            </div>
+            <div class="panel" style="grid-column: 1 / -1;">
+              <div class="panel-kicker">GLOBAL SOUTH REALIGNMENT // 东盟与中东的“去美国化”转向</div>
+              <p class="prose-block" style="margin:0; font-size:0.88rem;">
+                在海湾盟友目睹美军防护伞失效后，沙特、土耳其与巴基斯坦加快防务自主并推进“去美国化”；东盟国家无视华盛顿可能施加的 15% 对等关税威胁，听从经济收敛逻辑深度接入中国绿色能源与数字技术栈（亚洲占全球购买力产出份额已从 1995 年的 30% 跃升至 2025–2026 年的 50%）。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.4 AI & Technology -->
+      <div class="dimension-block" style="margin-bottom:0;">
+        <div class="dimension-banner">
+          <h3 class="dimension-title">维度四 · 人工智能与科技：寡头泡沫内耗与中国开源生态的非对称反超</h3>
+          <span class="dimension-code">DIM-04 // ALGORITHMIC HYPERWAR VS INDUSTRIAL STACK</span>
+        </div>
+
+        <div class="split-6-6">
+          <div class="panel">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-xs);">
+              <span class="panel-kicker">U.S. TECH-MILITARY OLIGOPOLY // 美式体系的内耗与失控</span>
+              <span class="badge danger">泡沫与伦理危机</span>
+            </div>
+            <h4 class="panel-title">AI 军工复合体“超战争”失控与算力电力垄断泡沫</h4>
+            <ul class="clean-list" style="font-size:0.9rem;">
+              <li><strong>算法军事化与实战丑闻：</strong>美军“多域一体化杀伤网”（Kill Web）与以色列国防军在加沙及中东战场的 AI 自动化目标识别与制导系统引发严重实战伦理丑闻，算法接管形成毫秒级“超战争”（Hyperwar）自动化屠杀与“斩首打击”范式，绕开人类外交缓冲并导致平民外溢、全球 1,100 艘船只 GPS/AIS 干扰及国际法底线崩溃。</li>
+              <li><strong>金融注水与算力电力瓶颈：</strong>以英伟达（市值突破 5 万亿美元）为首的美股科技七巨头陷入高估值循环与电力电网垄断内耗，资本狂热并未转化为美国本土实体制造业生产率的实质跃升；白宫在 4 天内接连升级对华投资管制与算法封锁，反而暴露出对技术领先优势丧失的深层焦虑。</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-xs);">
+              <span class="panel-kicker">CHINA ASYMMETRIC OVERMATCH // 中国开源与全栈实业优势</span>
+              <span class="badge positive">结构性反超</span>
+            </div>
+            <h4 class="panel-title">开源生态打破闭源壁垒，完整制造与绿电基建托底</h4>
+            <ul class="clean-list" style="font-size:0.9rem;">
+              <li><strong>开源生态降维打击（DeepSeek 范式）：</strong>中国大模型与开源社区以极低算力成本实现前沿性能跃迁，击穿美国算力封锁与闭源寡头高溢价商业模式，推动亚洲及全球南方工业与数字技术平权。</li>
+              <li><strong>全端国产算力与实体供应链闭环：</strong>华为昇腾（Ascend）生态与中芯国际晶圆制造加速国产替代；中国坐拥全球约 <strong>50% 的顶尖 AI 研发人才</strong>、压倒性的特高压与绿色电力基建余量、以及全球最完整的工业制造与“可消耗廉价质量”无人机/硬件产业链，在 5–10 年长周期竞争中奠定非对称主导优势。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: INTERACTIVE TIMELINE -->
+    <section id="sec-timeline" class="dossier-section">
+      <div class="section-header">
+        <div class="section-epoch">SECTION 04 // CHRONOLOGY 2026–2031</div>
+        <h2 class="section-title">帝国转折全景时间轴：从加勒比冒进到深圳三边峰会与补库死局</h2>
+        <p class="section-subtitle">
+          筛选核心事件域或点击“标记档案”将关键战略节点保存至您的本地研判工作区（状态自动持久化，可随时导出简报）。
+        </p>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:var(--space-sm); margin-bottom:var(--space-md);">
+        <div style="display:flex; flex-wrap:wrap; gap:var(--space-xs);">
+          <button type="button" class="chip-btn active" id="tl-filter-all" onclick="filterTimeline('all')">全部节点 (9)</button>
+          <button type="button" class="chip-btn" id="tl-filter-domestic" onclick="filterTimeline('domestic')">内政与宪政</button>
+          <button type="button" class="chip-btn" id="tl-filter-military" onclick="filterTimeline('military')">军事与军工</button>
+          <button type="button" class="chip-btn" id="tl-filter-finance" onclick="filterTimeline('finance')">金融与科技</button>
+          <button type="button" class="chip-btn" id="tl-filter-diplomacy" onclick="filterTimeline('diplomacy')">外交与地缘</button>
+        </div>
+        <span class="inline-status" id="timeline-status" aria-live="polite"></span>
+      </div>
+
+      <div class="timeline-list" id="timeline-container"></div>
+    </section>
+
+    <!-- SECTION 05: METHODOLOGY & SOURCES -->
+    <section id="sec-sources" class="dossier-section">
+      <div class="section-header">
+        <div class="section-epoch">SECTION 05 // INTELLIGENCE AUDIT &amp; METHODOLOGY</div>
+        <h2 class="section-title">数据核验清单与研究来源索引</h2>
+      </div>
+
+      <div class="card-grid-2">
+        <div class="panel">
+          <div class="panel-kicker">PRIMARY QUANTITATIVE SOURCES // 量化与官方审计来源</div>
+          <ul class="clean-list" style="font-size:0.88rem; margin-top:var(--space-sm);">
+            <li><strong>国会选举与民调统计：</strong>2026 年 11 月 3 日美国中期选举众议院（258 vs 177）与参议院（56 vs 44，含得州与俄亥俄翻盘）终局结果；Emerson College 全美民调、Cook Political Report 席位评估、Polymarket 与 Kalshi 预测市场。</li>
+            <li><strong>国防工业与弹药耗竭审计：</strong>战略与国际研究中心（CSIS）《最后的子弹：伊朗战争停火时关键弹药状况评估》及工业基础进展报告、五角大楼监察长（DoD IG）报告、副防长史蒂夫·芬伯格 21 天紧急军工备忘录、USCC（美中经济安全审查委员会）报告。</li>
+            <li><strong>财政债务与平行清算体系：</strong>美国财政部每日债务报告（$40.05T）、桥水基金瑞·达利欧主权债务风险预警、南方新政策中心（Policy Center for the New South）关于 CIPS 与 mBridge 的定量审计。</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <div class="panel-kicker">STRATEGIC &amp; LEGAL BRIEFINGS // 战略学者与宪政档案来源</div>
+          <ul class="clean-list" style="font-size:0.88rem; margin-top:var(--space-sm);">
+            <li><strong>外交与三边峰会文件：</strong>白宫 2026 年 11 月 19 日《中美俄元首面向和平声明》、外交关系委员会（CFR）六位专家关于深圳峰会与 Quad 会议对比的深度评估、布鲁金斯学会关于 21 世纪势力范围可行性研究。</li>
+            <li><strong>司法与弹劾听证链：</strong>最高法院首席大法官罗伯茨关于 IEEPA 关税越权多数意见、宾大沃顿商学院 1,750 亿美元退税模型、司法部解封的 16 页爱泼斯坦案 FBI 访谈摘要及众院监督委员会（加西亚、拉斯金）传票调查记录。</li>
+            <li><strong>学术与战略理论框架：</strong>约翰·米尔斯海默（进攻性现实主义与三线战争陷阱）、杰弗里·萨克斯（亚洲经济收敛与单极幻觉终结）、理查德·沃尔夫（寄生性债务体制与帝国金融内爆）、石齐平（后美国时代与三美循环断裂）。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <api-shim></api-shim>
+  <script>
+    /* State object synchronized with notebookAppApi */
+    var appState = {
+      chamber: `house`,
+      evidenceIndex: 0,
+      strategyIndex: 0,
+      gopDefections: 6,
+      munitionsMetric: `pct`,
+      timelineFilter: `all`,
+      bookmarkedIds: []
+    };
+
+    var voterChart = null;
+    var debtChart = null;
+    var munitionsChart = null;
+
+    var evidenceData = [
+      {
+        committee: `主管机构：众议院监督与问责委员会（罗伯特·加西亚等）`,
+        severity: `法律定性：妨碍司法与行政掩盖`,
+        title: `爱泼斯坦案“消失的 37 页”与司法部刻意压制证据链`,
+        desc: `司法部（DOJ）与 FBI 被指在执行《爱泼斯坦档案透明法案》时非法扣留 37 页关键记录（含新解封的 16 页 2019 年四次 FBI 访谈摘要），涉及未公开的未成年人性侵指控备忘录。加西亚直斥其为“现代史上最大的政府掩盖事件”。叠加 E. Jean Carroll 案逾 8,800 万美元赔偿判决，众院监督委员会将通过强制传唤司法部高官公开听证，在道德与法治层面对白宫实施穿透式打击。`
+      },
+      {
+        committee: `主管机构：众议院军事与外交委员会（亚当·史密斯等）`,
+        severity: `法律定性：践踏宪法第一条与《战争权力法》`,
+        title: `绕过国会发动“史诗狂怒”对伊空袭与加勒比海越境抓捕`,
+        desc: `特朗普未经国会宣战授权即于 2026 年 2 月 28 日联合以色列发动“史诗狂怒”大规模空袭并刺杀哈梅内伊，五角大楼却于 3 月 1 日向国会幕僚坦承无情报显示伊朗计划先发制人打击美军，直接戳穿“迫在眉睫威胁”叙事；加之 1 月在委内瑞拉动用特种部队强行抓扣马杜罗（“绝对决心”行动）并打空关键防空导弹储备，将被定性为违宪动武。`
+      },
+      {
+        committee: `主管机构：众议院筹款与司法委员会`,
+        severity: `法律定性：行政权侵夺国会征税权`,
+        title: `IEEPA 关税违宪裁决与 1,750 亿美元退税诉讼潮`,
+        desc: `联邦最高法院首席大法官罗伯茨撰写的多数意见已明确裁定，政府依据《国际紧急经济权力法》（IEEPA）加征全球对等关税缺乏法律授权。宾大沃顿商学院模型测算财政部面临高达 1,300 亿至 1,750 亿美元退税敞口，已有近 2,000 家企业涌向国际贸易法院立案。委员会将重点核查白宫在“极限施压—突然退缩（TACO）”循环中是否存在内阁成员与商业盟友的大宗商品及金融套利。`
+      },
+      {
+        committee: `主管机构：众议院司法委员会（杰米·拉斯金等）`,
+        severity: `法律定性：滥用行政权与侵蚀机构独立性`,
+        title: `“2025计划”联邦文官清洗、美联储施压与白宫秘密资金池`,
+        desc: `杰米·拉斯金已宣布将传唤外部私人实体与白宫关联机构，重点清查被称为“秘密资金池”（Slush Funds）的“和平委员会”（Board of Peace）、由特朗普起诉国税局及财政部和解产生的“反武器化基金”、以及白宫宴会厅筹资内幕；同时追究白宫大举解雇职业文官并向美联储送达传票干预货币独立性的帝王式行政独裁行径。`
+      }
+    ];
+
+    var strategyDescriptions = [
+      `<strong>战略一 · 杰弗里斯 / 加西亚 / 拉斯金基准路线（引而不发、传票绞杀）：</strong>民主党高层深知若在参议院 67 票尚未锁定前急于表决弹劾条款，一旦参院未能定罪，反而会被特朗普借宗教“殉道者”叙事翻盘。因此最致命的打法是利用众院 258 席传票权开展长周期、高密度的公开听证会，将爱泼斯坦案 37 页档案、1,750 亿退税僵局与战备空门铁证不断公之于众，彻底锁死其立法与政策生命，同时保留随时一击定罪的悬顶之剑。`,
+      `<strong>战略二 · 正式启动第三次弹劾与参院决战：</strong>众议院以简单多数迅速通过多条弹劾条款，使特朗普成为美国历史上首位三次遭弹劾的总统，并将案卷移交拥有 56 席民主党的参议院公开审判。此时只需至少 11 名在选区重挫与 2028 年路线切割压力下的共和党建制派参议员倒戈，即可触发宪法定罪条款并剥夺其公职资格。`,
+      `<strong>战略三 · “水门事件”式幕后逼退与提前下台：</strong>当国会传票证据链（特别是司法掩盖与经济反噬）压垮白宫，且民调长期低于 35% 拖累共和党 2028 年大选布局时，参议院共和党高层可能效仿 1974 年“水门事件”后期赴白宫摊牌，迫使特朗普以“提前辞职、由万斯接任并换取某种形式的司法与政治缓冲”作为终极退场方案。`
+    ];
+
+    var timelineEvents = [
+      {
+        id: `tl-1`,
+        date: `2026-01`,
+        cat: `diplomacy`,
+        catLabel: `外交与地缘`,
+        title: `“绝对决心”行动与“唐罗主义”激进扩张`,
+        desc: `美军越境突袭委内瑞拉强行抓扣总统马杜罗，白宫同时释放吞并格陵兰岛与把加拿大变为第 51 州言论，彻底抛弃《联合国宪章》不干涉原则。`
+      },
+      {
+        id: `tl-2`,
+        date: `2026-02-22`,
+        cat: `finance`,
+        catLabel: `金融与科技`,
+        title: `最高法院驳回 IEEPA 对等关税，近 2,000 家企业发起退税诉讼`,
+        desc: `首席大法官罗伯茨裁定总统无权借紧急状态重写关税表，沃顿商学院测算财政部面临高达 1,750 亿美元退税压力；白宫随即转用 122 条款祭出 15% 临时关税强行续命。`
+      },
+      {
+        id: `tl-3`,
+        date: `2026-02-28`,
+        cat: `military`,
+        catLabel: `军事与军工`,
+        title: `美以联合发动“史诗狂怒”行动，对伊战争全面爆发`,
+        desc: `美军绕过国会宣战程序空袭德黑兰并清除哈梅内伊，但未能摧毁伊朗 90% 地下导弹井；霍尔木兹海峡陷入事实性双向封锁，油价飙升至 $100–$115/桶。`
+      },
+      {
+        id: `tl-4`,
+        date: `2026-04-07`,
+        cat: `military`,
+        catLabel: `军事与军工`,
+        title: `弹药库濒临见底，美军接受巴基斯坦斡旋停火重整`,
+        desc: `38 天高强度空袭耗尽高达 80% 萨德、45%–65% 爱国者与逾千枚战斧导弹，迫使五角大楼将东亚兵力后撤并推迟盟友订单，西太平洋出现 5 年补库断层。`
+      },
+      {
+        id: `tl-5`,
+        date: `2026-08`,
+        cat: `finance`,
+        catLabel: `金融与科技`,
+        title: `美债突破 40.05 万亿美元，mBridge 与 CIPS 平行网络实战化`,
+        desc: `30 年期美债收益率攀升至 5.34%，年利息支出跃升至 1.2 万亿美元超越国防预算；CIPS 突破 24 万亿美元结算且 mBridge 实现 4,700 亿人民币跨境清算。`
+      },
+      {
+        id: `tl-6`,
+        date: `2026-11-03`,
+        cat: `domestic`,
+        catLabel: `内政与宪政`,
+        title: `中期选举民主党“蓝色横扫”：众院 258 席、参院 56 席`,
+        desc: `在 76% 选民对生活成本不满与汽油破 4 美元的怒火下，民主党不仅夺回众院绝对多数，更意外翻盘得克萨斯与俄亥俄参院席位，特朗普沦为终极跛脚鸭。`
+      },
+      {
+        id: `tl-7`,
+        date: `2026-11-19`,
+        cat: `diplomacy`,
+        catLabel: `外交与地缘`,
+        title: `深圳麒麟山庄中美俄三边元首峰会：新雅尔塔时刻降临`,
+        desc: `习近平居中主持，特朗普与普京分坐两侧，会晤时长达 Quad 峰会两倍并发表《面向和平声明》；欧洲全面出局，华盛顿事实上默认多极势力范围收缩。`
+      },
+      {
+        id: `tl-8`,
+        date: `2026-12 ~ 2027`,
+        cat: `domestic`,
+        catLabel: `内政与宪政`,
+        title: `众院传票风暴全面激活，第三次弹劾达摩克利斯之剑高悬`,
+        desc: `加西亚与拉斯金锁定爱泼斯坦案 37 页隐藏文件、违宪战争、退税内幕及秘密资金池；白宫以行政特权、万斯战术脱壳及宗教殉道者动员进行绝地反扑。`
+      },
+      {
+        id: `tl-9`,
+        date: `2030 ~ 2031`,
+        cat: `military`,
+        catLabel: `军事与军工`,
+        title: `美军精导弹药补库周期终局节点`,
+        desc: `CSIS 审计指出受限于 42–64 个月制造周期与稀土供应链约束，爱国者、战斧、萨德与标准-3 战备库存需迟至 2030–2031 年方能恢复至 2026 战前水平。`
+      }
+    ];
+
+    function getToken(name) {
+      return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    }
+
+    function saveState() {
+      if (window.notebookAppApi && typeof window.notebookAppApi.setAppState === 'function') {
+        window.notebookAppApi.setAppState(appState).catch(function() {});
+      }
+    }
+
+    function switchChamber(mode) {
+      appState.chamber = mode;
+      var btnHouse = document.getElementById(`btn-house`);
+      var btnSenate = document.getElementById(`btn-senate`);
+      var heading = document.getElementById(`chamber-heading`);
+      var demBar = document.getElementById(`chamber-dem-bar`);
+      var gopBar = document.getElementById(`chamber-gop-bar`);
+      var threshold = document.getElementById(`chamber-threshold`);
+      var metaLabel = document.getElementById(`chamber-meta-label`);
+      var badge = document.getElementById(`chamber-badge`);
+      var analysis = document.getElementById(`chamber-analysis`);
+
+      if (!btnHouse || !btnSenate || !heading || !demBar || !gopBar || !threshold || !metaLabel || !badge || !analysis) return;
+
+      if (mode === `house`) {
+        btnHouse.classList.add(`active`);
+        btnSenate.classList.remove(`active`);
+        heading.textContent = `第 120 届国会众议院最终席位格局（435 席）`;
+        demBar.style.width = `59.3%`;
+        demBar.textContent = `民主党 258 席`;
+        gopBar.style.width = `40.7%`;
+        gopBar.textContent = `共和党 177 席`;
+        threshold.style.left = `50.1%`;
+        metaLabel.textContent = `多数门槛：218 席 // 民主党净胜：+81 席`;
+        badge.textContent = `绝对多数控制权`;
+        analysis.innerHTML = `<strong>众院彻底易手：</strong> 选前 Emerson College 全美通用选票民调已显示民主党领先 8–10 个百分点（52% vs 42%），Polymarket 与 Kalshi 隐含翻盘概率高达 81%–92.6%。Cook Political Report 追踪的 22 个关键摇摆席位中有 15–16 席由共和党把守且高度暴露，最终民主党一举夺下 <strong>258 席</strong> 压倒性多数，令共和党试图靠得克萨斯州重划选区新增 5 席的算盘化为泡影。`;
+        renderChamberDots(258, 177, 41);
+      } else {
+        btnSenate.classList.add(`active`);
+        btnHouse.classList.remove(`active`);
+        heading.textContent = `第 120 届国会参议院最终席位格局（100 席）`;
+        demBar.style.width = `56%`;
+        demBar.textContent = `民主党 56 席`;
+        gopBar.style.width = `44%`;
+        gopBar.textContent = `共和党 44 席`;
+        threshold.style.left = `51%`;
+        metaLabel.textContent = `过半门槛：51 席 // 弹劾定罪门槛：67 席`;
+        badge.textContent = `翻盘得州与俄亥俄`;
+        analysis.innerHTML = `<strong>参院防线雪崩：</strong> 尽管年初华盛顿舆论普遍认为共和党改选席位大多“安全”，但高油价与关税反噬引爆了铁锈带与南部选民的怒火，民主党历史性翻盘<strong>得克萨斯州</strong>与<strong>俄亥俄州</strong>并夺下 <strong>56 席</strong>。这不仅终结了白宫的联邦法官与内阁任命通道，更使参议院距弹劾定罪的 67 票超级多数仅剩 11 席之遥。`;
+        renderChamberDots(56, 44, 9);
+      }
+      saveState();
+    }
+
+    function renderChamberDots(demCount, gopCount, flipCount) {
+      var container = document.getElementById(`chamber-dots`);
+      if (!container) return;
+      var html = ``;
+      var i;
+      var baseDem = demCount - flipCount;
+      for (i = 0; i < baseDem; i++) {
+        html += `<span class="seat-dot dem" title="民主党稳固席位"></span>`;
+      }
+      for (i = 0; i < flipCount; i++) {
+        html += `<span class="seat-dot flip" title="关键翻盘席位"></span>`;
+      }
+      for (i = 0; i < gopCount; i++) {
+        html += `<span class="seat-dot gop" title="共和党席位"></span>`;
+      }
+      container.innerHTML = html;
+    }
+
+    function selectEvidence(idx) {
+      appState.evidenceIndex = idx;
+      var i;
+      for (i = 0; i < 4; i++) {
+        var tab = document.getElementById(`ev-tab-` + i);
+        if (tab) {
+          if (i === idx) tab.classList.add(`active`);
+          else tab.classList.remove(`active`);
+        }
+      }
+      var item = evidenceData[idx];
+      if (!item) return;
+      var comm = document.getElementById(`ev-committee`);
+      var sev = document.getElementById(`ev-severity`);
+      var title = document.getElementById(`ev-title`);
+      var desc = document.getElementById(`ev-desc`);
+      if (comm) comm.textContent = item.committee;
+      if (sev) sev.textContent = item.severity;
+      if (title) title.textContent = item.title;
+      if (desc) desc.textContent = item.desc;
+      saveState();
+    }
+
+    function setStrategy(idx) {
+      appState.strategyIndex = idx;
+      var i;
+      for (i = 0; i < 3; i++) {
+        var btn = document.getElementById(`strat-btn-` + i);
+        if (btn) {
+          if (i === idx) btn.classList.add(`active`);
+          else btn.classList.remove(`active`);
+        }
+      }
+      updateWargameDisplay();
+      saveState();
+    }
+
+    function syncDefectionFromSlider(val) {
+      var num = parseInt(val, 10);
+      if (isNaN(num)) num = 0;
+      if (num < 0) num = 0;
+      if (num > 18) num = 18;
+      appState.gopDefections = num;
+      var numEl = document.getElementById(`gop-defection-number`);
+      if (numEl) numEl.value = String(num);
+      updateWargameDisplay();
+      saveState();
+    }
+
+    function syncDefectionFromNumber(val) {
+      var num = parseInt(val, 10);
+      if (isNaN(num)) num = 0;
+      if (num < 0) num = 0;
+      if (num > 18) num = 18;
+      appState.gopDefections = num;
+      var sliderEl = document.getElementById(`gop-defection-slider`);
+      if (sliderEl) sliderEl.value = String(num);
+      updateWargameDisplay();
+      saveState();
+    }
+
+    function updateWargameDisplay() {
+      var def = appState.gopDefections;
+      var total = 56 + def;
+      var readout = document.getElementById(`defection-readout`);
+      var inline = document.getElementById(`defection-inline`);
+      var badge = document.getElementById(`conviction-badge`);
+      var gopBar = document.getElementById(`convict-bar-gop`);
+      var outcome = document.getElementById(`wargame-outcome`);
+
+      if (readout) readout.textContent = def + ` 席`;
+      if (inline) inline.textContent = String(def);
+      if (gopBar) gopBar.style.width = def + `%`;
+
+      if (badge) {
+        if (total >= 67) {
+          badge.className = `badge danger`;
+          badge.textContent = total + ` / 67 票（已突破参院三分之二定罪门槛）`;
+        } else {
+          badge.className = `badge`;
+          badge.textContent = total + ` / 67 票（距定罪还差 ` + (67 - total) + ` 票）`;
+        }
+      }
+
+      if (outcome) {
+        var baseText = strategyDescriptions[appState.strategyIndex] || strategyDescriptions[0];
+        var extra = ``;
+        if (total >= 67) {
+          extra = `<br><br><strong style="color:var(--error);">实时触发定罪警报：</strong> 当参院共和党倒戈达到 ` + def + ` 席（总计 ` + total + ` 票），特朗普将被参议院正式定罪并剥夺公职资格，或被迫效仿尼克松在投票前辞职换取万斯特赦。`;
+        } else {
+          extra = `<br><br><strong>当前门槛推演：</strong> 56 席民主党加 ` + def + ` 席倒戈共 ` + total + ` 票，尚缺 ` + (67 - total) + ` 票方可定罪。这正解释了杰弗里斯与拉斯金为何拒绝贸然送审，而选择用传票听证持续施加压力以撬动剩余共和党参议员。`;
+        }
+        outcome.innerHTML = baseText + extra;
+      }
+    }
+
+    function switchMunitionsMetric(metric) {
+      appState.munitionsMetric = metric;
+      var btns = [`pct`, `lead`, `cost`];
+      for (var i = 0; i < btns.length; i++) {
+        var b = document.getElementById(`mun-btn-` + btns[i]);
+        if (b) {
+          if (btns[i] === metric) b.classList.add(`active`);
+          else b.classList.remove(`active`);
+        }
+      }
+      renderMunitionsChart();
+      saveState();
+    }
+
+    function filterTimeline(cat) {
+      appState.timelineFilter = cat;
+      var keys = [`all`, `domestic`, `military`, `finance`, `diplomacy`];
+      for (var i = 0; i < keys.length; i++) {
+        var btn = document.getElementById(`tl-filter-` + keys[i]);
+        if (btn) {
+          if (keys[i] === cat) btn.classList.add(`active`);
+          else btn.classList.remove(`active`);
+        }
+      }
+      renderTimeline();
+      saveState();
+    }
+
+    function toggleBookmark(id) {
+      var idx = appState.bookmarkedIds.indexOf(id);
+      if (idx === -1) {
+        appState.bookmarkedIds.push(id);
+      } else {
+        appState.bookmarkedIds.splice(idx, 1);
+      }
+      updateBookmarkCounter();
+      renderTimeline();
+      saveState();
+      var status = document.getElementById(`timeline-status`);
+      if (status) {
+        status.textContent = idx === -1 ? `已加入重点跟踪档案` : `已从跟踪档案移除`;
+      }
+    }
+
+    function updateBookmarkCounter() {
+      var el = document.getElementById(`bookmark-counter`);
+      if (el) {
+        el.textContent = `已标记里程碑：` + appState.bookmarkedIds.length;
+      }
+    }
+
+    function renderTimeline() {
+      var container = document.getElementById(`timeline-container`);
+      if (!container) return;
+      var filter = appState.timelineFilter;
+      var html = ``;
+      for (var i = 0; i < timelineEvents.length; i++) {
+        var ev = timelineEvents[i];
+        if (filter !== `all` && ev.cat !== filter) continue;
+        var isMarked = appState.bookmarkedIds.indexOf(ev.id) !== -1;
+        html += `<article class="timeline-item` + (isMarked ? ` bookmarked` : ``) + `">`;
+        html += `<div class="timeline-date">` + ev.date + `<div style="margin-top:var(--space-xs);"><span class="badge">` + ev.catLabel + `</span></div></div>`;
+        html += `<div class="timeline-body"><h4>` + ev.title + `</h4><p>` + ev.desc + `</p></div>`;
+        html += `<div><button type="button" class="` + (isMarked ? `btn-primary` : `btn-secondary`) + `" onclick="toggleBookmark('` + ev.id + `')">` + (isMarked ? `已标记` : `标记节点`) + `</button></div>`;
+        html += `</article>`;
+      }
+      container.innerHTML = html;
+    }
+
+    function exportDossierBrief() {
+      var totalConvict = 56 + appState.gopDefections;
+      var markedTitles = [];
+      for (var i = 0; i < timelineEvents.length; i++) {
+        if (appState.bookmarkedIds.indexOf(timelineEvents[i].id) !== -1) {
+          markedTitles.push(`- [` + timelineEvents[i].date + `] ` + timelineEvents[i].title);
+        }
+      }
+      var lines = [
+        `2026 终局推演：美利坚霸权系统性陨落战略研判简报`,
+        `生成时间：2026-11-21`,
+        `==================================================`,
+        `一、2026 中期选举终局：`,
+        `- 众议院：民主党 258 席 vs 共和党 177 席（绝对多数，传票权激活）`,
+        `- 参议院：民主党 56 席 vs 共和党 44 席（翻盘得克萨斯与俄亥俄）`,
+        ``,
+        `二、当前弹劾沙盘参数：`,
+        `- 选定国会策略路径：` + [`引而不发·传票固化`, `全院弹劾·参院决战`, `水门式逼退·辞职换豁免`][appState.strategyIndex],
+        `- 模拟共和党参议员倒戈：` + appState.gopDefections + ` 席（合成票数 ` + totalConvict + `/67）`,
+        ``,
+        `三、四大维度核心量化指标：`,
+        `- 美债规模：$40.05T；年利息支出：$1.2T（超越国防预算）；30年收益率：5.34%`,
+        `- 平行金融：CIPS 突破 $24T；mBridge 实现 ¥4,700 亿+ 跨境去美元清算`,
+        `- 军工断层：萨德耗尽 80%（53个月重建）；爱国者耗尽 45%-65%（42个月重建）`,
+        `- 外交拐点：2026-11-19 深圳中美俄三边元首峰会与《面向和平声明》`,
+        ``,
+        `四、已标记重点追踪里程碑（` + markedTitles.length + ` 项）：`
+      ];
+      if (markedTitles.length === 0) {
+        lines.push(`（暂未手动标记时间轴节点）`);
+      } else {
+        lines = lines.concat(markedTitles);
+      }
+      var content = lines.join(`\n`);
+
+      if (window.notebookAppApi && typeof window.notebookAppApi.triggerFileDownload === 'function') {
+        window.notebookAppApi.triggerFileDownload({
+          content: content,
+          contentType: `text/plain`,
+          encoding: `UTF-8`,
+          filename: `2026_us_hegemony_audit_brief.txt`
+        });
+      }
+      var status = document.getElementById(`timeline-status`);
+      if (status) status.textContent = `已生成并触发研判简报下载`;
+    }
+
+    function initCharts() {
+      var brass = getToken(`--data-1`);
+      var sky = getToken(`--data-2`);
+      var mint = getToken(`--data-3`);
+      var coral = getToken(`--data-4`);
+      var ctxGray = getToken(`--data-context`);
+      var textMain = getToken(`--on-surface`);
+      var textMuted = getToken(`--on-surface-variant`);
+      var gridColor = getToken(`--outline-variant`);
+
+      Chart.defaults.color = textMuted;
+      Chart.defaults.font.family = `'JetBrains Mono', 'Noto Sans SC', monospace`;
+
+      var voterCanvas = document.getElementById(`chart-voter-anger`);
+      if (voterCanvas) {
+        if (voterChart) voterChart.destroy();
+        voterChart = new Chart(voterCanvas, {
+          type: `bar`,
+          data: {
+            labels: [
+              `对生活成本强烈不满`,
+              `对通货膨胀极度愤怒`,
+              `不认可特朗普整体施政`,
+              `认定美军深陷对伊泥潭`,
+              `认可特朗普整体施政`,
+              `认可其物价治理表现`,
+              `支持对伊“史诗狂怒”`
+            ],
+            datasets: [{
+              label: `全美受访选民比例 (%)`,
+              data: [76, 72, 63, 60, 37, 30, 25],
+              backgroundColor: [coral, coral, coral, brass, sky, sky, ctxGray],
+              borderRadius: 3
+            }]
+          },
+          options: {
+            indexAxis: `y`,
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false }
+            },
+            scales: {
+              x: {
+                max: 100,
+                grid: { color: gridColor },
+                ticks: { callback: function(v) { return v + `%`; } }
+              },
+              y: {
+                grid: { display: false },
+                ticks: { color: textMain }
+              }
+            }
+          }
+        });
+      }
+
+      var debtCanvas = document.getElementById(`chart-debt-interest`);
+      if (debtCanvas) {
+        if (debtChart) debtChart.destroy();
+        debtChart = new Chart(debtCanvas, {
+          type: `bar`,
+          data: {
+            labels: [
+              `联邦年利息支出`,
+              `美国国防年度预算`,
+              `IEEPA 最高退税敞口`,
+              `mBridge 去美元清算`,
+              `CIPS 跨境结算规模`
+            ],
+            datasets: [{
+              label: `万亿美元 ($T 等值估算/官方审计)`,
+              data: [1.20, 0.90, 0.175, 0.065, 24.0],
+              backgroundColor: [coral, ctxGray, brass, mint, sky],
+              borderRadius: 3
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    var idx = context.dataIndex;
+                    if (idx === 0) return ` $1.20 万亿美元 / 年（已反超国防预算）`;
+                    if (idx === 1) return ` ~$0.90 万亿美元 / 年（参考基准）`;
+                    if (idx === 2) return ` 最高 $1,750 亿美元退税风险`;
+                    if (idx === 3) return ` 超 ¥4,700 亿人民币（约 $65B）实战清算`;
+                    return ` 突破 $24 万亿美元跨境结算规模`;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: { grid: { display: false }, ticks: { color: textMain } },
+              y: {
+                type: `logarithmic`,
+                grid: { color: gridColor },
+                ticks: {
+                  callback: function(value) {
+                    if (value === 0.1 || value === 1 || value === 10 || value === 25) {
+                      return `$` + value + `T`;
+                    }
+                    return null;
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      renderMunitionsChart();
+    }
+
+    function renderMunitionsChart() {
+      var brass = getToken(`--data-1`);
+      var sky = getToken(`--data-2`);
+      var coral = getToken(`--data-4`);
+      var textMain = getToken(`--on-surface`);
+      var gridColor = getToken(`--outline-variant`);
+
+      var canvas = document.getElementById(`chart-munitions`);
+      var titleEl = document.getElementById(`munitions-chart-title`);
+      if (!canvas) return;
+
+      var metric = appState.munitionsMetric;
+      var labels = [`萨德 (THAAD)`, `爱国者 (PAC-3)`, `标准-3 (SM-3)`, `战斧 (Tomahawk)`];
+      var datasetLabel = ``;
+      var values = [];
+      var colors = [];
+      var suffix = ``;
+
+      if (metric === `pct`) {
+        if (titleEl) titleEl.textContent = `美军四大核心防空与打击资产战备消耗深度峰值（%）`;
+        datasetLabel = `消耗战前库存上限占比 (%)`;
+        values = [80, 65, 61, 32];
+        colors = [coral, coral, brass, sky];
+        suffix = `%`;
+      } else if (metric === `lead`) {
+        if (titleEl) titleEl.textContent = `国防工业基地（DIB）单弹交付与重建周期（月）`;
+        datasetLabel = `生产交付周期 (月)`;
+        values = [53, 42, 64, 47];
+        colors = [brass, sky, coral, brass];
+        suffix = ` 个月`;
+      } else {
+        if (titleEl) titleEl.textContent = `美军单枚拦截/打击导弹采购造价（百万美元，对比 $0.035M 无人机）`;
+        datasetLabel = `单枚造价 (百万美元)`;
+        values = [15.5, 3.9, 28.7, 2.6];
+        colors = [brass, sky, coral, sky];
+        suffix = `M USD`;
+      }
+
+      if (munitionsChart) munitionsChart.destroy();
+      munitionsChart = new Chart(canvas, {
+        type: `bar`,
+        data: {
+          labels: labels,
+          datasets: [{
+            label: datasetLabel,
+            data: values,
+            backgroundColor: colors,
+            borderRadius: 3
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: function(ctx) {
+                  return ` ` + ctx.parsed.y + suffix;
+                }
+              }
+            }
+          },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: textMain } },
+            y: {
+              beginAtZero: true,
+              grid: { color: gridColor },
+              ticks: {
+                callback: function(v) { return v + suffix; }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    async function initApp() {
+      if (window.notebookAppApi && typeof window.notebookAppApi.getAppState === 'function') {
+        try {
+          var saved = await window.notebookAppApi.getAppState();
+          if (saved && typeof saved === 'object') {
+            if (saved.chamber === `house` || saved.chamber === `senate`) appState.chamber = saved.chamber;
+            if (typeof saved.evidenceIndex === `number`) appState.evidenceIndex = saved.evidenceIndex;
+            if (typeof saved.strategyIndex === `number`) appState.strategyIndex = saved.strategyIndex;
+            if (typeof saved.gopDefections === `number`) appState.gopDefections = saved.gopDefections;
+            if (saved.munitionsMetric) appState.munitionsMetric = saved.munitionsMetric;
+            if (saved.timelineFilter) appState.timelineFilter = saved.timelineFilter;
+            if (Array.isArray(saved.bookmarkedIds)) appState.bookmarkedIds = saved.bookmarkedIds;
+          }
+        } catch (e) {
+          /* ignore state load errors in standalone preview */
+        }
+      }
+
+      var sliderEl = document.getElementById(`gop-defection-slider`);
+      var numEl = document.getElementById(`gop-defection-number`);
+      if (sliderEl) sliderEl.value = String(appState.gopDefections);
+      if (numEl) numEl.value = String(appState.gopDefections);
+
+      switchChamber(appState.chamber);
+      selectEvidence(appState.evidenceIndex);
+      setStrategy(appState.strategyIndex);
+      switchMunitionsMetric(appState.munitionsMetric);
+      filterTimeline(appState.timelineFilter);
+      updateBookmarkCounter();
+      initCharts();
+
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+
+      if (window.notebookAppApi && typeof window.notebookAppApi.notifyAppReady === 'function') {
+        window.notebookAppApi.notifyAppReady();
+      }
+    }
+
+    document.addEventListener(`DOMContentLoaded`, initApp);
+  </script>
+</body>
+</html>
